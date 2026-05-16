@@ -1,5 +1,12 @@
 # CHANGELOG.md
 
+## 2026-05-17 补充关键帧 Prompt 格式
+
+### Changed
+- 更新 `EPISODE_PLAN.md`，将下一步建议改为：审阅第一集 15 分钟版结构、通过后补充关键帧 Prompt、再整理第一集 15 分钟版分镜脚本。
+- 扩写 `EPISODE_01_KEYFRAMES.md` 的“15 分钟版本补充关键帧建议”，把 KF-03.5、KF-05.5、KF-07.5、KF-10.5、KF-11.5、KF-14.5 补齐为完整关键帧 Prompt 格式。
+- 更新 `TASK_BOARD.md` 和 `SYNC_PACKET.md`，记录本次只是补充关键帧 Prompt 格式，不改第一集剧情设定。
+
 ## 2026-05-17 第一集 15 分钟版结构
 
 ### Changed
