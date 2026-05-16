@@ -19,13 +19,14 @@ Before starting any project task, read these files in order:
 8. DECISIONS.md
 9. STORY_BIBLE.md
 10. CHARACTER_BIBLE.md
-11. WORLD_RULES.md
-12. EPISODE_PLAN.md
-13. 边界回声_项目总览.md
-14. 边界回声_角色圣经.md
-15. 边界回声_剧情设定补充.md
-16. PROMPT_LIBRARY.md
-17. CHANGELOG.md
+11. CHARACTER_VISUAL_REFERENCES.md
+12. WORLD_RULES.md
+13. EPISODE_PLAN.md
+14. 边界回声_项目总览.md
+15. 边界回声_角色圣经.md
+16. 边界回声_剧情设定补充.md
+17. PROMPT_LIBRARY.md
+18. CHANGELOG.md
 
 If any file is missing, create it before continuing.
 
@@ -35,6 +36,8 @@ If any file is missing, create it before continuing.
 - Use CHATGPT_MEMORY_SYNC.md when preparing handoffs between ChatGPT and Codex.
 - Treat 边界回声_角色圣经.md as the current source of truth for character
   settings.
+- Treat CHARACTER_VISUAL_REFERENCES.md and assets/characters as the current
+  source of truth for character visual references.
 - Treat 边界回声_剧情设定补充.md as the current source of truth for named
   concepts, opening structure, and unit-event examples.
 - Do not change confirmed product direction, character settings, prompt rules,

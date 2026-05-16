@@ -25,6 +25,8 @@ Phase 1: 第一集关键帧 Prompt 已完成，可进入首批测试图阶段。
 - 当前可进入第一集首批关键帧测试图阶段。
 - 优先测试帧：KF-02、KF-03、KF-06、KF-13、KF-16。
 - 可选补充测试帧：KF-14。
+- 已新增 `CHARACTER_VISUAL_REFERENCES.md` 和 `assets/characters/`，把主角团单人海报与合照同步进 GitHub，供 ChatGPT / Codex / 图像生成共同参考。
+- 后续生成关键帧时必须参考角色海报，尤其是澪星外观不要仅凭文字 Prompt 重新设计。
 
 ## 已完成
 - 创建 README.md。
@@ -45,6 +47,8 @@ Phase 1: 第一集关键帧 Prompt 已完成，可进入首批测试图阶段。
 - 新增英文命名的项目入口和同步文件，方便 ChatGPT 读取和接管。
 - 新增并修订第一集完整剧情大纲 `EPISODE_01_OUTLINE.md` 至 V1。
 - 新增第一集关键帧 Prompt 文件 `EPISODE_01_KEYFRAMES.md`。
+- 新增主角团视觉参考图目录 `assets/characters/`。
+- 新增角色视觉参考索引 `CHARACTER_VISUAL_REFERENCES.md`。
 
 ## 当前任务
 1. 测试第一集首批关键帧图：KF-02、KF-03、KF-06、KF-13、KF-16。

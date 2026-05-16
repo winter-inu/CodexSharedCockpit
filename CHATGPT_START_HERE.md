@@ -15,11 +15,12 @@
 9. `WORLD_RULES.md`
 10. `EPISODE_PLAN.md`
 11. `DECISIONS.md`
-12. `边界回声_项目总览.md`
-13. `边界回声_角色圣经.md`
-14. `边界回声_剧情设定补充.md`
-15. `PROMPT_LIBRARY.md`
-16. `CHANGELOG.md`
+12. `CHARACTER_VISUAL_REFERENCES.md`
+13. `边界回声_项目总览.md`
+14. `边界回声_角色圣经.md`
+15. `边界回声_剧情设定补充.md`
+16. `PROMPT_LIBRARY.md`
+17. `CHANGELOG.md`
 
 如果无法读取 GitHub 仓库并看到 404，优先判断为仓库 private 或没有 GitHub 连接器授权，不要假设文件不存在。
 
@@ -48,6 +49,7 @@
 PROJECT_OVERVIEW.md
 STORY_BIBLE.md
 CHARACTER_BIBLE.md
+CHARACTER_VISUAL_REFERENCES.md
 WORLD_RULES.md
 EPISODE_PLAN.md
 CODEX_TASKS.md

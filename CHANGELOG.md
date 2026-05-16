@@ -1,5 +1,20 @@
 # CHANGELOG.md
 
+## 2026-05-16 角色视觉参考同步
+
+### Added
+- 新增 `CHARACTER_VISUAL_REFERENCES.md`，记录主角团视觉参考图读取规则。
+- 新增 `assets/characters/lan-bingyu-poster.png`。
+- 新增 `assets/characters/lin-jianzhou-poster.png`。
+- 新增 `assets/characters/lu-heng-poster-v2.png`。
+- 新增 `assets/characters/xu-mingjin-poster-v2.png`。
+- 新增 `assets/characters/lingstar-poster.png`。
+- 新增 `assets/characters/main-cast-group-poster.png`。
+
+### Changed
+- 更新 `CHATGPT_START_HERE.md` 和 `AGENTS.md`，把 `CHARACTER_VISUAL_REFERENCES.md` 加入优先读取顺序。
+- 更新 `SYNC_PACKET.md`，说明后续关键帧生成必须参考角色海报，避免角色外观漂移。
+
 ## 2026-05-16 第一集关键帧 Prompt
 
 ### Added
