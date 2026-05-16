@@ -23,7 +23,7 @@
 - `PROJECT_CONTEXT.md` 中已确认前段开局结构。
 - `TASK_BOARD.md` 中列出当前任务和状态。
 - `EPISODE_01_OUTLINE.md` 中已有第一集 15 分钟版结构。
-- `EPISODE_01_KEYFRAMES.md` 中已有第一集关键帧 Prompt 和 15 分钟版补充关键帧建议。
+- `EPISODE_01_KEYFRAMES.md` 中已有第一集关键帧 Prompt 和 15 分钟版补充关键帧 Prompt。
 
 ## 下一步建议
 
