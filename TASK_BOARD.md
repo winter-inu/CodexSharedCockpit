@@ -15,8 +15,8 @@
 | P0 | TODO | Codex / User | 设计第 2-4 集角色登场 | 陆衡、林见舟、许明烬先后加入 |
 | P0 | TODO | Codex / User | 完善第 5 集《无人到站》 | 展示五人能力与分工 |
 | P0 | TODO | User / ChatGPT | 审阅第一集 15 分钟版剧情结构 | 确认第一次失败、真正源点、小夏反问和 B-07 结尾钩子 |
-| P0 | DONE | Codex / User | 补充关键帧 Prompt | 已将 6 个补充镜头扩成与 KF-01～KF-16 相同字段格式，不改剧情 |
-| P0 | TODO | User / ChatGPT | 审阅 15 分钟版补充关键帧 Prompt | 确认 KF-03.5、KF-05.5、KF-07.5、KF-10.5、KF-11.5、KF-14.5 |
+| P0 | DONE | Codex / User | 第一集 15 分钟版补充关键帧 Prompt | 已将 6 个补充镜头扩成与 KF-01～KF-16 相同字段格式，不改剧情 |
+| P0 | TODO | User / ChatGPT | 审阅第一集 15 分钟版补充关键帧 Prompt | 确认 KF-03.5、KF-05.5、KF-07.5、KF-10.5、KF-11.5、KF-14.5 |
 | P0 | TODO | User / Codex | 测试第一集首批关键帧图 | 优先测试 KF-02、KF-03、KF-06、KF-13、KF-16；可选补充 KF-14 |
 | P0 | TODO | User / ChatGPT / Codex | 审阅首批测试图并修订 Prompt | 根据测试图统一角色锁、画面氛围和禁止项 |
 | P1 | TODO | Codex | 更新陆衡新版角色海报资产 | 角色圣经已写入“包内侧照片 / 终端投影”设定 |

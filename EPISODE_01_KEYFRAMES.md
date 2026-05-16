@@ -2,7 +2,7 @@
 
 ## 文件用途
 
-第一集《尾灯照见的鞋》关键帧 Prompt 草案。基于 `EPISODE_01_OUTLINE.md` V1，用于生成第一集视觉测试图和后续分镜参考。
+第一集《尾灯照见的鞋》关键帧 Prompt 草案。基于 `EPISODE_01_OUTLINE.md` V2 / 15 分钟版，用于生成第一集视觉测试图和后续分镜参考。
 
 ## 统一风格锁
 
@@ -680,7 +680,7 @@ Episode one ending keyframe, edge of the abandoned station before dawn, Lan Bing
 
 以下为第一集 15 分钟版新增结构所需的补充关键帧建议。不要替换上方原有 16 个关键帧；这些镜头用于补足“追踪源点、第一次失败、真正源点、情绪反扣”的单集节奏。
 
-### KF-03.5 储物柜自动打开
+## KF-03.5 储物柜自动打开
 
 ### 剧情功能
 
@@ -718,7 +718,7 @@ Near-future sci-fi emotional mystery animated series keyframe, a long corridor o
 
 不要加入怪物；不要做成惊吓恐怖片；不要出现陆衡、林见舟、许明烬；不要出现无人列车、末班车、到站无人下车。
 
-### KF-05.5 儿童水壶传出哭声
+## KF-05.5 儿童水壶传出哭声
 
 ### 剧情功能
 
@@ -756,7 +756,7 @@ Delicate animated series keyframe, near the lost-and-found room of an abandoned 
 
 不要血腥；不要夸张鬼魂；不要恐怖跳吓；不要高饱和儿童动画感。
 
-### KF-07.5 澜冰屿被广播诱导走错路
+## KF-07.5 澜冰屿被广播诱导走错路
 
 ### 剧情功能
 
@@ -794,7 +794,7 @@ Near-future sci-fi emotional mystery keyframe, deep inside an abandoned station,
 
 不要出现无人列车、末班车或到站无人下车；不要动作追逐；不要把澪星画成搞笑宠物。
 
-### KF-10.5 澜冰屿被识别为未登记人员
+## KF-10.5 澜冰屿被识别为未登记人员
 
 ### 剧情功能
 
@@ -832,7 +832,7 @@ Episode one first-failure keyframe, overlapping space of temporary shelter and l
 
 不要动作打斗；不要超级英雄对抗；不要能量爆炸；不要出现其他主角。
 
-### KF-11.5 澪星用尾灯照住他的脚边
+## KF-11.5 澪星用尾灯照住他的脚边
 
 ### 剧情功能
 
@@ -870,7 +870,7 @@ Wordless companionship keyframe, Lingstar close beside Lan Bingyu's worn boots, 
 
 不要过度卖萌；不要治愈系强光；不要夸张拥抱；不要把澪星外观改成其他造型。
 
-### KF-14.5 小夏问：那你呢？有人会绕回来找你吗？
+## KF-14.5 小夏问：那你呢？有人会绕回来找你吗？
 
 ### 剧情功能
 
