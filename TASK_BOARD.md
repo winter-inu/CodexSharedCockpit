@@ -19,9 +19,10 @@
 | P0 | TODO | User / ChatGPT | 审阅第一集 15 分钟版补充关键帧 Prompt | 确认 KF-03.5、KF-05.5、KF-07.5、KF-10.5、KF-11.5、KF-14.5 |
 | P0 | TODO | User / Codex | 测试第一集首批关键帧图 | 优先测试 KF-02、KF-03、KF-06、KF-13、KF-16；可选补充 KF-14 |
 | P0 | TODO | User / ChatGPT / Codex | 审阅首批测试图并修订 Prompt | 根据测试图统一角色锁、画面氛围和禁止项 |
+| P0 | TODO | User / ChatGPT | 审阅第一集 15 分钟版分镜脚本 | 已新增 `EPISODE_01_STORYBOARD.md`，需确认镜头节奏和关键帧对应关系 |
 | P1 | TODO | Codex | 更新陆衡新版角色海报资产 | 角色圣经已写入“包内侧照片 / 终端投影”设定 |
 | P1 | TODO | Codex | 统一“2.南枝”与林见舟命名 | 文件夹名与角色圣经不一致 |
-| P1 | TODO | Codex / ChatGPT | 第一集 15 分钟版分镜脚本 | 需在 15 分钟版结构和补充关键帧审阅后进行 |
+| P1 | DONE | Codex / ChatGPT | 第一集 15 分钟版分镜脚本 | 已新增 `EPISODE_01_STORYBOARD.md`，按 9 个时间段拆为 38 个镜头 |
 | P1 | DONE | Codex | 建立第一集关键帧 Prompt | 已新增 `EPISODE_01_KEYFRAMES.md`，共 16 个关键帧 |
 | P1 | TODO | User / ChatGPT | 审阅第一集关键帧 Prompt | 优先确认角色锁、画面顺序、禁止项和测试图优先级 |
 
@@ -40,9 +41,10 @@
 | 2026-05-16 | Codex | 建立第一集关键帧 Prompt | 新增 `EPISODE_01_KEYFRAMES.md`，拆分 16 个关键帧 |
 | 2026-05-17 | Codex | 升级第一集为 15 分钟版结构 | 更新 `EPISODE_01_OUTLINE.md`，并补充 15 分钟版关键帧建议 |
 | 2026-05-17 | Codex | 补齐 15 分钟版补充关键帧 Prompt 格式 | 仅格式扩写，不改第一集剧情设定 |
+| 2026-05-17 | Codex | 整理第一集 15 分钟版分镜脚本 | 新增 `EPISODE_01_STORYBOARD.md`，按 9 个时间段拆为 38 个镜头 |
 
 ## 本轮状态核对
 
 - 第一集 15 分钟版结构：DONE
 - 第一集 15 分钟版补充关键帧 Prompt：DONE
-- 第一集 15 分钟版分镜脚本：TODO
+- 第一集 15 分钟版分镜脚本：DONE
