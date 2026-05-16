@@ -4,6 +4,8 @@
 
 第一集《尾灯照见的鞋》关键帧 Prompt 草案。基于 `EPISODE_01_OUTLINE.md` V2 / 15 分钟版，用于生成第一集视觉测试图和后续分镜参考。
 
+本轮重新确认：文件用途按 V2 / 15 分钟版执行。
+
 ## 统一风格锁
 
 ```text
@@ -680,11 +682,13 @@ Episode one ending keyframe, edge of the abandoned station before dawn, Lan Bing
 
 以下为第一集 15 分钟版新增结构所需的补充关键帧建议。不要替换上方原有 16 个关键帧；这些镜头用于补足“追踪源点、第一次失败、真正源点、情绪反扣”的单集节奏。
 
+本轮同步确认：以下 6 个补充关键帧均已从简短建议扩写为完整关键帧格式，并包含中文版 Prompt、英文版 Prompt 和禁止项。
+
 ## KF-03.5 储物柜自动打开
 
 ### 剧情功能
 
-增加空间阻力，让观众感到车站在主动干扰路径。
+增加空间阻力，让观众感到车站并非静态背景，而是在主动翻出失物、干扰澜冰屿靠近真正源点。
 
 ### 画面描述
 
@@ -722,7 +726,7 @@ Near-future sci-fi emotional mystery animated series keyframe, a long corridor o
 
 ### 剧情功能
 
-增加人物阻力，把小夏的害怕通过遗失物传出来。
+增加人物阻力，把小夏的害怕通过遗失物传出来，让观众先听见她的情绪，再完整看见她的记忆。
 
 ### 画面描述
 
@@ -760,7 +764,7 @@ Delicate animated series keyframe, near the lost-and-found room of an abandoned 
 
 ### 剧情功能
 
-增加系统阻力，表现广播会伪装成安全提示误导澜冰屿。
+增加系统阻力，表现广播会伪装成安全提示误导澜冰屿，并提前建立“等待指令”会困住人的危险。
 
 ### 画面描述
 
@@ -798,7 +802,7 @@ Near-future sci-fi emotional mystery keyframe, deep inside an abandoned station,
 
 ### 剧情功能
 
-呈现第一次失败，说明澜冰屿不能直接带走小夏。
+呈现第一次失败，说明澜冰屿不能直接带走小夏；他若硬闯循环，自己也会被系统改写成等待者。
 
 ### 画面描述
 
@@ -836,7 +840,7 @@ Episode one first-failure keyframe, overlapping space of temporary shelter and l
 
 ### 剧情功能
 
-强化澪星无台词陪伴，确认澜冰屿“还在”。
+强化澪星无台词陪伴，确认澜冰屿“还在”，也让观众看见它会主动守住澜冰屿的存在痕迹。
 
 ### 画面描述
 
@@ -874,7 +878,7 @@ Wordless companionship keyframe, Lingstar close beside Lan Bingyu's worn boots, 
 
 ### 剧情功能
 
-情绪反扣，把小夏的遗憾反照到澜冰屿身上。
+情绪反扣，把小夏的遗憾反照到澜冰屿身上，让本集从“救回小夏”转向“澜冰屿也正在失去某些东西”。
 
 ### 画面描述
 

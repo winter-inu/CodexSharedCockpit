@@ -3,6 +3,7 @@
 ## 2026-05-17 补充关键帧 Prompt 格式
 
 ### Changed
+- 本轮强制复核并重新提交 5 个文件：`EPISODE_01_KEYFRAMES.md`、`EPISODE_PLAN.md`、`TASK_BOARD.md`、`SYNC_PACKET.md`、`CHANGELOG.md`。
 - 修正 `EPISODE_01_KEYFRAMES.md` 文件用途为 V2 / 15 分钟版。
 - 更新 `EPISODE_PLAN.md`，将下一步建议改为：审阅第一集 15 分钟版结构、通过后审阅补充关键帧 Prompt、再整理第一集 15 分钟版分镜脚本。
 - 扩写 `EPISODE_01_KEYFRAMES.md` 的“15 分钟版本补充关键帧建议”，把 KF-03.5、KF-05.5、KF-07.5、KF-10.5、KF-11.5、KF-14.5 补齐为与 KF-01～KF-16 相同的完整关键帧 Prompt 格式。
