@@ -1,5 +1,21 @@
 # CHANGELOG.md
 
+## 2026-05-16 项目入口校准
+
+### Added
+- 新增 `PROJECT_OVERVIEW.md`，作为新读者项目总入口。
+- 新增 `STORY_BIBLE.md`，作为故事设定入口。
+- 新增 `CHARACTER_BIBLE.md`，作为角色设定入口。
+- 新增 `WORLD_RULES.md`，作为世界观规则入口。
+- 新增 `EPISODE_PLAN.md`，作为分集规划入口。
+- 新增 `CODEX_TASKS.md`，作为 Codex 任务池。
+- 新增 `CHATGPT_MEMORY_SYNC.md`，作为 ChatGPT / Codex 同步规则说明。
+
+### Changed
+- 更新 `CHATGPT_START_HERE.md`，加入更完整的读取顺序和 404 处理提示。
+- 更新 `AGENTS.md`，让 Codex 优先读取新增入口文件。
+- 更新 `SYNC_PACKET.md`，记录 GitHub 访问 404 的处理判断和入口校准结果。
+
 ## 2026-05-16 GitHub 同步
 
 ### Added
