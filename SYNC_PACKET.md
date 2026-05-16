@@ -1,40 +1,50 @@
 # SYNC_PACKET.md
 
-## Current Project Goal
-Set up a shared cockpit workflow where ChatGPT plans and Codex implements from
-the same project memory files.
+## 当前项目
+边界回声
 
-Replace this with the real project goal once the project begins.
+## 当前阶段
+Phase 1: 核心世界观、角色设定和第一季前段叙事结构已建立，正在细化分集与角色线。
 
-## Current Phase
-Phase 0: Shared memory setup.
+## 最新状态
+- 已确认《边界回声》为原创近未来科幻情感悬疑剧。
+- 已确认核心世界观：静海系统、静海断层、异常区、记忆回声、边界漂移、情绪污染、遗憾循环。
+- 已确认新开局结构：澜冰屿和澪星一开始就在异常区中同行并回收遗憾，陆衡、林见舟和许明烬在后续事件中先后加入。
+- 已新增 F:\边界回声\边界回声_剧情设定补充.md，记录名词解释、开局结构、林见舟与澪星详细设定、前段节奏和《无人到站》团队分工样例。
+- 已补充主角团能力与装备来源：澜冰屿人形锚点、澪星泊舟体系、陆衡取证终端、林见舟心律共鸣晶体、许明烬工业机械右手。
+- 已调整陆衡妹妹照片呈现方式：照片贴在旧相机包内侧或肩带背面，关键时刻由取证终端从损坏记忆卡投射妹妹影像残帧。
+- 已将 F:\边界回声 的核心项目档案同步到 F:\CodexSharedCockpit，作为 GitHub / ChatGPT / Codex 共享读取版本。
+- 已新增 `CHATGPT_START_HERE.md`，用于告诉 ChatGPT 读取顺序、协作规则和接手提示词。
 
-## Latest Decisions
-- ChatGPT and Codex will not be treated as automatically synchronized systems.
-- Markdown files in the project folder are the shared source of truth.
-- AGENTS.md tells Codex how to operate.
-- SYNC_PACKET.md is the handoff summary between ChatGPT, Codex, and the user.
+## 已完成
+- 创建 README.md。
+- 创建 PROJECT_CONTEXT.md。
+- 创建 CONVERSATION_LOG.md。
+- 创建 IMPORT_INBOX.md。
+- 创建 TASK_BOARD.md。
+- 创建 DECISIONS.md。
+- 创建 PROMPT_LIBRARY.md。
+- 创建 SYNC_PACKET.md。
+- 创建 CHANGELOG.md。
+- 创建并更新《边界回声》项目总览。
+- 创建并更新《边界回声》角色圣经。
+- 新增《边界回声》剧情设定补充。
+- 补充主角团能力与装备来源设定。
+- 将《边界回声》项目资料复制进 `CodexSharedCockpit` Git 仓库目录。
+- 新增 ChatGPT 接手入口文件 `CHATGPT_START_HERE.md`。
 
-## Active Tasks
-1. Replace template project context with the real project context.
-2. Ask ChatGPT to produce milestone-level planning from this sync packet.
-3. Ask Codex to implement one highest priority technical task after planning.
+## 当前任务
+1. 编写第一集“澜冰屿 + 澪星”完整剧情大纲。
+2. 编写第 2-4 集陆衡、林见舟、许明烬先后登场的分集梗概。
+3. 完善第 5 集《无人到站》为完整单集大纲。
+4. 根据新版陆衡视觉更新角色海报资产。
 
-## Done
-- Created initial shared cockpit template files.
+## 开放问题
+- 陆衡妹妹姓名、性格和失踪当天细节。
+- 林见舟参与 B-07 情绪校准的完整场景。
+- 许明烬“最后一站”的七个人中至少 1-2 个具体人物。
+- 静海系统制造澜冰屿的具体机制。
+- 澪星愿望舱里那枚无法归还的碎片具体归属。
 
-## Open Questions For ChatGPT
-- What is the actual project goal?
-- What is the first milestone?
-- What is the smallest useful first deliverable?
-- What should Codex build first?
-- Are there fixed style, prompt, or character rules that must not change?
-
-## Codex Next Task
-Wait for the user or ChatGPT to replace the template content with real project
-details, then complete the highest priority unblocked task in TASK_BOARD.md.
-
-## Handoff Summary
-The shared memory system is ready. The next move is to fill in the actual
-project goal, decisions, and first implementation task.
-
+## Codex 下一步
+继续根据用户确认的方向细化第一集剧情大纲，并把后续设定及时同步到项目 Markdown 文件。

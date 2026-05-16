@@ -1,33 +1,30 @@
 # TASK_BOARD.md
 
-## Status Legend
-- TODO: Not started.
-- DOING: In progress.
-- BLOCKED: Waiting for input or another task.
-- DONE: Completed and verified enough for the current phase.
+## 状态说明
 
-## Current Priorities
+- TODO: 未开始
+- DOING: 进行中
+- BLOCKED: 等待输入
+- DONE: 已完成
 
-| Priority | Status | Owner | Task | Notes |
+## 当前任务
+
+| 优先级 | 状态 | 负责人 | 任务 | 备注 |
 | --- | --- | --- | --- | --- |
-| P0 | TODO | User | Replace template content with the real project goal | Update PROJECT_CONTEXT.md first. |
-| P0 | TODO | ChatGPT | Break the project into phase-level milestones | Paste SYNC_PACKET.md into ChatGPT and ask for planning. |
-| P0 | TODO | Codex | Implement the highest priority technical task | Start only after the first real task is defined. |
-| P1 | TODO | ChatGPT | Define acceptance criteria for the first milestone | Keep criteria concrete and testable. |
-| P1 | TODO | Codex | Add or update tests/checks for implemented work | Match the project's stack. |
+| P0 | TODO | Codex / User | 编写第一集完整剧情大纲 | 以“澜冰屿 + 澪星”双人开局为核心 |
+| P0 | TODO | Codex / User | 设计第 2-4 集角色登场 | 陆衡、林见舟、许明烬先后加入 |
+| P0 | TODO | Codex / User | 完善第 5 集《无人到站》 | 展示五人能力与分工 |
+| P1 | TODO | Codex | 更新陆衡新版角色海报资产 | 角色圣经已写入“包内侧照片 / 终端投影”设定 |
+| P1 | TODO | Codex | 统一“2.南枝”与林见舟命名 | 文件夹名与角色圣经不一致 |
+| P1 | TODO | Codex | 建立第一集关键帧 Prompt | 基于已有 Prompt 生成器 |
 
-## Backlog
+## 已完成
 
-| Status | Owner | Task | Notes |
+| 日期 | 负责人 | 任务 | 备注 |
 | --- | --- | --- | --- |
-| TODO | ChatGPT | Refine product scope | Add outputs to PROJECT_CONTEXT.md. |
-| TODO | ChatGPT | Identify risk areas | Add unresolved issues to SYNC_PACKET.md. |
-| TODO | Codex | Create project structure | Only after stack is confirmed. |
-| TODO | Codex | Implement first vertical slice | Keep it small and demonstrable. |
-
-## Done
-
-| Date | Owner | Task | Notes |
-| --- | --- | --- | --- |
-| 2026-05-15 | Codex | Created shared cockpit templates | Initial setup only. |
-
+| 2026-05-15 | Codex | 创建 F:\边界回声 项目档案夹 | 初始归档结构 |
+| 2026-05-15 | Codex / User | 建立项目总览和角色圣经 | 世界观与五位主角基础设定 |
+| 2026-05-16 | Codex / User | 确认新开局结构 | 澜冰屿和澪星先行，其他成员逐步加入 |
+| 2026-05-16 | Codex / User | 细化林见舟和澪星 | 已同步到角色圣经和剧情设定补充 |
+| 2026-05-16 | Codex / User | 建立《无人到站》事件样例 | 用于展示团队分工 |
+| 2026-05-16 | Codex / User | 补充主角团能力与装备来源 | 已加入心律共鸣晶体、取证终端、机械右手等来源 |

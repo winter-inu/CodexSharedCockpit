@@ -9,17 +9,25 @@ folder as the shared cockpit memory between ChatGPT, Codex, and the user.
 ## Always Read First
 Before starting any project task, read these files in order:
 
-1. PROJECT_CONTEXT.md
-2. TASK_BOARD.md
-3. DECISIONS.md
-4. PROMPT_LIBRARY.md
-5. SYNC_PACKET.md
-6. CHANGELOG.md
+1. CHATGPT_START_HERE.md
+2. SYNC_PACKET.md
+3. PROJECT_CONTEXT.md
+4. TASK_BOARD.md
+5. DECISIONS.md
+6. 边界回声_项目总览.md
+7. 边界回声_角色圣经.md
+8. 边界回声_剧情设定补充.md
+9. PROMPT_LIBRARY.md
+10. CHANGELOG.md
 
 If any file is missing, create it before continuing.
 
 ## Working Rules
 - Follow confirmed decisions in DECISIONS.md.
+- Treat 边界回声_角色圣经.md as the current source of truth for character
+  settings.
+- Treat 边界回声_剧情设定补充.md as the current source of truth for named
+  concepts, opening structure, and unit-event examples.
 - Do not change confirmed product direction, character settings, prompt rules,
   UI style, or technical choices unless the user explicitly asks.
 - Keep changes small, reviewable, and scoped to the active task.
@@ -46,4 +54,3 @@ At the end of each task, report:
 3. How it was verified or how to test it.
 4. What still needs ChatGPT planning.
 5. Any updates made to SYNC_PACKET.md.
-

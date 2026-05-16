@@ -1,24 +1,17 @@
 # DECISIONS.md
 
-## Confirmed Decisions
+## 已确认决定
 
-| Date | Decision | Reason | Owner |
-| --- | --- | --- | --- |
-| 2026-05-15 | Use shared markdown files as the source of truth between ChatGPT and Codex | ChatGPT and Codex do not automatically share full working memory | User |
-| 2026-05-15 | Use AGENTS.md to tell Codex how to work in this project | Codex can reliably read project-local instructions | User |
-| 2026-05-15 | Use SYNC_PACKET.md as the handoff document | Keeps planning and implementation aligned | User |
-
-## Proposed But Not Confirmed
-
-| Proposal | Status | Notes |
+| 日期 | 决定 | 理由 |
 | --- | --- | --- |
-| Add JSON import/export for shared task state | Open | Useful later if the workflow grows. |
-| Use Git branches/worktrees for parallel Codex tasks | Open | Good for larger projects with independent tasks. |
-| Keep prompt templates in PROMPT_LIBRARY.md | Open | Useful if the project involves AI production prompts. |
+| 2026-05-15 | 使用 F:\边界回声 作为“边界回声”的项目档案夹 | 用户要求将相关对话记录移到 F 盘项目文件中 |
+| 2026-05-15 | 使用 Markdown 文件保存项目记忆 | 方便 ChatGPT、Codex 和用户共同读取与更新 |
 
-## Rejected Decisions
+## 待确认决定
 
-| Date | Rejected Idea | Reason |
-| --- | --- | --- |
-| 2026-05-15 | Rely on ChatGPT or Codex memory alone for project state | Too easy for details to drift or disappear. |
+| 问题 | 状态 |
+| --- | --- |
+| “边界回声”的项目类型是什么 | 待确认 |
+| 是否需要从 ChatGPT 导出完整对话 | 待确认 |
+| 是否需要把 F:\边界回声 作为后续唯一工作目录 | 建议确认 |
 

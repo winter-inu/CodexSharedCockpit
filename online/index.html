@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="用于生成可直接粘贴到 ChatGPT 图片生成的 AI 漫剧关键帧 Prompt。" />
+  <title>漫剧关键帧 Prompt 生成器</title>
+  <style>
+    :root{
+      --bg:#f5f5f7;
+      --panel:#fff;
+      --text:#1d1d1f;
+      --muted:#6e6e73;
+      --line:#d2d2d7;
+      --blue:#0066cc;
+      --green:#2d7d46;
+      --shadow:0 10px 30px rgba(0,0,0,.07);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Arial,sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.55;
+    }
+    header{
+      padding:46px 20px 24px;
+      text-align:center;
+      background:linear-gradient(180deg,#fff 0%,#f5f5f7 100%);
+    }
+    h1{margin:0 0 10px;font-size:clamp(32px,5vw,56px);letter-spacing:-.04em}
+    header p{margin:0 auto;max-width:760px;color:var(--muted);font-size:18px}
+    main{max-width:1180px;margin:auto;padding:22px 20px 70px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+    .panel{
+      background:var(--panel);
+      border:1px solid rgba(0,0,0,.05);
+      border-radius:18px;
+      box-shadow:var(--shadow);
+      padding:22px;
+    }
+    h2{margin:0 0 16px;font-size:24px}
+    .form{display:grid;gap:14px}
+    label{display:block;margin-bottom:6px;font-weight:700;font-size:14px}
+    input,textarea,select{
+      width:100%;
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:11px 12px;
+      font:inherit;
+      background:#fff;
+      outline:none;
+    }
+    textarea{min-height:98px;resize:vertical}
+    textarea:focus,input:focus,select:focus{border-color:#8bbdf2;box-shadow:0 0 0 4px rgba(0,102,204,.12)}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .checks{display:grid;gap:9px}
+    .check{display:flex;gap:8px;align-items:flex-start;color:#333}
+    .check input{width:18px;height:18px;margin-top:3px;accent-color:var(--blue)}
+    .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+    button{
+      border:0;
+      border-radius:999px;
+      padding:10px 16px;
+      font:inherit;
+      cursor:pointer;
+      color:#fff;
+      background:#1d1d1f;
+    }
+    button.blue{background:var(--blue)}
+    button.green{background:var(--green)}
+    button.secondary{background:#fff;color:#1d1d1f;border:1px solid var(--line)}
+    .output{
+      min-height:640px;
+      white-space:pre-wrap;
+      background:#fbfbfd;
+      border:1px solid #e5e5ea;
+      border-radius:14px;
+      padding:16px;
+      font-family:Consolas,"Microsoft YaHei",monospace;
+      font-size:13.5px;
+      overflow:auto;
+    }
+    .hint{margin-top:14px;color:var(--muted);font-size:13px}
+    .status{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      margin-top:14px;
+      padding:7px 12px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:#fff;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--green)}
+    .toast{
+      position:fixed;
+      left:50%;
+      bottom:24px;
+      transform:translateX(-50%) translateY(24px);
+      opacity:0;
+      transition:.2s ease;
+      background:#1d1d1f;
+      color:#fff;
+      padding:10px 16px;
+      border-radius:999px;
+      box-shadow:var(--shadow);
+    }
+    .toast.show{opacity:1;transform:translateX(-50%)}
+    @media(max-width:900px){
+      .grid,.row{grid-template-columns:1fr}
+      .output{min-height:420px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>漫剧关键帧 Prompt 生成器</h1>
+    <p>把每一镜的角色、场景、动作和镜头填清楚，右侧会生成一段可以直接粘贴到 ChatGPT 图片生成里的指令。</p>
+    <div class="status"><span class="dot"></span><span>在线可访问，本地浏览器内生成，不上传你的输入</span></div>
+  </header>
+
+  <main>
+    <div class="grid">
+      <section class="panel">
+        <h2>填写这一帧</h2>
+        <div class="form">
+          <div class="row">
+            <div>
+              <label for="episode">集数 / 镜头号</label>
+              <input id="episode" value="第 1 集，第 1 镜" />
+            </div>
+            <div>
+              <label for="ratio">画幅</label>
+              <select id="ratio">
+                <option>16:9 横版视频关键帧</option>
+                <option>9:16 竖版短视频关键帧</option>
+                <option>1:1 方图</option>
+                <option>4:5 竖版封面</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="style">画风 / 美术方向</label>
+            <textarea id="style">日系动画电影感，干净线条，明亮色彩，细腻光影，角色表情生动，适合连续 AI 漫剧关键帧，不是真实照片。</textarea>
+          </div>
+
+          <div>
+            <label for="story">剧情背景</label>
+            <textarea id="story" placeholder="这一幕发生了什么？角色为什么在这里？情绪是什么？"></textarea>
+          </div>
+
+          <div>
+            <label for="characters">角色锁定</label>
+            <textarea id="characters" placeholder="角色A：外观、体型、服装、颜色、道具、表情特点。
+角色B：外观、体型、服装、颜色、道具、表情特点。
+提示：每个角色单独写，避免后续生成时混淆。"></textarea>
+          </div>
+
+          <div>
+            <label for="scene">场景与光线</label>
+            <textarea id="scene" placeholder="地点、时间、天气、背景物件、环境氛围、主光源、色调。"></textarea>
+          </div>
+
+          <div>
+            <label for="action">动作与表情</label>
+            <textarea id="action" placeholder="谁站在哪里，谁在做什么，眼神看向哪里，表情是什么。"></textarea>
+          </div>
+
+          <div>
+            <label for="camera">镜头与构图</label>
+            <textarea id="camera">中景，三分法构图，主体清晰，背景有层次，镜头略低角度，画面具有故事张力。</textarea>
+          </div>
+
+          <div>
+            <label for="negative">负面限制 / 不要出现</label>
+            <textarea id="negative">不要文字、字幕、水印、logo。不要多手、多脚、畸形肢体、错乱五官、角色混合。不要改变角色服装、颜色和核心特征。不要低清、模糊、过曝、真实照片风。</textarea>
+          </div>
+
+          <div>
+            <label>质量要求</label>
+            <div class="checks">
+              <label class="check"><input type="checkbox" class="rule" checked value="保持角色一致性：不同角色的外观、颜色、服装、道具不能混淆。" />保持角色一致性</label>
+              <label class="check"><input type="checkbox" class="rule" checked value="画面必须像动画关键帧，主体明确，适合后续剪辑成漫剧视频。" />动画关键帧质感</label>
+              <label class="check"><input type="checkbox" class="rule" checked value="构图要清楚，动作和表情必须能一眼看懂。" />动作表情清楚</label>
+              <label class="check"><input type="checkbox" class="rule" checked value="光影自然，背景服务剧情，不要喧宾夺主。" />光影和背景合理</label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>复制给 ChatGPT</h2>
+        <div class="toolbar">
+          <button class="blue" id="copyPrompt">复制 Prompt</button>
+          <button class="green" id="downloadTxt">下载 TXT</button>
+          <button class="secondary" id="reset">清空本镜内容</button>
+        </div>
+        <div class="output" id="output"></div>
+        <div class="hint">用法：复制右侧内容，粘贴到 ChatGPT，并选择图片生成。每一镜只改“剧情背景、角色锁定、场景、动作、镜头”。</div>
+      </section>
+    </div>
+  </main>
+
+  <div class="toast" id="toast">已复制</div>
+
+  <script>
+    const $ = (selector) => document.querySelector(selector);
+    const $$ = (selector) => Array.from(document.querySelectorAll(selector));
+    const fields = ['episode','ratio','style','story','characters','scene','action','camera','negative'];
+    const defaults = {};
+
+    function value(id, fallback){
+      return $('#'+id).value.trim() || fallback;
+    }
+
+    function generate(){
+      const rules = $$('.rule:checked').map((item) => '- ' + item.value).join('\n');
+      const prompt = `请直接生成一张图片，不要先输出分析或解释文字。
+
+图片用途：AI 漫剧关键帧
+镜头信息：${value('episode', '[填写集数 / 镜头号]')}
+画幅规格：${value('ratio', '16:9 横版视频关键帧')}
+
+画风：
+${value('style', '[填写画风 / 美术方向]')}
+
+剧情背景：
+${value('story', '[填写这一幕发生了什么]')}
+
+角色锁定：
+${value('characters', '[填写每个角色的外观、服装、颜色、道具、表情特点]')}
+
+场景与光线：
+${value('scene', '[填写地点、时间、天气、背景物件、环境氛围、光线]')}
+
+动作与表情：
+${value('action', '[填写谁在做什么、站位、表情、视线方向]')}
+
+镜头与构图：
+${value('camera', '[填写远景/中景/近景/特写、机位角度、构图重点]')}
+
+质量要求：
+${rules || '- 主体清晰，角色稳定，动作明确，适合连续漫剧制作。'}
+
+负面限制：
+${value('negative', '[填写不要出现的内容]')}
+
+最终要求：
+请把这张图做成完整、清晰、可直接用于漫剧视频剪辑的单张关键帧。画面中不要出现任何说明文字、字幕、边框、水印或 logo。`;
+
+      $('#output').textContent = prompt;
+      save();
+    }
+
+    function toast(msg='已复制'){
+      const el = $('#toast');
+      el.textContent = msg;
+      el.classList.add('show');
+      setTimeout(() => el.classList.remove('show'), 1400);
+    }
+
+    function copy(){
+      navigator.clipboard.writeText($('#output').textContent).then(() => toast()).catch(() => {
+        const ta = document.createElement('textarea');
+        ta.value = $('#output').textContent;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
+        toast();
+      });
+    }
+
+    function download(){
+      const blob = new Blob([$('#output').textContent], { type:'text/plain;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = '漫剧关键帧_prompt.txt';
+      a.click();
+      URL.revokeObjectURL(url);
+      toast('已下载 TXT');
+    }
+
+    function save(){
+      const state = { fields:{}, rules:$$('.rule').map((item) => item.checked) };
+      fields.forEach((id) => state.fields[id] = $('#'+id).value);
+      localStorage.setItem('comicFramePromptStateOnline', JSON.stringify(state));
+    }
+
+    function load(){
+      fields.forEach((id) => defaults[id] = $('#'+id).value);
+      try{
+        const state = JSON.parse(localStorage.getItem('comicFramePromptStateOnline') || '{}');
+        Object.entries(state.fields || {}).forEach(([id, val]) => {
+          if($('#'+id)) $('#'+id).value = val;
+        });
+        if(Array.isArray(state.rules)){
+          $$('.rule').forEach((item, index) => {
+            if(typeof state.rules[index] === 'boolean') item.checked = state.rules[index];
+          });
+        }
+      }catch(e){}
+    }
+
+    function resetFrame(){
+      ['story','characters','scene','action'].forEach((id) => $('#'+id).value = '');
+      generate();
+      toast('已清空本镜内容');
+    }
+
+    fields.forEach((id) => {
+      $('#'+id).addEventListener('input', generate);
+      $('#'+id).addEventListener('change', generate);
+    });
+    $$('.rule').forEach((item) => item.addEventListener('change', generate));
+    $('#copyPrompt').addEventListener('click', copy);
+    $('#downloadTxt').addEventListener('click', download);
+    $('#reset').addEventListener('click', resetFrame);
+
+    load();
+    generate();
+  </script>
+</body>
+</html>

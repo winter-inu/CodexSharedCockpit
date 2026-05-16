@@ -1,0 +1,42 @@
+# 漫剧关键帧 Prompt 生成器在线版
+
+这是一个纯前端静态网页，可以直接部署到 GitHub Pages、Netlify、Vercel 或任意静态网站服务。
+
+## 文件
+
+- `index.html`：网页入口，上传这个文件即可运行。
+
+## 隐私
+
+页面不会主动上传你的输入内容。Prompt 生成逻辑在浏览器本地完成，填写内容只会保存在当前浏览器的 `localStorage` 中。
+
+## 最简单的上线方式：Netlify
+
+1. 打开 https://app.netlify.com/drop
+2. 把 `online` 文件夹拖进去
+3. 等待上传完成
+4. Netlify 会给你一个可访问网址
+
+## GitHub Pages 方式
+
+1. 新建一个 GitHub 仓库
+2. 上传 `online/index.html`
+3. 打开仓库 Settings
+4. 进入 Pages
+5. Source 选择 `Deploy from a branch`
+6. Branch 选择 `main`，目录选择 `/root`
+7. 保存后等待生成网址
+
+如果你把 `online` 文件夹整体上传到仓库根目录，Pages 目录可以选择 `/docs` 前需要先把 `online` 改名为 `docs`，或者把 `index.html` 移到仓库根目录。
+
+## 使用建议
+
+每一镜只改这些字段：
+
+- 剧情背景
+- 角色锁定
+- 场景与光线
+- 动作与表情
+- 镜头与构图
+
+右侧生成结果可以直接复制给 ChatGPT，并让它生成图片。
