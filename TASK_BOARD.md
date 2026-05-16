@@ -15,9 +15,11 @@
 | P0 | TODO | Codex / User | 设计第 2-4 集角色登场 | 陆衡、林见舟、许明烬先后加入 |
 | P0 | TODO | Codex / User | 完善第 5 集《无人到站》 | 展示五人能力与分工 |
 | P0 | TODO | User / ChatGPT | 审阅第一集大纲 V1 | 确认标题、遗憾事件、澪星陪伴感、代价呈现和结尾钩子是否成立 |
+| P0 | TODO | User / Codex | 测试第一集首批关键帧图 | 优先测试 KF-02、KF-03、KF-06、KF-13、KF-16；可选补充 KF-14 |
+| P0 | TODO | User / ChatGPT / Codex | 审阅首批测试图并修订 Prompt | 根据测试图统一角色锁、画面氛围和禁止项 |
 | P1 | TODO | Codex | 更新陆衡新版角色海报资产 | 角色圣经已写入“包内侧照片 / 终端投影”设定 |
 | P1 | TODO | Codex | 统一“2.南枝”与林见舟命名 | 文件夹名与角色圣经不一致 |
-| P1 | DONE | Codex | 建立第一集关键帧 Prompt | 已新增 `EPISODE_01_KEYFRAMES.md`，共 16 个关键帧，待用户 / ChatGPT 审阅和挑选测试图 |
+| P1 | DONE | Codex | 建立第一集关键帧 Prompt | 已新增 `EPISODE_01_KEYFRAMES.md`，共 16 个关键帧 |
 | P1 | TODO | User / ChatGPT | 审阅第一集关键帧 Prompt | 优先确认角色锁、画面顺序、禁止项和测试图优先级 |
 
 ## 已完成
