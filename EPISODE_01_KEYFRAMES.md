@@ -682,228 +682,228 @@ Episode one ending keyframe, edge of the abandoned station before dawn, Lan Bing
 
 ### KF-03.5 储物柜自动打开
 
-#### 剧情功能
+### 剧情功能
 
 增加空间阻力，让观众感到车站在主动干扰路径。
 
-#### 画面描述
+### 画面描述
 
 失物招领室外的储物柜一格格自动弹开，柜门开合角度不一致。里面没有怪物，只有潮湿登记单、旧儿童物品、空白标签和被水泡皱的临时安置编号。
 
-#### 角色状态
+### 角色状态
 
 澜冰屿停在走廊中段，侧身听见柜子里的回声；澪星在远处用尾灯照路，保持警觉。
 
-#### 场景氛围
+### 场景氛围
 
 冷、潮湿、压抑。不是惊吓恐怖，而是空间本身在翻出被遗忘的物品。
 
-#### 视觉关键词
+### 视觉关键词
 
 储物柜、自动打开、潮湿登记单、旧儿童物品、失物招领室、冷雾、低饱和、澪星尾灯。
 
-#### AI 绘图 Prompt 中文版
+### AI 绘图 Prompt 中文版
 
 ```text
 近未来科幻情感悬疑动画剧集关键帧，废弃车站失物招领室外的长走廊，一排老旧储物柜一格格自动弹开，柜门角度错落，里面只有潮湿登记单、旧儿童物品、空白标签、被水泡皱的临时安置编号，地面潮湿反光，冷雾低饱和蓝灰色，澜冰屿站在走廊中段侧身倾听，米白旧长外套，远处澪星用青蓝尾灯照路，电影感，细腻动画剧集质感，安静压迫
 ```
 
-#### AI 绘图 Prompt 英文版
+### AI 绘图 Prompt 英文版
 
 ```text
 Near-future sci-fi emotional mystery animated series keyframe, a long corridor outside the lost-and-found room of an abandoned station, a row of old lockers opening one by one at uneven angles, containing only damp registration papers, old children's items, blank tags, water-wrinkled temporary shelter numbers, wet reflective floor, cold fog, desaturated blue-gray palette, Lan Bingyu standing mid-corridor and listening in profile, old off-white long coat, Lingstar in the distance lighting the path with a cyan tail beacon, cinematic delicate animated series look, quiet pressure
 ```
 
-#### 禁止项
+### 禁止项
 
 不要加入怪物；不要做成惊吓恐怖片；不要出现陆衡、林见舟、许明烬；不要出现无人列车、末班车、到站无人下车。
 
 ### KF-05.5 儿童水壶传出哭声
 
-#### 剧情功能
+### 剧情功能
 
 增加人物阻力，把小夏的害怕通过遗失物传出来。
 
-#### 画面描述
+### 画面描述
 
 一个旧儿童水壶从失物堆里滚出，停在澜冰屿靴边。壶身磨损，贴纸脱落，周围浮现微弱蓝灰色记忆波纹，像有哭声被困在里面。
 
-#### 角色状态
+### 角色状态
 
 澜冰屿低头看水壶，神情克制；澪星靠近一步，耳内信号灯微亮，保持警觉。
 
-#### 场景氛围
+### 场景氛围
 
 细小、脆弱、压抑。哭声不是恐怖来源，而是小夏被困住的害怕。
 
-#### 视觉关键词
+### 视觉关键词
 
 儿童水壶、澜冰屿靴边、记忆波纹、湿地反光、澪星警觉、冷雾。
 
-#### AI 绘图 Prompt 中文版
+### AI 绘图 Prompt 中文版
 
 ```text
 细腻动画剧集关键帧，废弃车站失物招领室附近，一个旧儿童水壶从失物堆里滚出，停在澜冰屿磨损短靴旁，壶身有磨损和脱落贴纸，周围浮现微弱蓝灰色记忆波纹，像压抑哭声被困在里面，澜冰屿低头凝视，米白旧长外套边缘被冷雾打湿，澪星靠近一步，耳内信号灯微亮，尾灯柔和青蓝，低饱和电影感，近未来科幻情感悬疑
 ```
 
-#### AI 绘图 Prompt 英文版
+### AI 绘图 Prompt 英文版
 
 ```text
 Delicate animated series keyframe, near the lost-and-found room of an abandoned station, an old children's water bottle rolls out from a pile of lost items and stops beside Lan Bingyu's worn boots, scratched surface and peeling sticker, faint blue-gray memory ripples around it as if a suppressed cry is trapped inside, Lan Bingyu looking down quietly, old off-white long coat damp with cold fog, Lingstar stepping closer with softly glowing inner signal lights and gentle cyan tail beacon, desaturated cinematic near-future sci-fi emotional mystery
 ```
 
-#### 禁止项
+### 禁止项
 
 不要血腥；不要夸张鬼魂；不要恐怖跳吓；不要高饱和儿童动画感。
 
 ### KF-07.5 澜冰屿被广播诱导走错路
 
-#### 剧情功能
+### 剧情功能
 
 增加系统阻力，表现广播会伪装成安全提示误导澜冰屿。
 
-#### 画面描述
+### 画面描述
 
 一条白色重复走廊出现在车站深处，所有指示牌都指向错误方向。广播喇叭亮起冷光，澜冰屿停在走廊入口，澪星把尾灯横在他脚边，阻止他继续往前。
 
-#### 角色状态
+### 角色状态
 
 澜冰屿短暂迟疑，像被声音牵引；澪星无声警告，尾灯压低。
 
-#### 场景氛围
+### 场景氛围
 
 安静、迷惑、危险。系统阻力不是攻击，而是温和地诱导人留在错误路径里。
 
-#### 视觉关键词
+### 视觉关键词
 
 错误指示牌、广播喇叭、白色重复走廊、澜冰屿迟疑、澪星尾灯、系统诱导。
 
-#### AI 绘图 Prompt 中文版
+### AI 绘图 Prompt 中文版
 
 ```text
 近未来科幻情感悬疑关键帧，废弃车站深处出现一条白色重复走廊，墙上多个旧指示牌全部指向错误方向，破损广播喇叭亮起冷淡白光，澜冰屿停在走廊入口，神情迟疑，像被声音牵引，米白旧长外套、浅灰高领、蓝色环形瞳孔微暗，澪星站在他脚边前方，把青蓝尾灯横向压低成一条光带阻止他前进，冷雾，低饱和，电影感，细腻动画剧集
 ```
 
-#### AI 绘图 Prompt 英文版
+### AI 绘图 Prompt 英文版
 
 ```text
 Near-future sci-fi emotional mystery keyframe, deep inside an abandoned station, a white repeating corridor appears, multiple old direction signs all pointing the wrong way, a broken speaker glowing with cold pale light, Lan Bingyu paused at the corridor entrance, subtly hesitant as if pulled by a voice, old off-white long coat, light gray turtleneck, dim blue ringed pupils, Lingstar standing near his feet and lowering its cyan tail beacon into a horizontal light bar to stop him from moving forward, cold fog, desaturated cinematic delicate animated series look
 ```
 
-#### 禁止项
+### 禁止项
 
 不要出现无人列车、末班车或到站无人下车；不要动作追逐；不要把澪星画成搞笑宠物。
 
 ### KF-10.5 澜冰屿被识别为未登记人员
 
-#### 剧情功能
+### 剧情功能
 
 呈现第一次失败，说明澜冰屿不能直接带走小夏。
 
-#### 画面描述
+### 画面描述
 
 闸机、隔离栏、电子屏同时转向澜冰屿。冷光扫过他的身体，屏幕显示“未登记人员”式识别信息。他脚下影子变浅，像快被纳入等待者身份。
 
-#### 角色状态
+### 角色状态
 
 澜冰屿承受系统识别，表情克制但身体略僵；小夏在远处被推回儿童等待区；澪星正准备冲向他的脚边。
 
-#### 场景氛围
+### 场景氛围
 
 紧张、压迫、第一次失败。不是动作对抗，而是身份被系统重新定义。
 
-#### 视觉关键词
+### 视觉关键词
 
 未登记人员、闸机转向、隔离栏、电子屏冷光、澜冰屿影子变浅、第一次失败。
 
-#### AI 绘图 Prompt 中文版
+### AI 绘图 Prompt 中文版
 
 ```text
 第一集第一次失败关键帧，废弃车站临时安置点与失物招领室重叠空间，闸机、隔离栏、电子屏同时转向澜冰屿，冷白系统光扫过他的身体，电子屏显示简短的未登记人员式识别信息，澜冰屿站在中央，米白旧长外套，蓝色环形瞳孔微亮，脚下影子变浅，远处小夏被推回儿童等待区，澪星正从画面边缘冲向他的脚边，低饱和冷雾，电影感，细腻动画剧集，克制压迫
 ```
 
-#### AI 绘图 Prompt 英文版
+### AI 绘图 Prompt 英文版
 
 ```text
 Episode one first-failure keyframe, overlapping space of temporary shelter and lost-and-found inside an abandoned station, gates, barrier rails, and electronic screens all turning toward Lan Bingyu, cold white system light scanning his body, screens showing a short unregistered-person style identification, Lan Bingyu standing in the center, old off-white long coat, faintly glowing blue ringed pupils, his shadow fading underfoot, Xia in the distance being pushed back toward the children's waiting area, Lingstar rushing in from the edge toward his feet, desaturated cold fog, cinematic delicate animated series, restrained pressure
 ```
 
-#### 禁止项
+### 禁止项
 
 不要动作打斗；不要超级英雄对抗；不要能量爆炸；不要出现其他主角。
 
 ### KF-11.5 澪星用尾灯照住他的脚边
 
-#### 剧情功能
+### 剧情功能
 
 强化澪星无台词陪伴，确认澜冰屿“还在”。
 
-#### 画面描述
+### 画面描述
 
 澪星压低尾灯，青蓝光照住澜冰屿变浅的影子。澜冰屿站在原地低头，脚边影子被光重新压回地面。
 
-#### 角色状态
+### 角色状态
 
 澪星安静但紧张；澜冰屿从被识别状态里拉回现实，低声确认自己还在。
 
-#### 场景氛围
+### 场景氛围
 
 无台词的救援，温柔但紧绷。
 
-#### 视觉关键词
+### 视觉关键词
 
 澪星尾灯、澜冰屿脚边、变浅影子、青蓝光带、我还在、无台词陪伴。
 
-#### AI 绘图 Prompt 中文版
+### AI 绘图 Prompt 中文版
 
 ```text
 无台词陪伴关键帧，澪星贴近澜冰屿磨损短靴旁，压低尾部悬浮青蓝引航灯，柔和光带照住澜冰屿正在变浅的影子，把影子重新压回潮湿地面，澪星雾海蓝和月灰蓝低饱和外壳、温暖象牙白腹部、深青绿色大眼睛安静紧张，澜冰屿低头站立，米白旧长外套边缘被冷雾打湿，废弃车站背景，电影感，细腻动画剧集，温柔但紧绷
 ```
 
-#### AI 绘图 Prompt 英文版
+### AI 绘图 Prompt 英文版
 
 ```text
 Wordless companionship keyframe, Lingstar close beside Lan Bingyu's worn boots, lowering its floating cyan tail beacon, a soft light band holding Lan Bingyu's fading shadow and pressing it back onto the wet floor, Lingstar with misty sea-blue and moon-gray desaturated shell, warm ivory belly, deep teal-green eyes quietly tense, Lan Bingyu standing with his head lowered, old off-white long coat damp with cold fog, abandoned station background, cinematic delicate animated series look, gentle but tense
 ```
 
-#### 禁止项
+### 禁止项
 
 不要过度卖萌；不要治愈系强光；不要夸张拥抱；不要把澪星外观改成其他造型。
 
 ### KF-14.5 小夏问：那你呢？有人会绕回来找你吗？
 
-#### 剧情功能
+### 剧情功能
 
 情绪反扣，把小夏的遗憾反照到澜冰屿身上。
 
-#### 画面描述
+### 画面描述
 
 小夏半透明身影平静下来，鞋带已经系好。她抬头看向澜冰屿，提出反问。澜冰屿沉默，澪星站在两人之间偏后，尾灯低亮。
 
-#### 角色状态
+### 角色状态
 
 小夏平静、真诚；澜冰屿被问住，安静沉默；澪星像听懂了这句话，轻轻看向澜冰屿。
 
-#### 场景氛围
+### 场景氛围
 
 温柔、克制、刺痛。不是大团圆，而是把问题留给澜冰屿。
 
-#### 视觉关键词
+### 视觉关键词
 
 小夏反问、澜冰屿沉默、半透明记忆回声、系好的鞋带、澪星低亮尾灯、情绪反扣。
 
-#### AI 绘图 Prompt 中文版
+### AI 绘图 Prompt 中文版
 
 ```text
 情绪反扣关键帧，废弃车站临时安置点记忆空间中，小女孩小夏的半透明身影已经平静下来，鞋带系好，抱着小布包抬头看向澜冰屿，像在轻声问他是否也有人会回来找他，澜冰屿站在她面前沉默，苍白肤色，米白旧长外套，蓝色环形瞳孔低亮，澪星站在两人之间偏后，尾灯低亮，冷雾低饱和，电影感，细腻动画剧集质感，温柔克制但刺痛
 ```
 
-#### AI 绘图 Prompt 英文版
+### AI 绘图 Prompt 英文版
 
 ```text
 Emotional echo-back keyframe, inside the remembered temporary shelter space of an abandoned station, semi-transparent Xia has become calm, her shoelaces tied, holding her small cloth bag and looking up at Lan Bingyu as if softly asking whether someone will come back for him too, Lan Bingyu standing silently before her, pale skin, old off-white long coat, dim blue ringed pupils, Lingstar standing slightly behind between them with a low cyan tail light, cold fog, desaturated cinematic delicate animated series look, gentle restrained but painful
 ```
 
-#### 禁止项
+### 禁止项
 
 不要大团圆；不要让母亲实体出现；不要让澜冰屿回答这个问题；不要出现陆衡、林见舟、许明烬。
