@@ -1,5 +1,13 @@
 # CHANGELOG.md
 
+## 2026-05-17 B 类动效方案状态收口
+
+### Changed
+- 审阅并小修 `EPISODE_01_B_SHOT_MOTION_PLAN.md`。
+- 明确 B 类镜头以动效、裁切、光效、雾和声音为主，不全部重生成主图。
+- 明确优先局部补图为 S09、S31。
+- 当前第一集进入 `EPISODE_01_VIDEO_TEST_PLAN.md` 建立阶段。
+
 ## 2026-05-17 视频化测试方案建立阶段同步
 
 ### Changed
