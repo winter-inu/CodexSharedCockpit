@@ -23,6 +23,9 @@
 | P0 | DONE | Codex / ChatGPT | 根据分镜脚本修订关键帧生成顺序 | 已新增 `EPISODE_01_PRODUCTION_SHOTLIST.md`，拆分 A/B/C 类镜头和第一批测试图 |
 | P0 | TODO | User / ChatGPT / Codex | 审阅第一集正式图像测试制作清单 | 确认 A/B/C 分类、第一批测试图和 S13 制作策略 |
 | P0 | TODO | User / Codex | 进入第一集正式图像测试 | 第一批测试图：S02、S03、S11、S14、S18、S20、S29、S38 |
+| P0 | DONE | Codex | 建立第一批测试图审阅表 | 已新增 `EPISODE_01_TEST_REVIEW.md`，覆盖 S02、S03、S11、S14、S18、S20、S29、S38 |
+| P0 | DONE | Codex | 同步第一批测试图文件 | 已复制 8 张测试图到 `assets/episode01/test-frames/` |
+| P0 | TODO | User / ChatGPT / Codex | 填写第一批测试图审阅表 | 根据测试图记录通过情况、问题、Prompt 修正和后期动效判断 |
 | P1 | TODO | Codex | 更新陆衡新版角色海报资产 | 角色圣经已写入“包内侧照片 / 终端投影”设定 |
 | P1 | TODO | Codex | 统一“2.南枝”与林见舟命名 | 文件夹名与角色圣经不一致 |
 | P1 | DONE | Codex / ChatGPT | 根据第一集新版结构整理分镜脚本 | 已新增 `EPISODE_01_STORYBOARD.md`，按 9 个时间段拆为 38 个镜头 |
@@ -46,6 +49,8 @@
 | 2026-05-17 | Codex | 补齐 15 分钟版补充关键帧 Prompt 格式 | 仅格式扩写，不改第一集剧情设定 |
 | 2026-05-17 | Codex | 整理第一集 15 分钟版分镜脚本 | 新增 `EPISODE_01_STORYBOARD.md`，按 9 个时间段拆为 38 个镜头 |
 | 2026-05-17 | Codex | 整理第一集正式图像测试制作清单 | 新增 `EPISODE_01_PRODUCTION_SHOTLIST.md`，将 38 个分镜拆为 A/B/C 类 |
+| 2026-05-17 | Codex | 建立第一批测试图审阅表 | 新增 `EPISODE_01_TEST_REVIEW.md`，用于审阅 S02、S03、S11、S14、S18、S20、S29、S38 |
+| 2026-05-17 | Codex | 同步第一批测试图文件 | 新增 `assets/episode01/test-frames/`，保存 8 张第一批测试图 |
 
 ## 本轮状态核对
 
