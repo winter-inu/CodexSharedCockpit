@@ -1,5 +1,15 @@
 # CHANGELOG.md
 
+## 2026-05-17 B 类镜头动效方案审阅
+
+### Changed
+
+- 审阅并小修 `EPISODE_01_B_SHOT_MOTION_PLAN.md`。
+- 明确 B 类镜头以动效、裁切、光效、雾和声音为主，不全部重生成主图。
+- 明确优先局部补图为 S09、S31。
+- 明确可选局部补图为 S12、S21、S36。
+- 当前第一集进入 `EPISODE_01_VIDEO_TEST_PLAN.md` 建立阶段。
+
 ## 2026-05-17 B 类动效方案状态收口
 
 ### Changed
