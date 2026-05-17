@@ -1,5 +1,16 @@
 # CHANGELOG.md
 
+## 2026-05-17 S35 空白坐标布条新版通过
+
+### Added
+- 新增 S35 空白坐标布条重生成版：`assets/episode01/test-frames-main-batch-02-revised/S35_KF15_blank_coordinate_cloth_test02.png`。
+- 新增 `EPISODE_01_FINAL_KEYFRAMES.md`，汇总第一集 16 张 A 类主关键帧最终可用清单。
+
+### Changed
+- 更新 `EPISODE_01_TEST_REVIEW_BATCH_02.md`，记录 S35 新版通过，正式制作使用空白布条重生成版。
+- 更新 `TASK_BOARD.md` 和 `SYNC_PACKET.md`，同步第一集 16 张 A 类主关键帧已全部收口。
+- 第一集进入后期文字 / 动效规划阶段。
+
 ## 2026-05-17 第二批主关键帧审阅
 
 ### Changed
