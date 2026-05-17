@@ -111,10 +111,10 @@
 - B 类镜头：S19、S21、S22、S24。
 - 后期文字重点：S18 “未登记人员 / 等待确认”。
 - 暂不补图，先验证现有图像能否通过动效和声音成立。
-- 下一步：审阅第一集视频化测试方案。
+- 下一步：审阅 `EPISODE_01_VIDEO_TEST_PLAN.md`。
 
 ## 当前任务
-1. 审阅第一集视频化测试方案。
+1. 审阅 `EPISODE_01_VIDEO_TEST_PLAN.md`。
 
 ## 开放问题
 - 陆衡妹妹姓名、性格和失踪当天细节。
@@ -124,4 +124,4 @@
 - 澪星愿望舱里那枚无法归还的碎片具体归属。
 
 ## Codex 下一步
-进入第一集视频化测试方案审阅阶段：第一集 16 张 A 类主关键帧已全部收口，`EPISODE_01_POST_TEXT_LIST.md` 已审阅通过，`EPISODE_01_B_SHOT_MOTION_PLAN.md` 已审阅通过并小修，`EPISODE_01_VIDEO_TEST_PLAN.md` 已建立。下一步审阅视频化测试方案。
+进入第一集视频化测试方案审阅阶段：第一集 16 张 A 类主关键帧已全部收口，`EPISODE_01_POST_TEXT_LIST.md` 已审阅通过，`EPISODE_01_B_SHOT_MOTION_PLAN.md` 已审阅通过并小修，`EPISODE_01_VIDEO_TEST_PLAN.md` 已建立。下一步：审阅 `EPISODE_01_VIDEO_TEST_PLAN.md`。
