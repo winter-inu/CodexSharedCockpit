@@ -1,5 +1,14 @@
 # CHANGELOG.md
 
+## 2026-05-17 第一集视频化测试准备状态同步
+
+### Changed
+- 记录 `EPISODE_01_POST_TEXT_LIST.md` 已新增。
+- 记录 `EPISODE_01_B_SHOT_MOTION_PLAN.md` 已新增。
+- 同步第一集 16 张 A 类主关键帧已收口。
+- 将第一集当前阶段推进为视频化测试准备阶段。
+- 清理 `TASK_BOARD.md` 与 `SYNC_PACKET.md` 的过时状态，当前下一步改为审阅后期文字清单、审阅 B 类动效方案，并建立第一集视频化测试方案。
+
 ## 2026-05-17 第一集主关键帧阶段收口清理
 
 ### Added
