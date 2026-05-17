@@ -1,5 +1,18 @@
 # CHANGELOG.md
 
+## 2026-05-17 S18 / S38 无字版通过
+
+### Added
+- 新增 S18 无字重生成版：`assets/episode01/test-frames-revised/S18_KF10_5_unregistered_no_text_test02.png`。
+- 新增 S38 无字重生成版：`assets/episode01/test-frames-revised/S38_KF16_b07_hook_no_text_test02.png`。
+
+### Changed
+- 更新 `EPISODE_01_TEST_REVIEW.md`，记录 S18、S38 原测试图作为参考保留，无字版通过。
+- 记录正式制作使用 S18 无字版，后期添加“未登记人员 / 等待确认”等系统文字。
+- 记录正式制作使用 S38 无字版，后期添加“B-07 锚点状态：存在痕迹下降”。
+- 记录第一批测试图审阅完成：S02、S03、S11、S14、S20、S29 原测试图通过，S18、S38 无字重生成版通过。
+- 更新 `TASK_BOARD.md` 和 `SYNC_PACKET.md`，同步第一批 8 张测试图进入后期动效 / 视频化准备阶段。
+
 ## 2026-05-17 第一批测试图正式审阅
 
 ### Changed
