@@ -34,7 +34,7 @@
 | P0 | DONE | Codex / ChatGPT | 重生成 S35 空白坐标布条版本 | 新版已同步到 `assets/episode01/test-frames-main-batch-02-revised/`，审阅通过 |
 | P0 | DONE | Codex / ChatGPT | 汇总第一集 16 张主关键帧最终可用清单 | 已新增 `EPISODE_01_FINAL_KEYFRAMES.md`，16 张 A 类主关键帧全部收口 |
 | P0 | DONE | Codex / ChatGPT | 建立第一集 B 类镜头动效方案 | 已新增 `EPISODE_01_B_SHOT_MOTION_PLAN.md` |
-| P0 | TODO | User / ChatGPT / Codex | 审阅第一集后期文字添加清单 | 审阅 `EPISODE_01_POST_TEXT_LIST.md`，确认系统文字、门牌、广播屏和登记屏添加方式 |
+| P0 | DONE | User / ChatGPT / Codex | 审阅第一集后期文字添加清单 | 已小修通过：只保留必要系统文字，S23 / S25 不建议使用文字 |
 | P0 | TODO | User / ChatGPT / Codex | 审阅第一集 B 类镜头动效方案 | 审阅 `EPISODE_01_B_SHOT_MOTION_PLAN.md`，确认 B 类镜头动效、声音和补图需求 |
 | P0 | TODO | Codex / ChatGPT | 建立第一集视频化测试方案 | 基于 A 类最终关键帧、后期文字清单和 B 类动效方案整理视频化测试步骤 |
 | P1 | TODO | Codex | 更新陆衡新版角色海报资产 | 角色圣经已写入“包内侧照片 / 终端投影”设定 |
@@ -45,7 +45,6 @@
 
 ## 当前 P0 TODO
 
-- 审阅第一集后期文字添加清单
 - 审阅第一集 B 类镜头动效方案
 - 建立第一集视频化测试方案
 
