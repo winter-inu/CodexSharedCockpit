@@ -37,6 +37,7 @@
 | P0 | DONE | User / ChatGPT / Codex | 审阅第一集后期文字添加清单 | 已小修通过：只保留必要系统文字，S23 / S25 不建议使用文字 |
 | P0 | DONE | User / ChatGPT / Codex | 审阅第一集 B 类镜头动效方案 | 已小修通过：B 类镜头以动效、裁切和声音为主，优先局部补图 S09、S31 |
 | P0 | DONE | Codex / ChatGPT | 建立第一集视频化测试方案 | 已新增 `EPISODE_01_VIDEO_TEST_PLAN.md`，先做 60-90 秒测试段 |
+| P0 | DONE | User / ChatGPT / Codex | 审阅第一集视频化测试方案 | 已小修为可直接执行的 60-90 秒样片剪辑单 |
 | P1 | TODO | Codex | 更新陆衡新版角色海报资产 | 角色圣经已写入“包内侧照片 / 终端投影”设定 |
 | P1 | TODO | Codex | 统一“2.南枝”与林见舟命名 | 文件夹名与角色圣经不一致 |
 | P1 | DONE | Codex / ChatGPT | 根据第一集新版结构整理分镜脚本 | 已新增 `EPISODE_01_STORYBOARD.md`，按 9 个时间段拆为 38 个镜头 |
@@ -45,7 +46,8 @@
 
 ## 当前 P0 TODO
 
-- 审阅第一集视频化测试方案
+- 制作第一集 60-90 秒视频化测试样片
+- 审阅第一集 60-90 秒视频化测试样片
 
 ## 当前 P1 TODO
 
