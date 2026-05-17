@@ -26,7 +26,8 @@
 | P0 | DONE | Codex | 建立第一批测试图审阅表 | 已新增 `EPISODE_01_TEST_REVIEW.md`，覆盖 S02、S03、S11、S14、S18、S20、S29、S38 |
 | P0 | DONE | Codex | 同步第一批测试图文件 | 已复制 8 张测试图到 `assets/episode01/test-frames/` |
 | P0 | DONE | Codex / ChatGPT | 归档澪星尾灯与视觉方向设定 | 用户确认澪星当前温柔陪伴方向可保留，尾灯规则已补充 |
-| P0 | TODO | User / ChatGPT / Codex | 填写第一批测试图审阅表 | 根据测试图记录通过情况、问题、Prompt 修正和后期动效判断 |
+| P0 | DONE | User / ChatGPT / Codex | 填写第一批测试图审阅表 | S02、S03、S11、S14、S20、S29 通过；S18、S38 需重生成无字版本 |
+| P0 | TODO | Codex / ChatGPT | 重生成 S18、S38 无字版本 | 系统文字和 B-07 屏幕文字后期添加，不由 AI 直接生成 |
 | P1 | TODO | Codex | 更新陆衡新版角色海报资产 | 角色圣经已写入“包内侧照片 / 终端投影”设定 |
 | P1 | TODO | Codex | 统一“2.南枝”与林见舟命名 | 文件夹名与角色圣经不一致 |
 | P1 | DONE | Codex / ChatGPT | 根据第一集新版结构整理分镜脚本 | 已新增 `EPISODE_01_STORYBOARD.md`，按 9 个时间段拆为 38 个镜头 |
@@ -53,6 +54,7 @@
 | 2026-05-17 | Codex | 建立第一批测试图审阅表 | 新增 `EPISODE_01_TEST_REVIEW.md`，用于审阅 S02、S03、S11、S14、S18、S20、S29、S38 |
 | 2026-05-17 | Codex | 同步第一批测试图文件 | 新增 `assets/episode01/test-frames/`，保存 8 张第一批测试图 |
 | 2026-05-17 | Codex | 归档澪星尾灯与视觉方向设定 | 更新中文角色圣经、Prompt 规则、审阅表和同步包 |
+| 2026-05-17 | User / ChatGPT / Codex | 填写第一批测试图审阅表 | S02、S03、S11、S14、S20、S29 通过；S18、S38 需重生成无字版本 |
 
 ## 本轮状态核对
 

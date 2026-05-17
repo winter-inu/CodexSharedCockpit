@@ -1,4 +1,4 @@
-# EPISODE_01_TEST_REVIEW.md
+﻿# EPISODE_01_TEST_REVIEW.md
 
 ## 文件用途
 
@@ -14,14 +14,14 @@ S02、S03、S11、S14、S18、S20、S29、S38
 
 | 镜头编号 | 仓库路径 |
 | --- | --- |
-| S02 | `assets/episode01/test-frames/S02_KF02_lingxing_shoe_test01.png.png` |
-| S03 | `assets/episode01/test-frames/S03_KF03_lanbingyu_appear_test01.png.png` |
-| S11 | `assets/episode01/test-frames/S11_KF05_lostfound_door_test01.png.png` |
-| S14 | `assets/episode01/test-frames/S14_KF09_xia_waiting_test01.png.png` |
-| S18 | `assets/episode01/test-frames/S18_KF10_5_unregistered_test01.png.png` |
-| S20 | `assets/episode01/test-frames/S20_KF11_5_lingxing_shadow_test01.png.png` |
-| S29 | `assets/episode01/test-frames/S29_KF14_return_words_test01.png.png` |
-| S38 | `assets/episode01/test-frames/S38_KF16_b07_hook_test01.png.png` |
+| S02 | `assets/episode01/test-frames/S02_KF02_lingxing_shoe_test01.png` |
+| S03 | `assets/episode01/test-frames/S03_KF03_lanbingyu_appear_test01.png` |
+| S11 | `assets/episode01/test-frames/S11_KF05_lostfound_door_test01.png` |
+| S14 | `assets/episode01/test-frames/S14_KF09_xia_waiting_test01.png` |
+| S18 | `assets/episode01/test-frames/S18_KF10_5_unregistered_test01.png` |
+| S20 | `assets/episode01/test-frames/S20_KF11_5_lingxing_shadow_test01.png` |
+| S29 | `assets/episode01/test-frames/S29_KF14_return_words_test01.png` |
+| S38 | `assets/episode01/test-frames/S38_KF16_b07_hook_test01.png` |
 
 ## 统一修正原则
 
@@ -41,104 +41,104 @@ S02、S03、S11、S14、S18、S20、S29、S38
 | 审阅项 | 记录 |
 | --- | --- |
 | 镜头编号 | S02 |
-| 测试图路径 | `assets/episode01/test-frames/S02_KF02_lingxing_shoe_test01.png.png` |
-| 是否通过 | 待审阅 |
-| 画面优点 | 待记录 |
-| 主要问题 | 待记录 |
-| 需要修正的 Prompt | 待记录 |
-| 是否需要重生成 | 待判断 |
-| 是否可进入后期动效 | 待判断 |
+| 测试图路径 | `assets/episode01/test-frames/S02_KF02_lingxing_shoe_test01.png` |
+| 是否通过 | 通过 |
+| 画面优点 | 澪星温柔、陪伴、可亲近的方向成立，可作为当前澪星视觉方向参考；尾灯照见儿童鞋的叙事功能清楚，低饱和冷雾和湿地反光氛围有效。 |
+| 主要问题 | 暂无核心问题；后续只需继续避免红项圈、铃铛、腹部圆口袋和哆啦A梦式视觉误读。 |
+| 需要修正的 Prompt | 保留当前澪星方向；强调“温柔陪伴型引航生命、青蓝尾部悬浮引航灯、低饱和冷雾、儿童鞋湿冷质感”，不要加入可读文字。 |
+| 是否需要重生成 | 否 |
+| 是否可进入后期动效 | 是，可用于尾灯轻微呼吸光、雾气流动、鞋面水光闪烁。 |
 
 ## S03 澜冰屿从雾中出现
 
 | 审阅项 | 记录 |
 | --- | --- |
 | 镜头编号 | S03 |
-| 测试图路径 | `assets/episode01/test-frames/S03_KF03_lanbingyu_appear_test01.png.png` |
-| 是否通过 | 待审阅 |
-| 画面优点 | 待记录 |
-| 主要问题 | 待记录 |
-| 需要修正的 Prompt | 待记录 |
-| 是否需要重生成 | 待判断 |
-| 是否可进入后期动效 | 待判断 |
+| 测试图路径 | `assets/episode01/test-frames/S03_KF03_lanbingyu_appear_test01.png` |
+| 是否通过 | 通过 |
+| 画面优点 | 澜冰屿从雾中出现的主角入场感成立，废弃车站冷雾氛围稳定，整体接近近未来情感悬疑方向。 |
+| 主要问题 | 后续正式图仍需持续检查澜冰屿是否贴近角色海报：白色破旧长外套、苍白、蓝色环形瞳孔、外套内侧坐标布条。 |
+| 需要修正的 Prompt | 保留当前构图和冷雾气质；进一步锁定澜冰屿角色海报特征，避免外套过新、眼睛普通化或坐标布条缺失。 |
+| 是否需要重生成 | 否 |
+| 是否可进入后期动效 | 是，可用于雾中缓慢推进、外套边缘雨雾、尾灯微光反射。 |
 
 ## S11 门牌闪烁与小手影子
 
 | 审阅项 | 记录 |
 | --- | --- |
 | 镜头编号 | S11 |
-| 测试图路径 | `assets/episode01/test-frames/S11_KF05_lostfound_door_test01.png.png` |
-| 是否通过 | 待审阅 |
-| 画面优点 | 待记录 |
-| 主要问题 | 待记录 |
-| 需要修正的 Prompt | 待记录 |
-| 是否需要重生成 | 待判断 |
-| 是否可进入后期动效 | 待判断 |
+| 测试图路径 | `assets/episode01/test-frames/S11_KF05_lostfound_door_test01.png` |
+| 是否通过 | 通过 |
+| 画面优点 | 失物招领室 / 临时安置点入口的悬疑感成立，门缝与小手影子的遗憾循环入口感清楚。 |
+| 主要问题 | 如果画面中存在 AI 生成的可读文字，正式版建议去除或弱化，系统文字和门牌文字后期添加。 |
+| 需要修正的 Prompt | 正式版 Prompt 中加入“no readable text, blank signage, text added in post-production”；保留低饱和冷雾、门缝小手影子和湿冷反光。 |
+| 是否需要重生成 | 否；若文字干扰明显，可后期擦除或重出无字版本。 |
+| 是否可进入后期动效 | 是，可用于门牌闪烁、门缝阴影轻微移动、雾气流动。 |
 
 ## S14 小夏等待母亲
 
 | 审阅项 | 记录 |
 | --- | --- |
 | 镜头编号 | S14 |
-| 测试图路径 | `assets/episode01/test-frames/S14_KF09_xia_waiting_test01.png.png` |
-| 是否通过 | 待审阅 |
-| 画面优点 | 待记录 |
-| 主要问题 | 待记录 |
-| 需要修正的 Prompt | 待记录 |
-| 是否需要重生成 | 待判断 |
-| 是否可进入后期动效 | 待判断 |
+| 测试图路径 | `assets/episode01/test-frames/S14_KF09_xia_waiting_test01.png` |
+| 是否通过 | 通过 |
+| 画面优点 | 小夏等待母亲的情绪清楚，儿童等待区的孤独感和废弃车站氛围成立。 |
+| 主要问题 | 小夏的半透明记忆回声感可以后期加强，避免过于普通儿童写真感。 |
+| 需要修正的 Prompt | 后续补充“semi-transparent memory echo, faint blue-gray glow, not ordinary child portrait”；保持低饱和、冷雾、湿地反光。 |
+| 是否需要重生成 | 否 |
+| 是否可进入后期动效 | 是，可用于轻微半透明叠化、记忆噪点、广播光闪。 |
 
 ## S18 澜冰屿被系统识别
 
 | 审阅项 | 记录 |
 | --- | --- |
 | 镜头编号 | S18 |
-| 测试图路径 | `assets/episode01/test-frames/S18_KF10_5_unregistered_test01.png.png` |
-| 是否通过 | 待审阅 |
-| 画面优点 | 待记录 |
-| 主要问题 | 待记录 |
-| 需要修正的 Prompt | 待记录 |
-| 是否需要重生成 | 待判断 |
-| 是否可进入后期动效 | 待判断 |
+| 测试图路径 | `assets/episode01/test-frames/S18_KF10_5_unregistered_test01.png` |
+| 是否通过 | 不通过，需重生成无字版本 |
+| 画面优点 | 系统识别澜冰屿的压迫感方向成立，第一次失败的功能明确。 |
+| 主要问题 | 正式生成画面不应包含 AI 生成的可读系统文字；系统识别文字应后期添加。需继续检查澜冰屿是否贴近角色海报。 |
+| 需要修正的 Prompt | 重生成时加入“no readable text, blank screens, UI text added in post-production”；保留闸机、隔离栏、电子屏转向澜冰屿、冷白系统光和低饱和冷雾。 |
+| 是否需要重生成 | 是，重生成 S18 无字版本 |
+| 是否可进入后期动效 | 暂不进入；等无字版本通过后再做屏幕 UI、冷光扫描和系统提示动效。 |
 
 ## S20 澪星照住澜冰屿影子
 
 | 审阅项 | 记录 |
 | --- | --- |
 | 镜头编号 | S20 |
-| 测试图路径 | `assets/episode01/test-frames/S20_KF11_5_lingxing_shadow_test01.png.png` |
-| 是否通过 | 待审阅 |
-| 画面优点 | 待记录 |
-| 主要问题 | 待记录 |
-| 需要修正的 Prompt | 待记录 |
-| 是否需要重生成 | 待判断 |
-| 是否可进入后期动效 | 待判断 |
+| 测试图路径 | `assets/episode01/test-frames/S20_KF11_5_lingxing_shadow_test01.png` |
+| 是否通过 | 通过 |
+| 画面优点 | 澪星温柔陪伴方向通过，可作为澪星陪伴动作参考；尾灯照住澜冰屿影子的动作有效，情绪温度和功能性兼具。 |
+| 主要问题 | 不把“偏可爱”视为缺点；后续只需避免红项圈、铃铛、腹部圆口袋和哆啦A梦式视觉误读。 |
+| 需要修正的 Prompt | 保留“温柔陪伴型引航生命、尾部悬浮引航灯、青蓝光照住影子”；补充尾灯可见短蓝色能量牵引线，但不要像武器、激光炮或魔法鞭。 |
+| 是否需要重生成 | 否 |
+| 是否可进入后期动效 | 是，可用于尾灯光带、影子被压回地面、澜冰屿低声确认“我还在”。 |
 
 ## S29 澜冰屿把话还给小夏
 
 | 审阅项 | 记录 |
 | --- | --- |
 | 镜头编号 | S29 |
-| 测试图路径 | `assets/episode01/test-frames/S29_KF14_return_words_test01.png.png` |
-| 是否通过 | 待审阅 |
-| 画面优点 | 待记录 |
-| 主要问题 | 待记录 |
-| 需要修正的 Prompt | 待记录 |
-| 是否需要重生成 | 待判断 |
-| 是否可进入后期动效 | 待判断 |
+| 测试图路径 | `assets/episode01/test-frames/S29_KF14_return_words_test01.png` |
+| 是否通过 | 通过 |
+| 画面优点 | 澜冰屿把话还给小夏的情绪关系成立，画面适合作为高潮情绪帧。 |
+| 主要问题 | 小夏的半透明记忆回声感可后期加强；澜冰屿仍需持续贴近角色海报特征。 |
+| 需要修正的 Prompt | 保留克制情绪和冷雾氛围；补充“小夏 semi-transparent memory echo, faint blue-gray particles”；避免大团圆、普通儿童写真或高饱和童话感。 |
+| 是否需要重生成 | 否 |
+| 是否可进入后期动效 | 是，可用于记忆波纹接回、轻微蓝灰粒子、小夏透明度变化。 |
 
 ## S38 B-07 屏幕钩子
 
 | 审阅项 | 记录 |
 | --- | --- |
 | 镜头编号 | S38 |
-| 测试图路径 | `assets/episode01/test-frames/S38_KF16_b07_hook_test01.png.png` |
-| 是否通过 | 待审阅 |
-| 画面优点 | 待记录 |
-| 主要问题 | 待记录 |
-| 需要修正的 Prompt | 待记录 |
-| 是否需要重生成 | 待判断 |
-| 是否可进入后期动效 | 待判断 |
+| 测试图路径 | `assets/episode01/test-frames/S38_KF16_b07_hook_test01.png` |
+| 是否通过 | 不通过，需重生成无字版本 |
+| 画面优点 | B-07 结尾钩子的方向成立，澪星看见屏幕而澜冰屿没看见的悬疑功能明确。 |
+| 主要问题 | 正式生成画面不应包含 AI 生成的可读系统文字；B-07 状态文字应后期添加，避免乱码、错字或不可控字体。 |
+| 需要修正的 Prompt | 重生成时加入“blank old screen, no readable text, screen text added in post-production”；保留废弃失物招领窗口、澪星回头、低饱和冷雾和结尾钩子氛围。 |
+| 是否需要重生成 | 是，重生成 S38 无字版本 |
+| 是否可进入后期动效 | 暂不进入；等无字版本通过后再添加 B-07 屏幕文字闪烁和澪星尾灯反应。 |
 
 ---
 
@@ -149,3 +149,4 @@ S02、S03、S11、S14、S18、S20、S29、S38
 3. 检查是否出现不应由模型生成的可读系统文字；若有，记录为后期添加方案。
 4. 对每张图判断：通过 / 需小修 Prompt / 需重生成。
 5. 只有通过或小修后通过的图，才进入后期动效、推拉、裁切和视频化流程。
+
