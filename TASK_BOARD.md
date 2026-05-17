@@ -29,11 +29,11 @@
 | P0 | DONE | User / ChatGPT / Codex | 填写第一批测试图审阅表 | S02、S03、S11、S14、S20、S29 通过；S18、S38 需重生成无字版本 |
 | P0 | DONE | Codex / ChatGPT | 重生成 S18、S38 无字版本 | 无字版已同步到 `assets/episode01/test-frames-revised/`，后期添加系统文字 |
 | P0 | DONE | Codex / ChatGPT | 整理第一集 A 类剩余主关键帧生成计划 | 第二批 8 张 A 类主关键帧已同步，待审阅 |
-| P0 | DONE | Codex / ChatGPT | 建立第一集后期文字添加清单 | 已新增 `EPISODE_01_POST_TEXT_LIST.md` |
+| P0 | DONE | Codex / ChatGPT | 建立第一集后期文字添加清单 | 已新增 `EPISODE_01_POST_TEXT_LIST.md`，当前结论已复核 |
 | P0 | DONE | User / ChatGPT / Codex | 审阅第二批 8 张主关键帧测试图 | 已复核写入审阅表：S01、S08、S10、S15、S25、S27、S33 通过；S35 需重生成 |
 | P0 | DONE | Codex / ChatGPT | 重生成 S35 空白坐标布条版本 | 新版已同步到 `assets/episode01/test-frames-main-batch-02-revised/`，审阅通过 |
 | P0 | DONE | Codex / ChatGPT | 汇总第一集 16 张主关键帧最终可用清单 | 已新增 `EPISODE_01_FINAL_KEYFRAMES.md`，16 张 A 类主关键帧全部收口 |
-| P0 | DONE | Codex / ChatGPT | 建立第一集 B 类镜头动效方案 | 已新增 `EPISODE_01_B_SHOT_MOTION_PLAN.md` |
+| P0 | DONE | Codex / ChatGPT | 建立第一集 B 类镜头动效方案 | 已新增 `EPISODE_01_B_SHOT_MOTION_PLAN.md`，当前状态已复核 |
 | P0 | DONE | User / ChatGPT / Codex | 审阅第一集后期文字添加清单 | 已小修通过：只保留必要系统文字，S23 / S25 不建议使用文字 |
 | P0 | TODO | User / ChatGPT / Codex | 审阅第一集 B 类镜头动效方案 | 审阅 `EPISODE_01_B_SHOT_MOTION_PLAN.md`，确认 B 类镜头动效、声音和补图需求 |
 | P0 | TODO | Codex / ChatGPT | 建立第一集视频化测试方案 | 基于 A 类最终关键帧、后期文字清单和 B 类动效方案整理视频化测试步骤 |

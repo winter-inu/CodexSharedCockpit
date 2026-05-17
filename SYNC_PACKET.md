@@ -4,7 +4,7 @@
 边界回声
 
 ## 当前阶段
-第一集《尾灯照见的鞋》16 张 A 类主关键帧已全部收口，`EPISODE_01_FINAL_KEYFRAMES.md` 已建立；`EPISODE_01_POST_TEXT_LIST.md` 和 `EPISODE_01_B_SHOT_MOTION_PLAN.md` 已建立，当前进入视频化测试准备阶段。
+第一集《尾灯照见的鞋》16 张 A 类主关键帧已全部收口，`EPISODE_01_FINAL_KEYFRAMES.md` 已建立；`EPISODE_01_POST_TEXT_LIST.md` 和 `EPISODE_01_B_SHOT_MOTION_PLAN.md` 已建立，当前进入视频化测试准备阶段。后期文字清单已审阅并小修，必须文字为 S11、S18、S38，可选文字为 S15、S30，S23/S25 不建议使用文字。下一步审阅 B 类镜头动效方案。
 
 ## 最新状态
 - 已确认《边界回声》为原创近未来科幻情感悬疑剧。
