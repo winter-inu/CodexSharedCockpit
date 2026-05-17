@@ -1,5 +1,12 @@
 # CHANGELOG.md
 
+## 2026-05-17 后期文字状态再同步
+
+### Changed
+- 修正 `EPISODE_01_POST_TEXT_LIST.md`：S23 / S25 改为不建议使用文字。
+- 同步 `TASK_BOARD.md`：后期文字清单和 B 类动效方案建立任务标为 DONE。
+- 当前下一步为审阅 B 类镜头动效方案。
+
 ## 2026-05-17 第一集后期文字清单小修
 
 ### Changed
