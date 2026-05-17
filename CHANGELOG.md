@@ -1,5 +1,15 @@
 # CHANGELOG.md
 
+## 2026-05-17 第二批 A 类主关键帧测试图
+
+### Added
+- 新增第二批 8 张主关键帧测试图到 `assets/episode01/test-frames-main-batch-02/`：S01、S08、S10、S15、S25、S27、S33、S35。
+- 新增 `EPISODE_01_TEST_REVIEW_BATCH_02.md`，建立第二批 8 张主关键帧测试图审阅表。
+
+### Changed
+- 更新 `EPISODE_01_PRODUCTION_SHOTLIST.md`，标注 S01、S08、S10、S15、S25、S27、S33、S35 已完成第一版测试图，待审阅。
+- 更新 `TASK_BOARD.md` 和 `SYNC_PACKET.md`，同步第一集 16 张 A 类主关键帧已全部生成第一版测试图，进入完整审阅阶段。
+
 ## 2026-05-17 S18 / S38 无字版通过
 
 ### Added
