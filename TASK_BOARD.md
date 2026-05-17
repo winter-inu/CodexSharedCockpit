@@ -14,15 +14,15 @@
 | P0 | DONE | Codex / User | 第一集 15 分钟版结构 | 已更新 `EPISODE_01_OUTLINE.md`，当前为约 15 分钟单集结构 |
 | P0 | TODO | Codex / User | 设计第 2-4 集角色登场 | 陆衡、林见舟、许明烬先后加入 |
 | P0 | TODO | Codex / User | 完善第 5 集《无人到站》 | 展示五人能力与分工 |
-| P0 | TODO | User / ChatGPT | 审阅第一集 15 分钟版剧情结构 | 确认第一次失败、真正源点、小夏反问和 B-07 结尾钩子 |
+| P0 | DONE | User / ChatGPT | 审阅第一集 15 分钟版剧情结构 | 已进入主关键帧收口阶段，早期结构审阅任务收口 |
 | P0 | DONE | Codex / User | 第一集 15 分钟版补充关键帧 Prompt | 已将 6 个补充镜头扩成与 KF-01～KF-16 相同字段格式，不改剧情 |
-| P0 | TODO | User / ChatGPT | 审阅第一集 15 分钟版补充关键帧 Prompt | 确认 KF-03.5、KF-05.5、KF-07.5、KF-10.5、KF-11.5、KF-14.5 |
-| P0 | TODO | User / Codex | 测试第一集首批关键帧图 | 优先测试 KF-02、KF-03、KF-06、KF-13、KF-16；可选补充 KF-14 |
-| P0 | TODO | User / ChatGPT / Codex | 审阅首批测试图并修订 Prompt | 根据测试图统一角色锁、画面氛围和禁止项 |
-| P0 | TODO | User / ChatGPT | 审阅第一集 15 分钟版分镜脚本 | 已新增 `EPISODE_01_STORYBOARD.md`，需确认镜头节奏和关键帧对应关系 |
+| P0 | DONE | User / ChatGPT | 审阅第一集 15 分钟版补充关键帧 Prompt | 补充关键帧已纳入测试图与最终关键帧流程 |
+| P0 | DONE | User / Codex | 测试第一集首批关键帧图 | 第一批 8 张已完成测试并通过，S18 / S38 使用无字重生成版 |
+| P0 | DONE | User / ChatGPT / Codex | 审阅首批测试图并修订 Prompt | 第一批测试图审阅完成，修订原则已写入审阅表 |
+| P0 | DONE | User / ChatGPT | 审阅第一集 15 分钟版分镜脚本 | 分镜脚本已通过并进入图像测试制作流程 |
 | P0 | DONE | Codex / ChatGPT | 根据分镜脚本修订关键帧生成顺序 | 已新增 `EPISODE_01_PRODUCTION_SHOTLIST.md`，拆分 A/B/C 类镜头和第一批测试图 |
-| P0 | TODO | User / ChatGPT / Codex | 审阅第一集正式图像测试制作清单 | 确认 A/B/C 分类、第一批测试图和 S13 制作策略 |
-| P0 | TODO | User / Codex | 进入第一集正式图像测试 | 第一批测试图：S02、S03、S11、S14、S18、S20、S29、S38 |
+| P0 | DONE | User / ChatGPT / Codex | 审阅第一集正式图像测试制作清单 | A/B/C 分类已用于 16 张 A 类主关键帧测试与收口 |
+| P0 | DONE | User / Codex | 进入第一集正式图像测试 | 第一集 16 张 A 类主关键帧已全部收口 |
 | P0 | DONE | Codex | 建立第一批测试图审阅表 | 已新增 `EPISODE_01_TEST_REVIEW.md`，覆盖 S02、S03、S11、S14、S18、S20、S29、S38 |
 | P0 | DONE | Codex | 同步第一批测试图文件 | 已复制 8 张测试图到 `assets/episode01/test-frames/` |
 | P0 | DONE | Codex / ChatGPT | 归档澪星尾灯与视觉方向设定 | 用户确认澪星当前温柔陪伴方向可保留，尾灯规则已补充 |
