@@ -4,9 +4,9 @@
 
 ### Changed
 
-- 补齐 `EPISODE_01_VIDEO_TEST_PLAN.md` 的第一轮测试段推荐剪辑顺序。
-- 补齐第一版输出文件建议：`EP01_TEST_01_UNREGISTERED_SEQUENCE_v001.mp4`。
-- 补齐第一版样片审阅表字段。
+- 补齐并审阅通过 `EPISODE_01_VIDEO_TEST_PLAN.md`。
+- 确认第一轮测试段推荐剪辑顺序、第一版输出文件建议和样片审阅表字段已完成。
+- 第一版样片建议输出为 `EP01_TEST_01_UNREGISTERED_SEQUENCE_v001.mp4`。
 - 当前第一集进入 60-90 秒视频化测试样片制作阶段。
 
 ## 2026-05-17 视频化测试方案待执行项补充
