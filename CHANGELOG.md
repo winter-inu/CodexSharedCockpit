@@ -2,13 +2,12 @@
 
 ## 2026-05-18 V3 情感刺点台词补入
 
-### Changed
-
 - 补入场 1 / 场 6 / 场 8 / 场 10 四处关键情感台词。
-- 小修 `EPISODE_01_OUTLINE_V3_EMOTIONAL.md`。
-- 小修 `EPISODE_01_EMOTIONAL_ACTION_TABLE.md`。
-- 暂缓旧版 S18-S24 样片流程。
-- 修复 `TASK_BOARD.md`、`SYNC_PACKET.md`、`CHANGELOG.md` 状态同步。
+- 小修 EPISODE_01_OUTLINE_V3_EMOTIONAL.md。
+- 小修 EPISODE_01_EMOTIONAL_ACTION_TABLE.md。
+- 修复 TASK_BOARD.md 当前 P0 状态。
+- 修复 SYNC_PACKET.md 当前阶段说明。
+- 确认旧版 S18-S24 样片流程暂缓，等待 V3 审阅通过后再重新规划关键帧和视频化样片。
 
 ## 2026-05-18 第一集情感强化版 V3 小修
 
