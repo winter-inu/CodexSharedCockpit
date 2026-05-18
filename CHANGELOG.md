@@ -1,5 +1,14 @@
 # CHANGELOG.md
 
+## 2026-05-18 V3 情感刺点台词补入
+
+### Changed
+
+- 补入场 1 / 场 6 / 场 8 / 场 10 四处关键情感台词。
+- 小修 `EPISODE_01_OUTLINE_V3_EMOTIONAL.md`。
+- 小修 `EPISODE_01_EMOTIONAL_ACTION_TABLE.md`。
+- 确认旧版 S18-S24 样片流程暂缓。
+
 ## 2026-05-18 第一集情感强化版 V3 小修
 
 ### Changed
