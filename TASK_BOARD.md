@@ -38,6 +38,11 @@
 | P0 | DONE | User / ChatGPT / Codex | 审阅第一集 B 类镜头动效方案 | 已小修通过：B 类镜头以动效、裁切和声音为主，优先局部补图 S09、S31 |
 | P0 | DONE | Codex / ChatGPT | 建立第一集视频化测试方案 | 已新增 `EPISODE_01_VIDEO_TEST_PLAN.md`，先做 60-90 秒测试段 |
 | P0 | DONE | User / ChatGPT / Codex | 审阅第一集视频化测试方案 | 已补齐并通过审阅：第一轮剪辑顺序、输出文件建议和样片审阅表字段可执行 |
+| P0 | TODO | User / ChatGPT / Codex | 审阅第一集情感强化版 V3 大纲 | 已新增 `EPISODE_01_OUTLINE_V3_EMOTIONAL.md`，待审阅 |
+| P0 | TODO | User / ChatGPT / Codex | 审阅第一集核心镜头动作表 | 已新增 `EPISODE_01_EMOTIONAL_ACTION_TABLE.md`，待审阅 |
+| P0 | TODO | Codex / ChatGPT | 基于 V3 重整第一集关键帧和视频化计划 | V3 审阅通过后再重整，不继续按旧版直接制作样片 |
+| P0 | TODO | Codex / User | 制作第一集 60-90 秒视频化测试样片 | 暂缓：移动到 V3 大纲和动作表审阅通过之后 |
+| P0 | TODO | User / ChatGPT / Codex | 审阅第一集 60-90 秒视频化测试样片 | 暂缓：等待 V3 重整后的新样片计划 |
 | P1 | TODO | Codex | 更新陆衡新版角色海报资产 | 角色圣经已写入“包内侧照片 / 终端投影”设定 |
 | P1 | TODO | Codex | 统一“2.南枝”与林见舟命名 | 文件夹名与角色圣经不一致 |
 | P1 | DONE | Codex / ChatGPT | 根据第一集新版结构整理分镜脚本 | 已新增 `EPISODE_01_STORYBOARD.md`，按 9 个时间段拆为 38 个镜头 |
@@ -46,8 +51,11 @@
 
 ## 当前 P0 TODO
 
-- 制作第一集 60-90 秒视频化测试样片
-- 审阅第一集 60-90 秒视频化测试样片
+- 审阅第一集情感强化版 V3 大纲
+- 审阅第一集核心镜头动作表
+- 基于 V3 重整第一集关键帧和视频化计划
+- 制作第一集 60-90 秒视频化测试样片（V3 审阅后）
+- 审阅第一集 60-90 秒视频化测试样片（V3 审阅后）
 
 ## 当前 P1 TODO
 

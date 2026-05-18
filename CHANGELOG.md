@@ -1,5 +1,18 @@
 # CHANGELOG.md
 
+## 2026-05-18 第一集情感强化版 V3 重构
+
+### Added
+
+- 新增 `EPISODE_01_OUTLINE_V3_EMOTIONAL.md`。
+- 新增 `EPISODE_01_EMOTIONAL_ACTION_TABLE.md`。
+
+### Changed
+
+- 第一集进入情感强化版 V3 重构。
+- 暂缓旧版 S18-S24 样片流程，等待 V3 大纲和核心镜头动作表审阅。
+- 旧版文件保留为历史参考，不删除旧版关键帧、分镜和视频化测试方案。
+
 ## 2026-05-17 视频化测试方案执行项补充
 
 ### Changed
