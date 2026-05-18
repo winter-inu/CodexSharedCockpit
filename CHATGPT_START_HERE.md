@@ -1,70 +1,31 @@
-# CHATGPT_START_HERE.md
+# CHATGPT_START_HERE
 
-## 给 ChatGPT 的读取顺序
+## 当前项目
 
-这是《边界回声》项目的共享工作仓库。请按以下顺序读取文件：
+《边界回声》
 
-1. `PROJECT_OVERVIEW.md`
-2. `SYNC_PACKET.md`
-3. `PROJECT_CONTEXT.md`
-4. `TASK_BOARD.md`
-5. `CODEX_TASKS.md`
-6. `CHATGPT_MEMORY_SYNC.md`
-7. `STORY_BIBLE.md`
-8. `CHARACTER_BIBLE.md`
-9. `WORLD_RULES.md`
-10. `EPISODE_PLAN.md`
-11. `DECISIONS.md`
-12. `CHARACTER_VISUAL_REFERENCES.md`
-13. `边界回声_项目总览.md`
-14. `边界回声_角色圣经.md`
-15. `边界回声_剧情设定补充.md`
-16. `PROMPT_LIBRARY.md`
-17. `CHANGELOG.md`
+## 当前阶段
 
-如果无法读取 GitHub 仓库并看到 404，优先判断为仓库 private 或没有 GitHub 连接器授权，不要假设文件不存在。
+仓库已完成清理，当前只保留最新有效设定、角色、第一集 V3 情感版剧情和制作流程。
 
-## 当前协作方式
+## 每次开始任务前必须优先读取
 
-- 用户负责最终审美、剧情方向和设定确认。
-- ChatGPT 负责规划、剧情拆解、设定补完、提示词设计、验收标准和审阅。
-- Codex 负责读取本地文件、整理 Markdown、实现工具页面、同步任务状态和变更记录。
-- 重要结论必须写回 Markdown 文件，不能只停留在聊天记录里。
+1. TASK_BOARD.md
+2. SYNC_PACKET.md
+3. docs/world/PROJECT_OVERVIEW.md
+4. docs/world/STORY_BIBLE.md
+5. docs/characters/CHARACTER_BIBLE.md
+6. docs/visual/boundary_echo_style_guide.md
+7. episodes/season_01/episode_01/EPISODE_01_OUTLINE_V3_EMOTIONAL.md
+8. episodes/season_01/episode_01/EPISODE_01_EMOTIONAL_ACTION_TABLE.md
+9. episodes/season_01/episode_01/EPISODE_01_V3_KEYFRAME_VIDEO_PLAN.md
 
-## 让 ChatGPT 接手时可以直接使用的提示词
+## 当前制作原则
 
-```text
-你现在接手《边界回声》项目。请先读取这个 GitHub 仓库里的 CHATGPT_START_HERE.md、SYNC_PACKET.md、PROJECT_CONTEXT.md、TASK_BOARD.md、DECISIONS.md、边界回声_项目总览.md、边界回声_角色圣经.md、边界回声_剧情设定补充.md。
-
-读取后请输出：
-1. 你理解的当前项目状态。
-2. 当前最重要的 3 个未完成任务。
-3. 你建议下一步让 Codex 执行的具体任务。
-4. 如果需要补充设定，请列出问题，但不要擅自改动已确认设定。
-```
-
-如果可以读取新增入口文件，也请优先读取：
-
-```text
-PROJECT_OVERVIEW.md
-STORY_BIBLE.md
-CHARACTER_BIBLE.md
-CHARACTER_VISUAL_REFERENCES.md
-WORLD_RULES.md
-EPISODE_PLAN.md
-CODEX_TASKS.md
-CHATGPT_MEMORY_SYNC.md
-```
-
-## 写回规则
-
-ChatGPT 的新结论如果要交给 Codex 执行，请让用户把结论复制进：
-
-- `SYNC_PACKET.md`：当前状态、最新决定、下一步任务。
-- `TASK_BOARD.md`：任务拆分和状态。
-- `CODEX_TASKS.md`：Codex 可执行任务池。
-- `CHATGPT_MEMORY_SYNC.md`：ChatGPT 与 Codex 的同步规则。
-- `DECISIONS.md`：已经确认的重要设定或工作方式。
-- 对应设定文件：角色、剧情、世界观、Prompt 等具体内容。
-
-Codex 完成改动后，应同步更新 `SYNC_PACKET.md`、`TASK_BOARD.md` 和 `CHANGELOG.md`。
+- 第一集以 V3 情感强化版为准。
+- 旧版 S18-S24 样片流程不再作为当前制作依据。
+- 旧版 S01-S38 关键帧流程不再作为当前制作依据。
+- 先做 K06 / K08 / K11 / K13 / K15 的 V3 情感样片。
+- 每次任务只改 1-3 个文件。
+- 不要恢复旧版文件。
+- 不要把每个关键帧都当成图生视频任务。

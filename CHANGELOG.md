@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 2026-05-18 仓库实际清理执行
+
+- 创建归档 tag：archive-before-cleanup-2026-05-18。
+- 按 CLEANUP_PLAN.md 执行仓库清理。
+- 移动最新世界观、角色、视觉、第一集 V3 文件到新目录结构。
+- 删除旧版第一集文件、旧版 S18-S24 样片流程文件、旧版测试审阅文件。
+- 删除旧版测试图资产目录。
+- 重写 CHATGPT_START_HERE.md、TASK_BOARD.md、SYNC_PACKET.md。
+- 当前制作基准切换为第一集 V3 情感强化版。
+
 ## 2026-05-18 仓库清理计划建立
 
 - 新增 CLEANUP_PLAN.md。
