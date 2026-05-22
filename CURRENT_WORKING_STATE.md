@@ -7,7 +7,7 @@
 ## 当前剧情版本
 
 第一集当前唯一剧情依据：
-EPISODE_01_OUTLINE_V4_EMOTIONAL.md
+episodes/season_01/episode_01/EPISODE_01_OUTLINE_V4_EMOTIONAL.md
 
 V3 只作为历史参考，不再作为当前制作依据。
 
