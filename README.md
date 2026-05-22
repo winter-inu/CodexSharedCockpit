@@ -1,26 +1,45 @@
 # 边界回声
 
-这是“边界回声”项目的共同档案夹，用来存放 ChatGPT、Codex 和用户之间围绕本项目产生的关键对话、设定、任务拆分、决策和同步记录。
+《边界回声》当前仓库只服务第一集 V4 制作线。
 
-## 使用方式
+## 当前唯一剧情依据
 
-1. 把 ChatGPT 里与“边界回声”相关的旧对话粘贴到 IMPORT_INBOX.md。
-2. 让我整理 IMPORT_INBOX.md，我会把内容归档到对应文件。
-3. Codex 每次执行任务前先读 PROJECT_CONTEXT.md、TASK_BOARD.md、DECISIONS.md、CONVERSATION_LOG.md 和 SYNC_PACKET.md。
-4. 每次完成任务后更新 TASK_BOARD.md、SYNC_PACKET.md 和 CHANGELOG.md。
+- episodes/season_01/episode_01/EPISODE_01_OUTLINE_V4_EMOTIONAL.md
 
-## 文件说明
+V3、K06-K15 旧样片流程、S18-S24 旧样片流程只作为历史参考，已移入归档或暂停使用。
 
-| 文件 | 作用 |
+## 当前制作线
+
+- OP01-OP06：事故前午后暖光母女回忆段。
+- OP07-OP12：静海断层事故发生过程，母女被迫分开。
+- OP13 以后：多年后废弃车站，澪星和澜冰屿进入，小夏回声出现。
+
+## 当前优先读取
+
+1. CURRENT_WORKING_STATE.md
+2. CHATGPT_START_HERE.md
+3. TASK_BOARD.md
+4. SYNC_PACKET.md
+5. episodes/season_01/episode_01/EPISODE_01_OUTLINE_V4_EMOTIONAL.md
+6. prompts/global_style_lock.md
+7. prompts/character_locks.md
+8. prompts/environment_locks.md
+9. prompts/kling_consistency_lock.md
+10. prompts/prompt_templates.md
+
+## 关键目录
+
+| 路径 | 用途 |
 | --- | --- |
-| PROJECT_CONTEXT.md | 项目总设定、目标、风格、世界观、产品方向 |
-| 边界回声_项目总览.md | 当前世界观、主线结构、视觉方向总览 |
-| 边界回声_角色圣经.md | 当前唯一角色设定记录 |
-| 边界回声_剧情设定补充.md | 名词解释、开局结构、角色细化、单元事件样例 |
-| CONVERSATION_LOG.md | 已整理的关键对话记录 |
-| IMPORT_INBOX.md | 待整理的原始粘贴内容 |
-| TASK_BOARD.md | 当前任务拆分和状态 |
-| DECISIONS.md | 已确认的重要决定 |
-| PROMPT_LIBRARY.md | 常用提示词、角色锁、风格锁 |
-| SYNC_PACKET.md | ChatGPT 和 Codex 的当前交接包 |
-| CHANGELOG.md | 每次整理或实现后的变更记录 |
+| episodes/season_01/episode_01/ | 第一集当前剧情文件 |
+| prompts/ | 当前角色锁、场景锁、全局风格锁和模板 |
+| docs/visual/boundary_echo_style_guide.md | 当前视觉风格参考 |
+| assets/characters/ | 当前角色海报资产 |
+| _archive/deprecated_2026-05-22/ | 已暂停或作废的旧版文件归档 |
+
+## 清理原则
+
+- 不永久删除旧文件，只归档。
+- 不再把 V3 当作当前剧情依据。
+- 不再使用 K06/K08/K11/K13/K15 作为当前主线样片流程。
+- 不在 OP07-OP12 中提前使用澪星、澜冰屿或多年后废弃车站。
