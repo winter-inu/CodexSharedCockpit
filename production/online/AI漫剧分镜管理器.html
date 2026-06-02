@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="《边界回声》第一集 OP01-OP30 AI 漫剧分镜管理器。" />
+  <title>AI 漫剧分镜管理器</title>
+  <style>
+    :root{
+      --bg:#f4f6f8;
+      --surface:#ffffff;
+      --surface-2:#eef2f5;
+      --text:#182026;
+      --muted:#68727d;
+      --line:#d8dee5;
+      --blue:#2563eb;
+      --green:#2f7d5b;
+      --amber:#a16207;
+      --red:#b42318;
+      --shadow:0 12px 28px rgba(22,32,38,.08);
+      --radius:8px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Arial,sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.45;
+    }
+    header{
+      padding:22px 28px;
+      background:#fff;
+      border-bottom:1px solid var(--line);
+      display:flex;
+      justify-content:space-between;
+      gap:18px;
+      align-items:flex-start;
+    }
+    h1{margin:0 0 6px;font-size:28px;letter-spacing:0}
+    header p{margin:0;color:var(--muted);max-width:820px}
+    main{
+      display:grid;
+      grid-template-columns:320px minmax(0,1fr);
+      gap:16px;
+      padding:16px;
+      max-width:1760px;
+      margin:0 auto;
+    }
+    aside,.detail,.frames{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    aside{padding:16px;position:sticky;top:16px;align-self:start}
+    .summary{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:8px;
+      margin:14px 0;
+    }
+    .metric{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:10px;
+      background:#fbfcfd;
+    }
+    .metric strong{display:block;font-size:22px}
+    .metric span{font-size:12px;color:var(--muted)}
+    label{display:block;font-weight:700;font-size:13px;margin:14px 0 6px}
+    input,select,textarea{
+      width:100%;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:10px 11px;
+      font:inherit;
+      background:#fff;
+      outline:none;
+    }
+    textarea{min-height:190px;resize:vertical}
+    input:focus,select:focus,textarea:focus{border-color:#93b4f7;box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+    .ops{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:8px;
+      margin-top:12px;
+    }
+    button{
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--text);
+      border-radius:var(--radius);
+      padding:9px 10px;
+      font:inherit;
+      cursor:pointer;
+    }
+    button.primary{background:#1f2937;color:#fff;border-color:#1f2937}
+    button:hover{filter:brightness(.98)}
+    .layout{
+      display:grid;
+      grid-template-rows:auto minmax(0,1fr);
+      gap:16px;
+      min-width:0;
+    }
+    .detail{
+      padding:16px;
+      position:sticky;
+      top:16px;
+      z-index:4;
+      max-height:calc(100vh - 32px);
+      overflow:auto;
+    }
+    .detail-grid{
+      display:grid;
+      grid-template-columns:minmax(560px,1.45fr) minmax(360px,1fr);
+      gap:16px;
+      align-items:start;
+    }
+    .preview{
+      position:relative;
+      background:#0d1117;
+      border-radius:var(--radius);
+      overflow:hidden;
+      aspect-ratio:16/9;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#c9d1d9;
+      border:1px solid #30363d;
+      min-height:360px;
+    }
+    .preview img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      cursor:zoom-in;
+    }
+    .zoom-button{
+      position:absolute;
+      right:10px;
+      bottom:10px;
+      background:rgba(15,23,42,.88);
+      color:#fff;
+      border-color:rgba(255,255,255,.18);
+      backdrop-filter:blur(8px);
+      padding:7px 10px;
+      font-size:13px;
+    }
+    .title-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+    h2{margin:0;font-size:22px}
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      border-radius:999px;
+      padding:4px 10px;
+      font-size:12px;
+      font-weight:700;
+      border:1px solid var(--line);
+      background:var(--surface-2);
+      color:var(--muted);
+    }
+    .done{background:#eaf6ef;color:var(--green);border-color:#b9dec9}
+    .review{background:#fff7e6;color:var(--amber);border-color:#e7c77a}
+    .todo{background:#eef4ff;color:var(--blue);border-color:#b9cffd}
+    .bad{background:#fff0ee;color:var(--red);border-color:#f3b5ae}
+    .meta{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:8px;
+      margin:12px 0;
+    }
+    .meta div{
+      background:#fbfcfd;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:8px 10px;
+      min-height:52px;
+    }
+    .meta span{display:block;color:var(--muted);font-size:12px}
+    .meta strong{font-size:14px}
+    .notes{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin-top:12px;
+    }
+    .note{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:10px;
+      background:#fbfcfd;
+    }
+    .note h3{margin:0 0 6px;font-size:14px}
+    .note p{margin:0;color:#303942}
+    .manage{
+      margin-top:12px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:12px;
+      background:#fbfcfd;
+    }
+    .manage textarea{min-height:86px}
+    .mini-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:10px;
+      align-items:center;
+    }
+    .mini-actions span{color:var(--muted);font-size:12px}
+    .path{
+      margin-top:10px;
+      font-family:Consolas,"Microsoft YaHei",monospace;
+      color:var(--muted);
+      font-size:12px;
+      word-break:break-all;
+    }
+    .frames{overflow:hidden}
+    table{width:100%;border-collapse:collapse;background:#fff}
+    th,td{
+      border-bottom:1px solid var(--line);
+      padding:10px 12px;
+      text-align:left;
+      vertical-align:top;
+      font-size:14px;
+    }
+    th{
+      position:sticky;
+      top:0;
+      background:#f8fafc;
+      z-index:1;
+      color:#374151;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:0;
+    }
+    tr{cursor:pointer}
+    tr:hover{background:#f8fafc}
+    tr.selected{background:#edf4ff}
+    .shot{font-weight:800;white-space:nowrap}
+    .compact{color:var(--muted);font-size:13px}
+    .empty{
+      padding:40px;
+      color:var(--muted);
+      text-align:center;
+    }
+    footer{
+      padding:0 16px 22px;
+      max-width:1500px;
+      margin:0 auto;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .lightbox{
+      position:fixed;
+      inset:0;
+      z-index:20;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+      background:rgba(8,12,18,.9);
+    }
+    .lightbox.open{display:flex}
+    .lightbox img{
+      max-width:96vw;
+      max-height:92vh;
+      object-fit:contain;
+      border-radius:var(--radius);
+      box-shadow:0 20px 70px rgba(0,0,0,.55);
+    }
+    .lightbox button{
+      position:absolute;
+      top:18px;
+      right:18px;
+      background:#fff;
+      color:#111827;
+      border:0;
+    }
+    @media(max-width:1050px){
+      header{display:block}
+      main{grid-template-columns:1fr}
+      aside{position:static}
+      .detail{position:static;max-height:none;overflow:visible}
+      .detail-grid,.notes{grid-template-columns:1fr}
+      .preview{min-height:auto}
+      .meta{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>AI 漫剧分镜管理器</h1>
+      <p>《边界回声》第一集 OP01-OP30 当前分镜库。前半段已整理，OP17-OP30 进入后半集调查、重逢与代价段制作。</p>
+    </div>
+    <span class="badge review">当前任务：制作 OP17-OP30</span>
+  </header>
+
+  <main>
+    <aside>
+      <label for="search">搜索</label>
+      <input id="search" placeholder="镜头号、动作、文件名" />
+
+      <label for="opFilter">段落</label>
+      <select id="opFilter"></select>
+
+      <label for="statusFilter">状态</label>
+      <select id="statusFilter">
+        <option value="all">全部状态</option>
+        <option value="已生成">已生成</option>
+        <option value="已生成待审">已生成待审</option>
+        <option value="待生成">待生成</option>
+        <option value="需重做">需重做</option>
+        <option value="废弃">废弃</option>
+      </select>
+
+      <div class="summary">
+        <div class="metric"><strong id="totalCount">0</strong><span>总镜头格</span></div>
+        <div class="metric"><strong id="doneCount">0</strong><span>已生成</span></div>
+        <div class="metric"><strong id="reviewCount">0</strong><span>待审</span></div>
+        <div class="metric"><strong id="todoCount">0</strong><span>待生成</span></div>
+      </div>
+
+      <div class="ops">
+        <button class="primary" id="copyPrompt">复制 Prompt</button>
+        <button id="copyPath">复制路径</button>
+        <button id="exportJson">导出 JSON</button>
+        <button id="exportMarkdown">导出 MD</button>
+      </div>
+
+      <label for="sourceBox">源文件</label>
+      <textarea id="sourceBox" readonly></textarea>
+    </aside>
+
+    <section class="layout">
+      <div class="detail">
+        <div class="detail-grid">
+          <div class="preview" id="preview"></div>
+          <div>
+            <div class="title-row">
+              <h2 id="detailTitle">选择一个镜头格</h2>
+              <span class="badge" id="detailStatus">未选择</span>
+            </div>
+            <div class="meta">
+              <div><span>段落</span><strong id="detailOp">-</strong></div>
+              <div><span>时间</span><strong id="detailTime">-</strong></div>
+              <div><span>目标文件</span><strong id="detailFile">-</strong></div>
+            </div>
+            <div class="notes">
+              <div class="note">
+                <h3>内容与动作</h3>
+                <p id="detailAction">-</p>
+              </div>
+              <div class="note">
+                <h3>机位与运动</h3>
+                <p id="detailCamera">-</p>
+              </div>
+              <div class="note">
+                <h3>台词 / 声音</h3>
+                <p id="detailAudio">-</p>
+              </div>
+              <div class="note">
+                <h3>关键帧要求</h3>
+                <p id="detailRequirement">-</p>
+              </div>
+            </div>
+            <div class="manage">
+              <label for="statusEdit">制作状态</label>
+              <select id="statusEdit">
+                <option value="已生成">已生成</option>
+                <option value="已生成待审">已生成待审</option>
+                <option value="待生成">待生成</option>
+                <option value="需重做">需重做</option>
+                <option value="废弃">废弃</option>
+              </select>
+              <label for="frameNote">制作备注</label>
+              <textarea id="frameNote" placeholder="记录生成轮次、审核问题、重生成要求或通过意见"></textarea>
+              <div class="mini-actions">
+                <button class="primary" id="saveFrame">保存备注</button>
+                <button id="resetFrame">恢复默认状态</button>
+                <span id="saveStatus">本地保存到当前浏览器</span>
+              </div>
+            </div>
+            <div class="path" id="detailPath"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="frames">
+        <table>
+          <thead>
+            <tr>
+              <th>镜头格</th>
+              <th>状态</th>
+              <th>内容与动作</th>
+              <th>关键帧文件</th>
+            </tr>
+          </thead>
+          <tbody id="frameRows"></tbody>
+        </table>
+        <div class="empty" id="emptyState" hidden>没有匹配的镜头格</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    数据源：第一集_OP01-OP16_主线分镜宫格表_V1.md；第一集_OP17-OP30_主线分镜宫格表_V1.md；第一集_OP17-OP30_可灵视频Prompt_主线版_V1.md。图片路径按本仓库相对路径展示。
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button id="closeLightbox">关闭</button>
+    <img id="lightboxImage" alt="关键帧大图" />
+  </div>
+
+  <script>
+    const base = '../../episodes/season_01/episode_01/';
+    const keyframeBase = base + 'keyframes/op01_op12_全宫格_v1/';
+    const sourceFiles = [
+      base + '第一集_OP01-OP16_主线分镜宫格表_V1.md',
+      base + '第一集_OP17-OP30_主线分镜宫格表_V1.md',
+      base + '第一集_OP17-OP30_可灵视频Prompt_主线版_V1.md',
+      base + '第一集_OP06-OP14_可灵视频Prompt_主线版_V1.md',
+      base + '第一集_OP03-OP16_视频台词时间槽参考_V1.md'
+    ];
+    const STORAGE_KEY = 'boundaryEchoStoryboardManager:v2';
+
+    const generated = [
+      ['OP01-1','OP01','0.0-2.0s','空间建立，午后车站大全景','超大全景，略高平视或轻微俯视','环境广播、脚步声、行李轮声、人群低语','已生成','镜头01-1_空间建立_午后车站大全景_v1.png'],
+      ['OP01-2','OP01','2.0-3.8s','母女进入叙事视线','大全景继续，空间感优先','广播延续，无角色台词','已生成','镜头01-2_母女进入叙事视线_v1.png'],
+      ['OP01-3','OP01','3.8-5.0s','切到人物段落落点','慢推趋于稳定，硬切 OP02','环境声连续，作为声音桥','已生成','镜头01-3_切到人物段落落点_v1.png'],
+      ['OP02-1','OP02','0.0-0.8s','正面行走首帧','正面中景，平视','环境声延续，无角色台词','已生成','镜头02-1_正面行走首帧_v1.png'],
+      ['OP02-2','OP02','0.8-1.5s','小夏步伐变慢','正面中景，轻微后退或固定','无台词','已生成','镜头02-2_小夏步伐变慢_v1.png'],
+      ['OP02-3','OP02','1.5-2.3s','小夏低头发现右脚鞋松','中景偏下，脚部可见','无台词','已生成','镜头02-3_小夏低头发现右脚鞋松_v1.png'],
+      ['OP02-4','OP02','2.3-3.0s','妈妈察觉停下','正面中景，固定','妈妈：“又松了？”后期口型同步','已生成','镜头02-4_妈妈察觉停下_v1.png'],
+      ['OP02-5','OP02','3.0-4.0s','小夏不好意思回应','中景略近，轻微推近小夏','小夏：“它自己松的。”后期口型同步','已生成','镜头02-5_小夏不好意思回应_v1.png'],
+      ['OP02-6','OP02','4.0-4.8s','妈妈轻轻笑','中景，妈妈表情清楚','妈妈：“真的？”后期口型同步','已生成','镜头02-6_妈妈轻轻笑_v1.png'],
+      ['OP02-7','OP02','4.8-5.4s','妈妈准备蹲下','中景转低，轻微下移','无新增台词','已生成','镜头02-7_妈妈准备蹲下_v1.png'],
+      ['OP02-8','OP02','5.4-6.0s','动作落点准备切 OP03','中景稳定，硬切 OP03','环境声持续','已生成','镜头02-8_动作落点准备切OP03_v1.png'],
+      ['OP02-9','OP02','可选 0.5s','右脚鞋魔术贴松开','低机位近景，无或轻微推近','魔术贴轻响、脚步停顿声','已生成','镜头02-9_右脚鞋魔术贴松开_v1.png'],
+      ['OP03-1','OP03','0.0-1.0s','蹲下整理建立','低机位中近景，轻微推近','衣料声、车站环境声','已生成','镜头03-1_蹲下整理建立_v1.png'],
+      ['OP03-2','OP03','1.0-2.2s','妈妈检查鞋','低机位中近景，妈妈侧脸可见','妈妈：“不是你刚刚踩水坑踩松的？”','已生成','镜头03-2_妈妈检查鞋_v1.png'],
+      ['OP03-3','OP03','2.2-3.2s','小夏小声回应','低机位中近景，轻微上移到小夏表情','小夏：“就踩了一下。”','已生成','镜头03-3_小夏小声回应_v1.png'],
+      ['OP03-4','OP03','3.2-4.4s','妈妈压紧魔术贴','手部近景或中近景','魔术贴轻响','已生成','镜头03-4_妈妈压紧魔术贴_v1.png'],
+      ['OP03-5','OP03','4.4-5.8s','妈妈温柔叮嘱','中近景，妈妈和小夏同框','妈妈叮嘱鞋要系好','已生成','镜头03-5_妈妈温柔叮嘱_v1.png'],
+      ['OP03-6','OP03','5.8-7.0s','小夏点头妈妈准备起身','低机位中近景，稳定','小夏短应声','已生成','镜头03-6_小夏点头妈妈准备起身_v1.png'],
+      ['OP04-1','OP04','0.0-1.0s','妈妈站起人群经过','中景平视，轻微横移','人群声稍近','已生成','镜头04-1_妈妈站起人群经过_v1.png'],
+      ['OP04-2','OP04','1.0-2.0s','小夏抓住妈妈袖子','中景偏近，轻微推近','小夏担心人多会看不到妈妈','已生成','镜头04-2_小夏抓住妈妈袖子_v1.png'],
+      ['OP04-3','OP04','2.0-3.0s','妈妈重新握住小夏','手部中近景，轻微下移','衣料摩擦、手掌握紧','已生成','镜头04-3_妈妈重新握住小夏_v1.png'],
+      ['OP04-4','OP04','3.0-4.0s','妈妈温柔回应','中近景固定','妈妈：“那你就抓紧妈妈。”','已生成','镜头04-4_妈妈温柔回应_v1.png'],
+      ['OP04-5','OP04','4.0-5.0s','小夏认真补充','中近景偏小夏','小夏：“那你也要抓紧我。”','已生成','镜头04-5_小夏认真补充_v1.png'],
+      ['OP04-6','OP04','5.0-6.0s','妈妈点头进入拉钩','中景稳定，硬切 OP05','轻呼吸','已生成','镜头04-6_妈妈点头进入拉钩_v1.png'],
+      ['OP05-1','OP05','0.0-1.0s','妈妈伸出小指','中近景，手部和脸同框','妈妈：“好，拉钩。”','已生成','镜头05-1_妈妈伸出小指_v1.png'],
+      ['OP05-2','OP05','1.0-2.0s','小夏伸出小指','中近景固定','环境声压低','已生成','镜头05-2_小夏伸出小指_v1.png'],
+      ['OP05-3','OP05','2.0-2.8s','两人拉钩手部近景','手部近景，轻微推近','环境声轻，衣料声','已生成','镜头05-3_两人拉钩手部近景_v1.png'],
+      ['OP05-4','OP05','2.8-5.0s','妈妈核心承诺','中近景，妈妈脸清楚','妈妈承诺会紧紧拉住小夏','已生成','镜头05-4_妈妈核心承诺_v1.png'],
+      ['OP05-5','OP05','5.0-6.0s','小夏确认规则','中近景偏小夏','小夏：“拉钩以后就不能反悔。”','已生成','镜头05-5_小夏确认规则_v1.png'],
+      ['OP05-6','OP05','6.0-6.8s','妈妈保证','中近景偏妈妈','妈妈：“不反悔。”','已生成','镜头05-6_妈妈保证_v1.png'],
+      ['OP05-7','OP05','6.8-7.4s','手回到掌心','手部中近景，轻微下移','无台词','已生成','镜头05-7_手回到掌心_v1.png'],
+      ['OP05-8','OP05','7.4-8.0s','妈妈握紧','手部近景稳定，切 OP06','环境声回升','已生成','镜头05-8_妈妈握紧_v1.png'],
+      ['OP05-9','OP05','可选 0.5s','备用情绪近景','小夏近景','无台词或轻呼吸','已生成','镜头05-9_备用情绪近景_v1.png'],
+      ['OP06-1','OP06','0.0-1.0s','握紧后继续走','中远景固定','车站环境声','已生成','镜头06-1_握紧后继续走_v1.png'],
+      ['OP06-2','OP06','1.0-2.0s','电子屏轻微闪烁','中远景，轻微推向屏幕','广播短暂失真','已生成','镜头06-2_电子屏轻微闪烁_v1.png'],
+      ['OP06-3','OP06','2.0-3.0s','少数乘客抬头','中远景固定','电流噪声一闪','已生成','镜头06-3_少数乘客抬头_v1.png'],
+      ['OP06-4','OP06','3.0-3.8s','小夏呼唤妈妈','中景偏母女，轻微推近','小夏：“妈妈？”','已生成','镜头06-4_小夏呼唤妈妈_v1.png'],
+      ['OP06-5','OP06','3.8-4.8s','妈妈拉近小夏','中景稳定','妈妈：“没事，抓紧我。”','已生成','镜头06-5_妈妈拉近小夏_v1.png'],
+      ['OP06-6','OP06','4.8-6.0s','看向电子屏','中远景稳定','轻微不安持续','已生成','镜头06-6_看向电子屏_v1.png'],
+      ['OP07-1','OP07','0.0-1.2s','屏幕故障增强','中远景，轻微推近','系统广播开始','已生成','镜头07-1_屏幕故障增强_v1.png'],
+      ['OP07-2','OP07','1.2-2.2s','警示灯亮起','中远景固定','系统广播继续','已生成','镜头07-2_警示灯亮起_v1.png'],
+      ['OP07-3','OP07','2.2-3.0s','人群反应','中远景，轻微横移','广播和人群低语','已生成','镜头07-3_人群反应_v1.png'],
+      ['OP07-4','OP07','3.0-4.0s','小夏问妈妈','中景偏母女，轻微推近','小夏：“妈妈，怎么了？”','已生成','镜头07-4_小夏问妈妈_v1.png'],
+      ['OP07-5','OP07','4.0-5.4s','妈妈拉近小夏','中景固定','妈妈：“跟着我，不要松手。”','已生成','镜头07-5_妈妈拉近小夏_v1.png'],
+      ['OP07-6','OP07','5.4-7.0s','警觉看向通道','中远景稳定','警报声持续','已生成','镜头07-6_警觉看向通道_v1.png'],
+      ['OP08-1','OP08','0.0-1.0s','远处巨响','中景或中远景，轻微震动','远处巨响','已生成','镜头08-1_远处巨响_v1.png'],
+      ['OP08-2','OP08','1.0-2.0s','人群喊叫反向','中景，缓慢横移','背景群声：“前面塌了！回去！”','已生成','镜头08-2_人群喊叫反向_v1.png'],
+      ['OP08-3','OP08','2.0-3.2s','妈妈护住小夏','中景偏近，轻微推近','急促呼吸','已生成','镜头08-3_妈妈护住小夏_v1.png'],
+      ['OP08-4','OP08','3.2-4.4s','妈妈撑住栏杆挡人流','中景稳定','妈妈：“别怕，抓紧我。”','已生成','镜头08-4_妈妈撑住栏杆挡人流_v1.png'],
+      ['OP08-5','OP08','4.4-5.3s','小夏贴紧妈妈，背景人群弃箱逃跑','中近景偏小夏，背景可见弃箱逃生','人群尖叫、奔跑声、行李箱倒地声','已生成待审','镜头08-5_小夏贴紧妈妈_弃行李逃跑_v2.png','OP08-5 起背景人群进入逃生状态，行李箱变成障碍物。'],
+      ['OP08-6','OP08','5.3-6.0s','人流继续挤压，弃箱成为通道障碍','中景轻微横移，硬切 OP09','拥挤声、奔跑声、行李箱被撞翻声','已生成待审','镜头08-6_人流继续挤压_弃箱逃生_v2.png','母女被推向闸机，地上必须有无人认领或倒下的行李箱。'],
+      ['OP09-1','OP09','0.0-0.8s','低机位弃箱人流压迫','低机位中近景，逃跑脚步方向混乱','人流声、奔跑声、箱子翻倒声','已生成待审','镜头09-1_低机位弃箱人流压迫_v2.png','逃跑人群腿部、倒地行李箱、闸机边缘共同形成压迫。'],
+      ['OP09-2','OP09','0.8-1.4s','右脚鞋被弃置行李箱卡住，换向确认右脚','小夏身体右侧低机位，母女运动方向反转','鞋底摩擦声、行李箱滑动/撞击声','已生成待审','镜头09-2_右脚鞋被弃箱卡住_换向_v4.png','换向后确认卡住的是小夏右脚鞋；左脚远离箱子且正常穿鞋。'],
+      ['OP09-3','OP09','1.4-2.0s','右脚鞋脱落，弃箱混乱持续，换向确认右脚','承接 OP09-2 换向角度','鞋滑落轻响、人群奔跑声','已生成待审','镜头09-3_右脚鞋脱落弃箱混乱_换向_v4.png','右脚白袜、掉落右鞋和行李箱在同侧；左脚仍穿鞋。'],
+      ['OP09-4','OP09','2.0-2.8s','小夏低头想捡','中近景低机位，跟随低头','无台词','已生成','镜头09-4_小夏低头想捡_v1.png'],
+      ['OP09-5','OP09','2.8-3.5s','妈妈立刻拉住她','中近景，轻微反向拉回','妈妈：“别捡！”','已生成','镜头09-5_妈妈立刻拉住她_v1.png'],
+      ['OP09-6','OP09','3.5-4.3s','小夏抬头看妈妈，弃箱逃散持续','中近景偏小夏','人群声压迫','已生成待审','镜头09-6_小夏抬头看妈妈_弃箱逃散_v2.png','OP09-6 起人群必须是事故后惊慌逃散，背景保留弃置行李障碍。'],
+      ['OP09-7','OP09','4.3-5.0s','妈妈没有松手，弃箱逃散持续','中近景，轻微推近','无新增台词','已生成待审','镜头09-7_妈妈没有松手_弃箱逃散_v2.png','妈妈不是主动松手，背景人流与弃箱制造分离压力。'],
+      ['OP09-8','OP09','5.0-5.5s','鞋留在边缘，弃箱逃散持续','低机位边缘构图，不追鞋','行李轮声掠过','已生成待审','镜头09-8_鞋留在边缘_弃箱逃散_v2.png','右脚鞋已脱落，行李箱从旅行道具变成通道障碍。'],
+      ['OP09-9','OP09','5.5-6.0s','进入隔离门前落点，右脚白袜清楚','中近景稳定或轻微横移','人流声持续','已生成待审','镜头09-9_进入隔离门前落点_右脚白袜_v3.png','承接 OP10，右脚没有穿鞋、左脚单鞋；母女被混乱人流推向隔离门分区线。'],
+      ['OP10-1','OP10','0.0-1.2s','地面与顶棚轨道出现冷白预警光，母女仍牵着手，被人流推到分区线旁。','中景偏低，母女手部关系清楚。','机械低频启动。','已生成','../op06_op14_main_v1/OP10_保护性松手隔离门升起_主控关键帧_v1.png','主控帧抓住保护性松手后的落点；视频要补牵手、门体升起、妈妈松开并把小夏挡向安全侧。']
+    ];
+
+    const planned = [
+      ['OP10-2','OP10','1.2-2.2s','高长隔离栏从两人之间急速升起，金属边缘逼近小夏手臂。','手部与门体近景，轻微上摇。','金属升起、电子锁定。','已生成','../op06_op14_main_v1/OP10_保护性松手隔离门升起_主控关键帧_v1.png','让危险来自门体逼近，不要表现为妈妈放弃。'],
+      ['OP10-3','OP10','2.2-3.4s','妈妈先想拉回小夏，随即意识到继续牵着会伤到她。','中近景，妈妈表情和手部同框。','呼吸一滞，人群压迫声。','已生成','../op06_op14_main_v1/OP10_保护性松手隔离门升起_主控关键帧_v1.png','情绪落点是判断，不是慌乱。'],
+      ['OP10-4','OP10','3.4-4.6s','妈妈松开手，反手把小夏挡向候车区安全侧。','中近景，动作清楚但不夸张。','妈妈急促喊小夏名字。','已生成','../op06_op14_main_v1/OP10_保护性松手隔离门升起_主控关键帧_v1.png','必须看出是保护性松手，不是推开逃走。'],
+      ['OP10-5','OP10','4.6-6.3s','隔离栏升到两米以上，透明防爆板与金属框连续咬合，真正隔开两侧。','中远景，门体横贯大厅。','系统分区音、锁定声。','已生成','../op06_op14_main_v1/OP10_保护性松手隔离门升起_主控关键帧_v1.png','不要短栏杆，不要可绕过。'],
+      ['OP10-6','OP10','6.3-7.7s','母女隔着升起的门体伸手，指尖短暂靠近又被挡住。','手部近景，隔着透明板。','小夏：妈妈！妈妈：小夏！','已生成','../op06_op14_main_v1/OP10_保护性松手隔离门升起_主控关键帧_v1.png','后期配音，基础画面不强求口型。'],
+      ['OP10-7','OP10','7.7-9.0s','小夏怔在候车区侧，妈妈已经转向隔离门准备开门。','中景稳定。','警报持续。','已生成','../op06_op14_main_v1/OP10_保护性松手隔离门升起_主控关键帧_v1.png','切 OP11 敲门。'],
+      ['OP11-1','OP11','0.0-1.2s','隔离门完全升起并锁死，门体高度超过两米。','中远景，门体贯穿大厅。','电子锁死声。','已生成','../op06_op14_main_v1/OP11_妈妈隔门敲打安慰小夏_主控关键帧_v1.png','同一隔离门结构。'],
+      ['OP11-2','OP11','1.2-2.6s','小夏站在候车区侧发怔，手贴着透明防爆板。','中近景偏小夏。','警报、人群声变钝。','已生成','../op06_op14_main_v1/OP11_妈妈隔门敲打安慰小夏_主控关键帧_v1.png','右脚白袜，左脚单鞋。'],
+      ['OP11-3','OP11','2.6-4.1s','妈妈扑到门前，用力敲打门体。','中近景偏妈妈，门体震动。','敲击声。','已生成','../op06_op14_main_v1/OP11_妈妈隔门敲打安慰小夏_主控关键帧_v1.png','情绪激动但不是失控。'],
+      ['OP11-4','OP11','4.1-5.8s','妈妈寻找应急开关，试图打开隔离门。','侧面中景，手摸索门侧。','金属按钮失灵声。','已生成','../op06_op14_main_v1/OP11_妈妈隔门敲打安慰小夏_主控关键帧_v1.png','不要像无助乱拍，要有行动。'],
+      ['OP11-5','OP11','5.8-7.4s','妈妈隔门安慰小夏，强迫自己稳住声音。','母女隔门同框。','妈妈：看着妈妈。别怕。站在那里，不要往这边挤。','已生成','../op06_op14_main_v1/OP11_妈妈隔门敲打安慰小夏_主控关键帧_v1.png','妈妈的声音要稳，不是慌张无措。'],
+      ['OP11-6','OP11','7.4-8.8s','小夏终于哭出来，手掌贴住门，想靠近妈妈。','中近景偏小夏，轻微推。','小夏抽泣。','已生成','../op06_op14_main_v1/OP11_妈妈隔门敲打安慰小夏_主控关键帧_v1.png','克制，不做夸张哭脸。'],
+      ['OP11-7','OP11','8.8-10.0s','妈妈隔门说“妈妈在这儿”，但身后人潮开始再次反冲。','中景，妈妈身后人流压迫。','妈妈：妈妈想办法过去。人潮声逼近。','已生成','../op06_op14_main_v1/OP11_妈妈隔门敲打安慰小夏_主控关键帧_v1.png','声音先行切 OP12。'],
+      ['OP12-1','OP12','0.0-1.5s','人潮从轨道连廊方向反冲，妈妈被从隔离门前推开。','中景，隔离门仍在前景。','人潮声、警报。','已生成','../op06_op14_main_v1/OP12_坍塌后小夏停顿跑向隔离门_主控关键帧_v1.png','妈妈身体被推走，但脸朝向小夏。'],
+      ['OP12-2','OP12','1.5-3.0s','妈妈被带往反方向，仍扭身朝小夏喊。','中近景偏妈妈。','妈妈：小夏！回候车区！','已生成','../op06_op14_main_v1/OP12_坍塌后小夏停顿跑向隔离门_主控关键帧_v1.png','后期配音。'],
+      ['OP12-3','OP12','3.0-4.4s','小夏隔门哭喊妈妈，不知所措站在原地。','中近景偏小夏。','小夏：妈妈！','已生成','../op06_op14_main_v1/OP12_坍塌后小夏停顿跑向隔离门_主控关键帧_v1.png','右脚白袜。'],
+      ['OP12-4','OP12','4.4-5.8s','妈妈喊出“回候车区等——”。','中远景，妈妈被人潮带远。','前半句清楚。','已生成','../op06_op14_main_v1/OP12_坍塌后小夏停顿跑向隔离门_主控关键帧_v1.png','后半句不要让小夏听见。'],
+      ['OP12-5','OP12','5.8-7.2s','连廊深处结构坍塌，钢梁断裂，电缆短路爆出刺眼冷白光。','中远景或局部失真，轻震。','坍塌声、电气爆燃、广播爆音吞没后半句。','已生成','../op06_op14_main_v1/OP12_坍塌后小夏停顿跑向隔离门_主控关键帧_v1.png','不做大火球，不血腥。'],
+      ['OP12-6','OP12','7.2-8.8s','小夏茫然站了几秒，望着妈妈所在方向被灰尘和冷白电光吞没。','中景固定。','人声短暂变闷。','已生成','../op06_op14_main_v1/OP12_坍塌后小夏停顿跑向隔离门_主控关键帧_v1.png','情绪停顿很重要。'],
+      ['OP12-7','OP12','8.8-10.5s','小夏崩溃，朝隔离门另一侧边哭边跑，喊妈妈。','中景到跟拍，动作短促。','小夏：妈妈！','已生成','../op06_op14_main_v1/OP12_坍塌后小夏停顿跑向隔离门_主控关键帧_v1.png','右脚白袜踩过冷白警示光。'],
+      ['OP12-8','OP12','10.5-13.0s','镜头拉回掉落儿童鞋特写，画面无人；人声环境声逐渐变小直至消失。','低机位特写，固定。','人声、警报、环境声渐远，最后只剩电流残响。','已生成','../op06_op14_main_v1/OP12-6_掉落鞋无人定格_主控关键帧_v2.png','为 OP13 同机位腐蚀做桥。'],
+      ['OP13-1','OP13','0.0-0.8s','承接 OP12-6 同一鞋子特写，时间开始滑向多年后废站。','固定低机位鞋子特写，镜头位置、视角、构图、鞋在画面中的位置、地面透视线和背景大结构都不变。','冷白警示残响逐渐转为雨夜空站声。','已生成待审','../op13_op16_废站_v1/镜头13-1_鞋子同镜头转入废站_v4_同机位去行李.png','不是新镜头，不换废站背景；必须像 OP12-6 原图多年后腐蚀版。只让鞋、地面和同一背景结构变潮湿、破旧、荒废、完全断电；右侧行李已移除；不出现人物。'],
+      ['OP13-2','OP13','0.8-1.6s','同一鞋子特写完成废站转场，鞋变得潮湿、破旧。','继续保持 OP13-1 同机位低角度特写，不向后展开另一个废站空间。','雨滴、旧广播残噪。','已生成待审','../op13_op16_废站_v1/镜头13-2_鞋子潮湿破旧废站完成_v4_同机位去行李.png','承接 OP12-6 / OP13-1 的同一画面：同一地面、同一背景大轮廓、同一透视方向。只做多年后破败、积水、裂缝、灰尘、锈迹和弱雨夜光；右侧行李已移除。'],
+      ['OP13-3','OP13','1.6-2.4s','澪星从画面外进入鞋前，低头观察。','鞋位低机位，澪星从左侧入画。','轻微机械移动声，雨声。','已生成待审','../op13_op16_废站_v1/镜头13-3_澪星从画面外进入鞋前_v5_统一背景.png','澪星按 V2 版海报；背景承接 OP13-1 / OP13-2 的同一空间结构；正常尾灯底部连尾巴、星星朝上。'],
+      ['OP13-4','OP13','2.4-3.4s','澪星尾部引航灯倒置伸到身前照亮鞋子，水面出现等待回声。','低机位近景，鞋和倒置尾灯为中心。','引航灯微响，水面细小涟漪。','已生成待审','../op13_op16_废站_v1/镜头13-4_澪星倒置尾灯照亮鞋子_v5_统一背景.png','引航灯照鞋时必须倒置：底部在上方连接尾巴，顶部星星朝下；背景继续统一，不出现人类角色。'],
+      ['OP13-5','OP13','3.4-4.4s','澪星听见澜冰屿画外音，斜视身后。','鞋前低机位，澪星三分之二侧面，背景留黑暗入口。','澜冰屿画外音：“又有人没能回家吗？”','已生成待审','../op13_op16_废站_v1/镜头13-5_澪星斜视黑暗入口_v5_统一背景.png','澜冰屿仍不入画；废站断电，背景没有车站灯光；空间结构承接前镜。'],
+      ['OP13-5A','OP13','4.4-5.2s','澜冰屿从远处黑暗里走出来，还没有进入近景。','同一黑暗入口远景，人物小身位。','雨声、旧广播残噪延续。','已生成待审','../op13_op16_废站_v1/镜头13-5A_澜冰屿远处黑暗中走出_v1.png','澜冰屿病弱、疲惫、非英雄姿态；黑发为主，只有零星细碎白丝。'],
+      ['OP13-6','OP13','5.2-6.4s','正对澜冰屿，他从黑暗里慢慢出现，镜头拉近到上半身特写。','正面平视，黑暗入口中出现，缓慢推近。','雨声、旧广播残噪延续。','已生成待审','../op13_op16_废站_v1/镜头13-6_澜冰屿黑暗中病弱近景_v11_黑发零星白丝.png','不仰视；澜冰屿病弱、疲惫、克制；短黑发为主，白发只是零星细碎发丝，不成束、不成大片。'],
+      ['OP13-7','OP13','6.4-7.6s','切到澜冰屿主观视角朝鞋子走去，在鞋前停下。','第一人称主观镜头，鞋逐渐靠近并停在画面下方。','轻微脚步水声。','已生成待审','../op13_op16_废站_v1/镜头13-7_澜冰屿主观视角走到鞋前_v2_统一背景.png','不能出现澜冰屿正脸；画面像他的视线，废站材质和背景结构与 OP13 前段统一。'],
+      ['OP14-1','OP14','0.0-1.2s','切回第三视角，从侧面描写澜冰屿半蹲下观察鞋子。','第三视角侧面中近景，平视 / 略俯，不用仰视。','雨声、澪星尾灯低频声。','已生成待审','../op13_op16_废站_v1/镜头14-1_澜冰屿侧面半蹲观察鞋子_v4.png','澜冰屿不触碰鞋；澪星在旁照明，倒置尾灯照鞋；废站断电无灯。'],
+      ['OP14-2','OP14','1.2-2.4s','澜冰屿观察鞋底、鞋口、地面水痕和鞋所在位置。','地面近景，手、靴子、衣摆、坐标布条与鞋同框。','雨滴、水痕轻响、旧广播残噪。','已生成待审','../op13_op16_废站_v1/镜头14-2_澜冰屿观察鞋底水痕_v2_断电废站.png','不拍正脸；用澜冰屿的手、靴子、衣摆和坐标布条体现调查动作；废站完全断电，只保留雨夜弱光、湿地反光和澪星尾灯。'],
+      ['OP14-3','OP14','2.4-3.3s','澜冰屿判断这只鞋太小，不属于成年人。','近景或中近景，澜冰屿与儿童鞋建立尺寸对比。','雨声压低，旧广播残噪。','已生成待审','../op13_op16_废站_v1/镜头14-3_澜冰屿判断鞋太小_v1.png','澜冰屿动作克制，不触碰或移动鞋；人物写实 CG 风格，废站断电无灯。'],
+      ['OP14-4','OP14','3.3-4.2s','鞋尖朝向旧长椅，显示小夏曾等待的方向。','低机位近景，鞋在前景，旧长椅在远处。','空站雨声、远处金属轻响。','已生成待审','../op13_op16_废站_v1/镜头14-4_鞋朝向长椅等待痕迹_v1.png','用鞋和长椅建立方向关系；不出现车站灯、屏幕光、霓虹或可读文字。'],
+      ['OP14-5','OP14','4.2-5.0s','鞋被异常力量固定在原位。','鞋的近景，水痕和微弱回声光围绕原点。','低频回声短促响起。','已生成待审','../op13_op16_废站_v1/镜头14-5_鞋被固定在原位_v1.png','鞋仍在原点；异常表现要克制，不要夸张魔法特效。'],
+      ['OP14-6','OP14','5.0-6.0s','澜冰屿看向旧长椅，意识到源点不只是鞋。','平视或略俯，澜冰屿视线转向长椅。','雨声延续，澪星尾灯低频声。','已生成待审','../op13_op16_废站_v1/镜头14-6_澜冰屿看向旧长椅_v1.png','澜冰屿黑发为主，白发丝零碎散落；废站完全断电。'],
+      ['OP15-1','OP15','0.0-1.0s','澪星准备收纳儿童鞋。','近景，澪星、鞋、愿望舱小包和尾灯同框。','澪星机械声变轻。','已生成待审','../op13_op16_废站_v1/镜头15-1_澪星准备收纳儿童鞋_v1.png','澪星靠近鞋但不破坏鞋的位置；废站光源仍受限。'],
+      ['OP15-2','OP15','1.0-1.8s','鞋离地半厘米，等待回声即将启动。','低机位鞋特写，鞋轻微悬起。','水面细小涟漪声。','已生成待审','../op13_op16_废站_v1/镜头15-2_鞋离地半厘米等待回声启动_v1.png','只用细小涟漪和极弱回声光；不要强烈魔法阵或夸张发光。'],
+      ['OP15-3','OP15','1.8-2.8s','等待回声异常爆发。','鞋和水痕处扩散出抽象回声光。','低频回声突然增强。','已生成待审','../op13_op16_废站_v1/镜头15-3_等待回声异常爆发_v1.png','抽象回声，不出现清晰小夏正脸；空间仍是断电废站。'],
+      ['OP15-4','OP15','2.8-3.6s','鞋猛地落回原位。','鞋落回地面，水花和湿地反光表现冲击。','短促落地声，回声骤断。','已生成待审','../op13_op16_废站_v1/镜头15-4_鞋猛地落回原位_v1.png','避免车站灯、红色状态灯和屏幕光；鞋必须回到原点。'],
+      ['OP15-5','OP15','3.6-4.8s','澜冰屿拦住澪星，阻止继续收纳。','中近景，澜冰屿动作克制但明确。','澜冰屿低声制止，雨声延续。','已生成待审','../op13_op16_废站_v1/镜头15-5_澜冰屿拦住澪星_v1.png','澪星尺寸约到澜冰屿膝盖，不是脚踝高度；澜冰屿不偶像化。'],
+      ['OP15-6','OP15','4.8-6.0s','旧长椅旁出现小夏淡影。','旧长椅旁远景或中景，淡影极弱。','很轻的儿童呼吸感或回声。','已生成待审','../op13_op16_废站_v1/镜头15-6_旧长椅旁小夏淡影初现_v1.png','使用非清晰人像的等待回声：淡粉衣物残影、书包残影、水面倒影或轮廓；不要清晰儿童正脸。'],
+      ['OP16-1','OP16','0.0-1.2s','旧长椅旁等待回声轮廓成形。','长椅旁固定镜头，轮廓与残影逐渐稳定。','雨声中出现极弱回声。','已生成待审','../op13_op16_废站_v1/镜头16-1_旧长椅旁等待回声轮廓_v1.png','不要清晰小夏人像；光源极弱，废站仍完全断电。'],
+      ['OP16-2','OP16','1.2-2.4s','等待回声转向澜冰屿。','抽象轮廓、衣物残影或水面倒影表现转向。','回声方向感移动。','已生成待审','../op13_op16_废站_v1/镜头16-2_等待回声转向澜冰屿_抽象版_v1.png','不要字幕、气泡或可读文字；不要清晰儿童正脸。'],
+      ['OP16-3','OP16','2.4-3.6s','澜冰屿隔着鞋面对等待回声。','鞋作为画面中心锚点，澜冰屿与回声分处两侧。','雨声、低频回声、澪星尾灯声。','已生成待审','../op13_op16_废站_v1/镜头16-3_澜冰屿隔鞋面对等待回声_v1.png','澜冰屿平视或略俯，不仰视；画风对齐 OP12 写实 CG。']
+    ];
+
+
+    const op17to30 = [
+      ['OP17','OP17','10s','第一次救援失败：小夏因残缺命令拒绝离开，澜冰屿意识到不能硬带她走。','旧长椅旁平视中远景，澜冰屿降低姿态，旧隔离门残影短暂落下。','小夏台词时间槽；澜冰屿台词时间槽。','已生成待审','../op17_op30_main_v1/OP17_第一次救援失败_主控关键帧_v1.png','小夏仍是等待回声，不要清晰儿童正脸；澜冰屿伸手但不触碰。'],
+      ['OP18','OP18','10s','澜冰屿被等待循环拖住，澪星用引航光稳定他。','湿地低机位到中近景，影子被拉长，澪星在脚边形成保护光。','低频回声；澜冰屿台词时间槽。','已生成待审','../op17_op30_main_v1/OP18_等待循环拖住澜冰屿_主控关键帧_v1.png','病弱疲惫，不要战斗姿态；澪星约到膝盖高度。'],
+      ['OP19','OP19','9s','调查鞋的异常结构，确认鞋不是源点而是小夏停下来的坐标。','低机位鞋、水痕、手、衣摆与旧长椅方向同框。','澜冰屿分析台词时间槽。','已生成待审','../op17_op30_main_v1/OP19_鞋不是源点是坐标_主控关键帧_v1.png','鞋不能移动，不要拿起鞋；回声光必须克制。'],
+      ['OP20','OP20','11s','恢复主广播残留记录，只找到妈妈喊出的前半句。','破损主广播控制台前中景，控制台完全断电，澪星读取抽象声纹。','前半句回声时间槽；澜冰屿台词时间槽。','已生成待审','../op17_op30_main_v1/OP20_主广播只有前半句_主控关键帧_v1.png','不要亮屏和可读文字；控制台不能恢复供电。'],
+      ['OP21','OP21','11s','沿隔离门和应急通话线路寻找后半句，发现妈妈一直在找回来的路。','隔离门残骸、坍塌连廊、应急通话器连续调查。','澜冰屿台词时间槽。','已生成待审','../op17_op30_main_v1/OP21_寻找后半句_主控关键帧_v1.png','背景承接废站统一；妈妈没有走的情绪要被看见。'],
+      ['OP22','OP22','10s','澜冰屿站在两段断裂回声之间，决定成为锚点连接它们。','平视中景，主广播与应急通话器两个声源分处两端。','澜冰屿台词时间槽；回声合拢。','已生成待审','../op17_op30_main_v1/OP22_连接断裂回声_主控关键帧_v1.png','坐标布条可见但不可读；不要强光爆炸和战斗法术。'],
+      ['OP23','OP23','12s','小夏听到完整答案，等待循环开始松动。','旧长椅旁固定中景，小夏回声抬头，澜冰屿远处半蹲。','妈妈后半句时间槽；澜冰屿台词时间槽。','已生成待审','../op17_op30_main_v1/OP23_小夏听到完整答案_主控关键帧_v1.png','小夏半透明温柔，不要恐怖哭脸；澜冰屿不靠太近。'],
+      ['OP24','OP24','12s','妈妈的回声出现，蹲下抱住小夏。','候车区到出口方向中远景，柔和回家光雾。','小夏和澜冰屿台词时间槽；小夏哭笑时间槽。','已生成待审','../op17_op30_main_v1/OP24_妈妈来接小夏_主控关键帧_v1.png','妈妈承接事故当天造型；重逢温柔克制，不做恐怖幽灵。'],
+      ['OP25','OP25','9s','小夏牵着妈妈，向澜冰屿道谢。','母女中景与澜冰屿近景交替，最后背影走向光雾。','小夏台词时间槽。','已生成待审','../op17_op30_main_v1/OP25_小夏感谢澜冰屿_主控关键帧_v1.png','小夏可略清晰但仍保留回声质感；动作不要夸张。'],
+      ['OP26','OP26','10s','小夏最后回头问澜冰屿是否也会有人来接。','光雾边缘侧背中景，反打澜冰屿被问住。','小夏台词时间槽；短暂静音。','已生成待审','../op17_op30_main_v1/OP26_小夏最后回头_主控关键帧_v1.png','这句是转向澜冰屿主线的刺点，情绪收住。'],
+      ['OP27','OP27','11s','母女离开后，澜冰屿发现坐标布条一段字迹变白。','鞋原点低机位，手部布条近景，澪星担忧靠近。','澜冰屿台词时间槽。','已生成待审','../op17_op30_main_v1/OP27_澜冰屿的代价_主控关键帧_v1.png','布条不要可读文字；表现变白和存在痕迹下降。'],
+      ['OP28','OP28','8s','澪星发现 B-07 存在痕迹下降警告，澜冰屿没有看见。','澪星近景、抽象界面反射、澜冰屿背影。','无明确台词，轻微警示音。','已生成待审','../op17_op30_main_v1/OP28_B07警告_主控关键帧_v1.png','可出现短标识 B-07，避免大段文字和屏幕强光。'],
+      ['OP29','OP29','8s','澜冰屿和澪星离开旧北站，长椅和鞋原点重新空下来。','背影大全景、空镜、冷雾吞没。','无明确台词。','已生成待审','../op17_op30_main_v1/OP29_离开旧北站_主控关键帧_v1.png','不出现小夏和妈妈；不英雄化。'],
+      ['OP30','OP30','8s','第一集尾钩：坐标布条继续褪白，澪星担忧，冷雾落黑。','低机位空镜、手部近景、澪星近景、远景黑场前空镜。','无明确台词。','已生成待审','../op17_op30_main_v1/OP30_第一集尾钩_主控关键帧_v1.png','不新增台词，不出现小夏和妈妈，保留悬念。']
+    ];
+
+    const deprecated = [
+      ['OP10-x1','OP10','反例','废弃隔离门系统预警','不使用','反例','废弃','废弃_OP10_隔离门错误版本/镜头10-1_隔离门系统预警_v1.png','隔离结构不符合当前高长连续门要求。'],
+      ['OP10-x2','OP10','反例','废弃隔离门从地面升起','不使用','反例','废弃','废弃_OP10_隔离门错误版本/镜头10-2_隔离门从地面升起_v1.png','隔离结构不符合当前高长连续门要求。'],
+      ['OP10-x3','OP10','反例','废弃隔离门完全分区','不使用','反例','废弃','废弃_OP10_隔离门错误版本/镜头10-3_隔离门完全分区_v1.png','只作反例，不作为主线关键帧。']
+    ];
+
+    const accidentPromptTemplate = `高精度写实 CG 渲染风 / 电影级关键帧插画风，看起来像真人电影被按下暂停键，但明确不是实拍。事故当天午后静海旧北站大型车站大厅，暖色阳光从高窗进入，系统警报冷白光增强，少量红色警示灯亮起，人群反向混乱。
+
+小夏保持 6-7 岁东亚小女孩、圆脸、黑色低位小马尾、淡粉儿童连帽外套、深色小裙子、小书包。OP09 后右脚鞋已经掉落：右脚只能穿白袜，左脚仍穿淡粉米白圆头魔术贴儿童鞋。妈妈保持 30 岁左右东亚女性、黑色低发髻、浅卡其灰外套、斜挎包。
+
+自动隔离门必须是高长连续的玻璃与金属分区墙，高度超过两米并接近顶棚，横向贯穿大厅，左右延伸出画面，没有可绕路径。小夏在候车区安全侧，妈妈在轨道连廊危险侧。OP10 中妈妈可以松手，但只能表现为保护性松手：隔离门从两人之间急速升起，她为了避免小夏被门体带倒或夹伤，松开手并把小夏挡向安全侧。绝不能表现成放弃、推开小夏后转身离开或冷漠逃走。OP11 妈妈要隔门敲打、寻找应急开关并安慰小夏；OP12 人潮把妈妈推向反方向，连廊结构坍塌与电气爆燃吞没“妈妈一定会来接你”的后半句，小夏先茫然停顿，再哭着跑向隔离门。
+
+负面：不要真人短剧风，不要照片级实拍，不要动画剧集风格，不要二次元萌系，不要废弃雨夜车站，不要澪星，不要澜冰屿，不要小夏回声，不要妈妈像放弃一样松手，不要妈妈推开小夏后转身离开，不要小夏两只脚都穿鞋，不要右脚重新出现鞋子，不要低矮栏杆，不要短隔断，不要可绕过的门，不要同侧站位，不要大火球爆炸，不要血腥，不要可读中文文字，不要水印，不要 logo。`;
+
+    const op13PromptTemplate = `高精度写实 CG 渲染风 / 电影级关键帧插画风，看起来像真人电影被按下暂停键，但明确不是实拍。真实物理光照，电影级 CG 光影，低饱和冷灰蓝雨夜废站，湿地反光、旧金属、雨水、冷雾和旧车站空间都像布景精美的实景片场。静海断层事故多年后，废弃旧北站年久失修、破旧、冷清、荒废、完全断电：不要任何仍在工作的车站灯、顶灯、屏幕光、闸机红灯、状态灯、广告牌、霓虹或室内照明。可见光只来自雨夜极弱天光、破洞外的冷月光、湿地反光、澪星引航灯和极微弱回声光。人物风格必须与 OP12 小夏和妈妈统一：真实皮肤肌理、克制眼神、真实布料和身体比例，不做动画男主、漫画美少年、游戏角色立绘或角色海报站桩。
+
+OP13 承接 OP12-6 同一只小夏右脚掉落鞋特写。OP13-1 不是新镜头，不是换到另一个废站角度，而是 OP12-6 原图的多年后腐蚀版：镜头位置、视角、构图、鞋在画面中的位置、地面砖缝 / 水泥缝透视方向、背景大结构都必须保持一致。只允许时间变化：鞋从事故当天干净状态转为多年后潮湿、破旧、沾灰、褪色；同一块地面出现积水、裂缝、灰尘、锈迹和杂物；同一背景结构变成年久失修、完全断电、荒废冷清的旧北站。不允许重新设计背景，不允许换闸机 / 长椅 / 站台结构，不允许移动鞋的位置，不允许改变地面透视方向。生成 OP13-1 时优先使用 OP12-6 作为参考图做图生图 / 续图，而不是纯文字重新生成。四周是废弃旧北站雨夜，旧闸机、空长椅、破损玻璃、积水、坍塌顶棚、灰尘和杂物都必须是断电荒废状态，不允许屏幕发光或闸机亮灯。
+
+澪星使用 V2 版海报造型：蓝灰磨损外壳、奶白脸腹、青蓝眼、额头引航星核、橙色耳灯、斜挎愿望舱小包、尾部悬挂引航灯。与澜冰屿同框时，澪星高度约到澜冰屿膝盖，不是脚踝高度的小玩具。澪星尾灯方向必须正确：正常状态下引航灯底部与尾巴相连、顶部星星朝上；尾巴伸到身前照亮鞋子时，引航灯倒置，底部在上方连接尾巴，顶部星星朝下。澜冰屿使用 V2 版海报2头发造型：苍白肤色，短黑发为主，黑发层里零碎散落少量白色发丝，白色部分细碎、断续、随机分布，不是一束一束的白色挑染；极细蓝色环形瞳孔，米白色破旧长外套，浅灰高领，旧黑裤，磨损短靴，外套内侧可见手写坐标布条。澜冰屿是剧中真实存在的人，动作克制疲惫，不偶像化。
+
+负面：不要真人短剧风，不要照片级实拍，不要动画剧集风格，不要 animated series，不要 anime concept art，不要二次元萌系，不要漫画美少年，不要网游角色，不要海报站桩，不要仰视英雄机位，不要地面低机位拍澜冰屿出场，不要黑色风衣，不要长发，不要一束一束的白发，不要大片白发，不要半头白发，不要银白刘海，不要把澪星缩成脚踝高度，不要把照鞋状态的引航灯画成星星朝上，不要车站灯光，不要顶灯，不要屏幕光，不要闸机灯，不要红色状态灯，不要霓虹，不要广告牌发光，不要战斗姿势，不要可读中文文字，不要字幕，不要气泡，不要水印，不要 logo。OP13-1 不要换视角，不要换机位，不要重新设计背景，不要新增另一组闸机 / 长椅 / 站台结构，不要移动鞋的位置，不要改变地面透视方向。`;
+
+    const frames = [...generated, ...planned, ...op17to30, ...deprecated].map((item) => ({
+      id:item[0],
+      op:item[1],
+      time:item[2],
+      action:item[3],
+      camera:item[4],
+      audio:item[5],
+      status:item[6],
+      originalStatus:item[6],
+      file:item[7],
+      requirement:item[8] || '已按当前分镜生成。',
+      path:keyframeBase + item[7],
+      note:''
+    }));
+
+    const $ = (sel) => document.querySelector(sel);
+    const savedState = loadSavedState();
+
+    frames.forEach((frame) => {
+      const saved = savedState.frames && savedState.frames[frame.id];
+      if(!saved) return;
+      if(saved.status) frame.status = saved.status;
+      if(saved.note) frame.note = saved.note;
+    });
+
+    const state = { selected:frames.find((f) => f.id === 'OP10-1') || frames[0] };
+
+    function loadSavedState(){
+      try{
+        return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{"frames":{}}');
+      }catch(e){
+        return { frames:{} };
+      }
+    }
+
+    function saveFrameState(frame){
+      const current = loadSavedState();
+      current.version = 1;
+      current.updatedAt = new Date().toISOString();
+      current.frames = current.frames || {};
+      if(frame.status === frame.originalStatus && !frame.note){
+        delete current.frames[frame.id];
+      }else{
+        current.frames[frame.id] = { status:frame.status, note:frame.note };
+      }
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(current));
+    }
+
+    function escapeHtml(value){
+      return String(value ?? '').replace(/[&<>"']/g, (char) => ({
+        '&':'&amp;',
+        '<':'&lt;',
+        '>':'&gt;',
+        '"':'&quot;',
+        "'":'&#39;'
+      }[char]));
+    }
+
+    function cleanCell(value){
+      return String(value ?? '').replace(/\|/g, '／').replace(/\r?\n/g, ' ');
+    }
+
+    function badgeClass(status){
+      if(status === '已生成') return 'done';
+      if(status === '已生成待审') return 'review';
+      if(status === '待生成') return 'todo';
+      if(status === '需重做') return 'bad';
+      if(status === '废弃') return 'bad';
+      return '';
+    }
+
+    function buildFilters(){
+      const ops = ['all', ...new Set(frames.map((f) => f.op))];
+      $('#opFilter').innerHTML = ops.map((op) => `<option value="${op}">${op === 'all' ? '全部段落' : op}</option>`).join('');
+      $('#opFilter').value = 'all';
+      $('#sourceBox').value = sourceFiles.join('\n');
+    }
+
+    function filtered(){
+      const q = $('#search').value.trim().toLowerCase();
+      const op = $('#opFilter').value;
+      const status = $('#statusFilter').value;
+      return frames.filter((f) => {
+        const text = `${f.id} ${f.op} ${f.action} ${f.file} ${f.status} ${f.note}`.toLowerCase();
+        return (!q || text.includes(q)) && (op === 'all' || f.op === op) && (status === 'all' || f.status === status);
+      });
+    }
+
+    function renderSummary(list){
+      $('#totalCount').textContent = frames.length;
+      $('#doneCount').textContent = frames.filter((f) => f.status === '已生成').length;
+      $('#reviewCount').textContent = frames.filter((f) => f.status === '已生成待审').length;
+      $('#todoCount').textContent = frames.filter((f) => f.status === '待生成' || f.status === '需重做').length;
+      $('#emptyState').hidden = list.length > 0;
+    }
+
+    function renderRows(){
+      const list = filtered();
+      renderSummary(list);
+      $('#frameRows').innerHTML = list.map((f) => `
+        <tr data-id="${f.id}" class="${state.selected && state.selected.id === f.id ? 'selected' : ''}">
+          <td class="shot">${escapeHtml(f.id)}<div class="compact">${escapeHtml(f.op)} · ${escapeHtml(f.time)}</div></td>
+          <td><span class="badge ${badgeClass(f.status)}">${f.status}</span></td>
+          <td>${escapeHtml(f.action)}<div class="compact">${escapeHtml(f.requirement)}</div>${f.note ? `<div class="compact">备注：${escapeHtml(f.note)}</div>` : ''}</td>
+          <td class="compact">${escapeHtml(f.file)}</td>
+        </tr>
+      `).join('');
+      document.querySelectorAll('tr[data-id]').forEach((row) => {
+        row.addEventListener('click', () => {
+          state.selected = frames.find((f) => f.id === row.dataset.id);
+          renderDetail();
+          renderRows();
+        });
+      });
+    }
+
+    function renderDetail(){
+      const f = state.selected;
+      $('#detailTitle').textContent = `${f.id} ${f.action}`;
+      $('#detailStatus').textContent = f.status;
+      $('#detailStatus').className = `badge ${badgeClass(f.status)}`;
+      $('#detailOp').textContent = f.op;
+      $('#detailTime').textContent = f.time;
+      $('#detailFile').textContent = f.file;
+      $('#detailAction').textContent = f.action;
+      $('#detailCamera').textContent = f.camera;
+      $('#detailAudio').textContent = f.audio;
+      $('#detailRequirement').textContent = f.requirement;
+      $('#detailPath').textContent = f.path;
+      $('#statusEdit').value = f.status;
+      $('#frameNote').value = f.note || '';
+      if(f.status === '待生成'){
+        $('#preview').innerHTML = '<span>待生成关键帧</span>';
+      }else{
+        $('#preview').innerHTML = `<img src="${escapeHtml(f.path)}" alt="${escapeHtml(f.id)} ${escapeHtml(f.action)}" onerror="this.parentElement.innerHTML='<span>图片路径待检查</span>'" /><button class="zoom-button" id="openLightbox">放大查看</button>`;
+        const previewImage = $('#preview img');
+        const openButton = $('#openLightbox');
+        if(previewImage) previewImage.addEventListener('click', () => openLightbox(f.path, `${f.id} ${f.action}`));
+        if(openButton) openButton.addEventListener('click', () => openLightbox(f.path, `${f.id} ${f.action}`));
+      }
+    }
+
+    function openLightbox(src, alt){
+      $('#lightboxImage').src = src;
+      $('#lightboxImage').alt = alt;
+      $('#lightbox').classList.add('open');
+      $('#lightbox').setAttribute('aria-hidden','false');
+    }
+
+    function closeLightbox(){
+      $('#lightbox').classList.remove('open');
+      $('#lightbox').setAttribute('aria-hidden','true');
+      $('#lightboxImage').removeAttribute('src');
+    }
+
+    async function copyText(text){
+      try{
+        await navigator.clipboard.writeText(text);
+      }catch(e){
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
+      }
+    }
+
+    function selectedPrompt(){
+      const f = state.selected;
+      const template = ['OP13','OP14','OP15','OP16','OP17','OP18','OP19','OP20','OP21','OP22','OP23','OP24','OP25','OP26','OP27','OP28','OP29','OP30'].includes(f.op) ? op13PromptTemplate : accidentPromptTemplate;
+      return `${template}
+
+当前镜头：${f.id}
+时间：${f.time}
+内容与动作：${f.action}
+机位与运动：${f.camera}
+台词 / 声音：${f.audio}
+关键帧要求：${f.requirement}
+目标文件名：${f.file}`;
+    }
+
+    function exportJson(){
+      const blob = new Blob([JSON.stringify(frames, null, 2)], {type:'application/json;charset=utf-8'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'boundary-echo-op01-op30-storyboard.json';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function exportMarkdown(){
+      const rows = frames.map((f) => `| ${cleanCell(f.id)} | ${cleanCell(f.status)} | ${cleanCell(f.time)} | ${cleanCell(f.action)} | ${cleanCell(f.requirement)} | ${cleanCell(f.file)} | ${cleanCell(f.note)} |`).join('\n');
+      const content = `# 《边界回声》EP01 OP01-OP12 分镜进度
+
+数据源：
+${sourceFiles.map((file) => `- ${file}`).join('\n')}
+
+| 镜头格 | 状态 | 时间 | 内容与动作 | 关键帧要求 | 文件 | 备注 |
+|---|---|---|---|---|---|---|
+${rows}
+`;
+      const blob = new Blob([content], {type:'text/markdown;charset=utf-8'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'boundary-echo-op01-op30-storyboard.md';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function saveCurrentFrame(){
+      const f = state.selected;
+      f.status = $('#statusEdit').value;
+      f.note = $('#frameNote').value.trim();
+      saveFrameState(f);
+      $('#saveStatus').textContent = `已保存 ${new Date().toLocaleTimeString()}`;
+      renderDetail();
+      renderRows();
+    }
+
+    function resetCurrentFrame(){
+      const f = state.selected;
+      f.status = f.originalStatus;
+      f.note = '';
+      saveFrameState(f);
+      $('#saveStatus').textContent = '已恢复默认状态';
+      renderDetail();
+      renderRows();
+    }
+
+    $('#search').addEventListener('input', renderRows);
+    $('#opFilter').addEventListener('change', renderRows);
+    $('#statusFilter').addEventListener('change', renderRows);
+    $('#copyPrompt').addEventListener('click', () => copyText(selectedPrompt()));
+    $('#copyPath').addEventListener('click', () => copyText(state.selected.path));
+    $('#exportJson').addEventListener('click', exportJson);
+    $('#exportMarkdown').addEventListener('click', exportMarkdown);
+    $('#saveFrame').addEventListener('click', saveCurrentFrame);
+    $('#resetFrame').addEventListener('click', resetCurrentFrame);
+    $('#closeLightbox').addEventListener('click', closeLightbox);
+    $('#lightbox').addEventListener('click', (event) => {
+      if(event.target.id === 'lightbox') closeLightbox();
+    });
+    document.addEventListener('keydown', (event) => {
+      if(event.key === 'Escape') closeLightbox();
+    });
+
+    buildFilters();
+    renderDetail();
+    renderRows();
+  </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+﻿duration=63 width=1916 height=1080

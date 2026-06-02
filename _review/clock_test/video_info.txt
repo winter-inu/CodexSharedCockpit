@@ -1,0 +1,4 @@
+path=F:\关键帧视频test\废弃无用\时钟走动.mp4
+duration=3.04
+fps=24.0
+size=(1920, 1080)
