@@ -137,7 +137,10 @@
 
 ## OP10 保护性松手，自动隔离门升起
 
-首帧：`keyframes/op06_op14_main_v1/OP10_保护性松手隔离门升起_主控关键帧_v1.png`
+关键帧组：`keyframes/op10_op12_grid_v1/OP10-1_轨道预警母女仍牵手_关键帧_v1.png` 至 `OP10-7_小夏怔住妈妈转向门体准备开门_关键帧_v1.png`
+
+首帧：`keyframes/op10_op12_grid_v1/OP10-1_轨道预警母女仍牵手_关键帧_v1.png`
+尾帧：`keyframes/op10_op12_grid_v1/OP10-7_小夏怔住妈妈转向门体准备开门_关键帧_v1.png`
 
 建议时长：9 秒
 
@@ -169,7 +172,10 @@
 
 ## OP11 隔离门锁死，妈妈敲门安抚小夏
 
-首帧：`keyframes/op06_op14_main_v1/OP11_妈妈隔门敲打安慰小夏_主控关键帧_v1.png`
+关键帧组：`keyframes/op10_op12_grid_v1/OP11-1_隔离门完全升起锁死_关键帧_v1.png` 至 `OP11-7_妈妈说妈妈在这儿身后人潮逼近_关键帧_v1.png`
+
+首帧：`keyframes/op10_op12_grid_v1/OP11-1_隔离门完全升起锁死_关键帧_v1.png`
+尾帧：`keyframes/op10_op12_grid_v1/OP11-7_妈妈说妈妈在这儿身后人潮逼近_关键帧_v1.png`
 
 建议时长：10 秒
 
@@ -200,7 +206,10 @@
 
 ## OP12 人潮推远，坍塌切断后半句
 
-首帧：`keyframes/op06_op14_main_v1/OP12_坍塌后小夏停顿跑向隔离门_主控关键帧_v1.png`
+关键帧组：`keyframes/op10_op12_grid_v1/OP12-1_人潮反冲妈妈被从门前推开_关键帧_v1.png` 至 `OP12-8_掉落儿童鞋无人定格声音消失_关键帧_v1.png`
+
+首帧：`keyframes/op10_op12_grid_v1/OP12-1_人潮反冲妈妈被从门前推开_关键帧_v1.png`
+尾帧：`keyframes/op10_op12_grid_v1/OP12-8_掉落儿童鞋无人定格声音消失_关键帧_v1.png`
 
 建议时长：13 秒
 
