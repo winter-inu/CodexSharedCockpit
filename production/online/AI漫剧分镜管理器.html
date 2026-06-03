@@ -218,6 +218,83 @@
       word-break:break-all;
     }
     .frames{overflow:hidden}
+    .cockpit{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:16px;
+    }
+    .cockpit-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:16px;
+      flex-wrap:wrap;
+      margin-bottom:12px;
+    }
+    .cockpit-head h2{font-size:20px}
+    .cockpit-sub{color:var(--muted);font-size:13px;margin-top:4px}
+    .cockpit-metrics{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:10px;
+      margin-bottom:12px;
+    }
+    .cockpit-card{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:#fbfcfd;
+      padding:12px;
+      min-height:84px;
+    }
+    .cockpit-card strong{display:block;font-size:26px}
+    .cockpit-card span{display:block;color:var(--muted);font-size:12px}
+    .cockpit-grid{
+      display:grid;
+      grid-template-columns:1.1fr 1fr 1fr;
+      gap:12px;
+      align-items:start;
+    }
+    .cockpit-panel{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:#fbfcfd;
+      padding:12px;
+    }
+    .cockpit-panel h3{margin:0 0 10px;font-size:15px}
+    .op-ready{display:grid;gap:10px}
+    .op-line{
+      display:grid;
+      grid-template-columns:56px 1fr auto;
+      gap:10px;
+      align-items:center;
+    }
+    .bar{
+      height:9px;
+      border-radius:999px;
+      background:#e5e7eb;
+      overflow:hidden;
+    }
+    .bar span{display:block;height:100%;background:#2f7d5b}
+    .risk-list,.task-list,.asset-list{display:grid;gap:8px}
+    .risk-item,.task-item,.asset-item{
+      border:1px solid var(--line);
+      background:#fff;
+      border-radius:var(--radius);
+      padding:9px;
+      font-size:13px;
+    }
+    .risk-item button{
+      padding:4px 8px;
+      font-size:12px;
+      margin-right:6px;
+      background:#fff7e6;
+      border-color:#e7c77a;
+      color:#7c4a03;
+    }
+    .task-item strong,.asset-item strong{display:block;margin-bottom:2px}
+    .task-item span,.asset-item span,.risk-item span{color:var(--muted);font-size:12px}
     table{width:100%;border-collapse:collapse;background:#fff}
     th,td{
       border-bottom:1px solid var(--line);
@@ -285,6 +362,7 @@
       aside{position:static}
       .detail{position:static;max-height:none;overflow:visible}
       .detail-grid,.notes{grid-template-columns:1fr}
+      .cockpit-metrics,.cockpit-grid{grid-template-columns:1fr}
       .preview{min-height:auto}
       .meta{grid-template-columns:1fr}
     }
@@ -336,6 +414,36 @@
     </aside>
 
     <section class="layout">
+      <div class="cockpit">
+        <div class="cockpit-head">
+          <div>
+            <h2>共同驾驶舱准备度</h2>
+            <div class="cockpit-sub">轻量移植 Jellyfish 的制作管理思路：资产锁、镜头准备度、风险项和任务中心。</div>
+          </div>
+          <span class="badge done">OP10-OP12 试点</span>
+        </div>
+        <div class="cockpit-metrics">
+          <div class="cockpit-card"><strong id="assetMetric">0</strong><span>核心资产锁</span></div>
+          <div class="cockpit-card"><strong id="shotMetric">0</strong><span>宫格镜头</span></div>
+          <div class="cockpit-card"><strong id="readyMetric">0</strong><span>待视频镜头</span></div>
+          <div class="cockpit-card"><strong id="taskMetric">0</strong><span>制作任务</span></div>
+        </div>
+        <div class="cockpit-grid">
+          <div class="cockpit-panel">
+            <h3>OP 准备度</h3>
+            <div class="op-ready" id="opReadiness"></div>
+          </div>
+          <div class="cockpit-panel">
+            <h3>重点风险镜头</h3>
+            <div class="risk-list" id="riskList"></div>
+          </div>
+          <div class="cockpit-panel">
+            <h3>任务中心</h3>
+            <div class="task-list" id="taskList"></div>
+          </div>
+        </div>
+      </div>
+
       <div class="detail">
         <div class="detail-grid">
           <div class="preview" id="preview"></div>
@@ -426,6 +534,46 @@
       base + '第一集_OP03-OP16_视频台词时间槽参考_V1.md'
     ];
     const STORAGE_KEY = 'boundaryEchoStoryboardManager:v2';
+
+    const cockpitAssets = [
+      {id:'char_xia', type:'角色', name:'小夏', note:'OP09 后右脚白袜、左脚单鞋'},
+      {id:'char_mother', type:'角色', name:'妈妈', note:'保护性松手，不能被误读为放弃'},
+      {id:'scene_old_north_station_accident', type:'场景', name:'事故当天旧北站', note:'不是多年后废站'},
+      {id:'prop_isolation_door', type:'道具', name:'自动高长隔离门', note:'两米以上，真正隔离两侧'},
+      {id:'prop_xia_shoe', type:'道具', name:'小夏右脚掉落儿童鞋', note:'OP12-8 无人定格，接 OP13 同机位腐蚀'}
+    ];
+
+    const cockpitShots = [
+      {id:'OP10-1', op:'OP10', status:'待视频', score:92, risks:['保持母女仍牵手，不能提前松手。']},
+      {id:'OP10-2', op:'OP10', status:'待视频', score:92, risks:['隔离栏危险要具体，会夹伤或带倒小夏。']},
+      {id:'OP10-3', op:'OP10', status:'待视频', score:92, risks:['妈妈的反应是判断，不是慌乱。']},
+      {id:'OP10-4', op:'OP10', status:'待视频', score:92, risks:['保护性松手必须靠运动清楚表达，不能像推开或放弃。']},
+      {id:'OP10-5', op:'OP10', status:'待视频', score:92, risks:['不能变成短栏杆或可绕过的门。']},
+      {id:'OP10-6', op:'OP10', status:'待视频', score:92, risks:['手部接近又碰不到，是情绪关键。']},
+      {id:'OP10-7', op:'OP10', status:'待视频', score:92, risks:['妈妈要准备开门，不能转身离开。']},
+      {id:'OP11-1', op:'OP11', status:'待视频', score:90, risks:['承接 OP10 同一隔离门结构。']},
+      {id:'OP11-2', op:'OP11', status:'待视频', score:90, risks:['右脚白袜、左脚单鞋必须清楚。']},
+      {id:'OP11-3', op:'OP11', status:'待视频', score:90, risks:['情绪激动但不能失控乱拍。']},
+      {id:'OP11-4', op:'OP11', status:'待视频', score:90, risks:['当前不是应急开关硬特写，视频必须补出沿门侧寻找开关、按键失灵。']},
+      {id:'OP11-5', op:'OP11', status:'待视频', score:90, risks:['安慰要稳，不是慌张无措。']},
+      {id:'OP11-6', op:'OP11', status:'待视频', score:90, risks:['哭要克制，不能变夸张哭脸。']},
+      {id:'OP11-7', op:'OP11', status:'待视频', score:90, risks:['声音先行切 OP12，人潮压迫必须逐渐逼近。']},
+      {id:'OP12-1', op:'OP12', status:'待视频', score:91, risks:['妈妈身体被推走，但脸要朝向小夏。']},
+      {id:'OP12-2', op:'OP12', status:'待视频', score:91, risks:['不能表现成妈妈主动离开。']},
+      {id:'OP12-3', op:'OP12', status:'待视频', score:91, risks:['小夏右脚白袜状态必须延续。']},
+      {id:'OP12-4', op:'OP12', status:'待视频', score:91, risks:['后半句不要让小夏听见，必须被事故声吞没。']},
+      {id:'OP12-5', op:'OP12', status:'待视频', score:91, risks:['不做大火球，不血腥，用结构坍塌和电气爆闪吞声。']},
+      {id:'OP12-6', op:'OP12', status:'待视频', score:91, risks:['情绪停顿必须留够，不要马上跑。']},
+      {id:'OP12-7', op:'OP12', status:'待视频', score:91, risks:['当前帧偏崩溃停顿，视频必须补出从停顿到短促奔跑。']},
+      {id:'OP12-8', op:'OP12', status:'待视频', score:91, risks:['画面必须无人，不能出现人物、人影或玻璃反射人影。']}
+    ];
+
+    const cockpitTasks = [
+      {id:'task_video_op10', target:'OP10', priority:'P0', status:'待开始', title:'制作 OP10 保护性松手与隔离门升起视频段'},
+      {id:'task_video_op11', target:'OP11', priority:'P0', status:'待开始', title:'制作 OP11 敲门、找应急开关、安慰小夏视频段'},
+      {id:'task_video_op12', target:'OP12', priority:'P0', status:'待开始', title:'制作 OP12 坍塌吞声、小夏停顿后奔跑、无人鞋静音视频段'},
+      {id:'task_upgrade_manager_readiness', target:'管理器', priority:'P1', status:'待开始', title:'把准备度和任务中心扩展到更多 OP'}
+    ];
 
     const generated = [
       ['OP01-1','OP01','0.0-2.0s','空间建立，午后车站大全景','超大全景，略高平视或轻微俯视','环境广播、脚步声、行李轮声、人群低语','已生成','镜头01-1_空间建立_午后车站大全景_v1.png'],
@@ -656,6 +804,63 @@ OP13 承接 OP12-6 同一只小夏右脚掉落鞋特写。OP13-1 不是新镜头
       $('#sourceBox').value = sourceFiles.join('\n');
     }
 
+    function renderCockpit(){
+      const readyShots = cockpitShots.filter((shot) => shot.status === '待视频');
+      $('#assetMetric').textContent = cockpitAssets.length;
+      $('#shotMetric').textContent = cockpitShots.length;
+      $('#readyMetric').textContent = readyShots.length;
+      $('#taskMetric').textContent = cockpitTasks.length;
+
+      const ops = ['OP10','OP11','OP12'];
+      $('#opReadiness').innerHTML = ops.map((op) => {
+        const items = cockpitShots.filter((shot) => shot.op === op);
+        const ready = items.filter((shot) => shot.status === '待视频' || shot.status === '通过').length;
+        const percent = items.length ? Math.round(ready / items.length * 100) : 0;
+        const avg = items.length ? Math.round(items.reduce((sum, shot) => sum + shot.score, 0) / items.length) : 0;
+        return `
+          <div class="op-line">
+            <strong>${op}</strong>
+            <div class="bar" title="${ready}/${items.length}"><span style="width:${percent}%"></span></div>
+            <span class="badge done">${ready}/${items.length} · ${avg}分</span>
+          </div>
+        `;
+      }).join('');
+
+      const importantRisks = cockpitShots
+        .filter((shot) => ['OP10-4','OP11-4','OP12-7','OP12-8'].includes(shot.id))
+        .map((shot) => `
+          <div class="risk-item">
+            <button data-jump="${shot.id}">${shot.id}</button>
+            ${escapeHtml(shot.risks[0])}
+            <div><span>${shot.op} · ${shot.status} · ${shot.score}分</span></div>
+          </div>
+        `).join('');
+      $('#riskList').innerHTML = importantRisks;
+
+      $('#taskList').innerHTML = cockpitTasks.map((task) => `
+        <div class="task-item">
+          <strong>${escapeHtml(task.title)}</strong>
+          <span>${escapeHtml(task.priority)} · ${escapeHtml(task.status)} · ${escapeHtml(task.target)}</span>
+        </div>
+      `).join('');
+
+      document.querySelectorAll('[data-jump]').forEach((button) => {
+        button.addEventListener('click', () => jumpToFrame(button.dataset.jump));
+      });
+    }
+
+    function jumpToFrame(id){
+      const frame = frames.find((item) => item.id === id);
+      if(!frame) return;
+      state.selected = frame;
+      $('#opFilter').value = frame.op;
+      $('#statusFilter').value = 'all';
+      $('#search').value = '';
+      renderDetail();
+      renderRows();
+      document.querySelector('.detail').scrollIntoView({behavior:'smooth', block:'start'});
+    }
+
     function filtered(){
       const q = $('#search').value.trim().toLowerCase();
       const op = $('#opFilter').value;
@@ -828,6 +1033,7 @@ ${rows}
     });
 
     buildFilters();
+    renderCockpit();
     renderDetail();
     renderRows();
   </script>
