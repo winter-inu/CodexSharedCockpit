@@ -1,0 +1,93 @@
+{
+  "version": "2026-06-03-v1",
+  "project": "边界回声",
+  "purpose": "轻量资产库。用于 AI 漫剧分镜管理器、镜头准备度检查和视频生成前一致性核对。",
+  "assets": [
+    {
+      "id": "char_xia",
+      "type": "character",
+      "name": "小夏",
+      "status": "locked",
+      "description": "6-7岁小女孩，圆脸，黑色头发，低位小马尾，淡粉色儿童连帽外套，深色小裙子，小书包。",
+      "continuity_lock": [
+        "OP01-OP08：两只脚都穿淡粉米白圆头魔术贴儿童鞋，鞋面有低调小花图案。",
+        "OP09：右脚鞋被卡住并脱落。",
+        "OP10-OP12：右脚只有白袜，左脚仍穿一只淡粉米白儿童鞋。",
+        "事故段不能变年龄、发型、脸型、服装或鞋子状态。"
+      ],
+      "reference_images": [
+        "episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP11-6_小夏终于哭出来手掌贴门_关键帧_v1.png",
+        "episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP12-6_小夏茫然停顿望向妈妈方向_关键帧_v1.png"
+      ],
+      "notes": "OP12-7 视频运动必须补足从停顿到短促奔跑。"
+    },
+    {
+      "id": "char_mother",
+      "type": "character",
+      "name": "妈妈",
+      "status": "locked",
+      "description": "30岁左右，黑色头发扎低发髻，浅卡其灰色外套或带帽外套，斜挎包，温柔、疲惫但非常爱女儿。",
+      "continuity_lock": [
+        "OP10：妈妈松手只能是保护性松手，为避免隔离栏伤到小夏。",
+        "OP11：情绪激动但有行动力，敲门、找应急开关、稳声安慰小夏。",
+        "OP12：被人潮推离时仍朝向小夏，不是主动离开。"
+      ],
+      "reference_images": [
+        "episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP10-4_妈妈保护性松手把小夏挡向安全侧_关键帧_v1.png",
+        "episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP11-3_妈妈扑到门前用力敲打门体_关键帧_v1.png"
+      ],
+      "notes": "任何视频段都不能把妈妈表现成冷漠放弃或转身逃走。"
+    },
+    {
+      "id": "scene_old_north_station_accident",
+      "type": "scene",
+      "name": "事故当天旧北站候车大厅",
+      "status": "locked",
+      "description": "事故当天午后旧北站候车大厅，暖光仍在，但逐渐混入警报冷白光、人群反向混乱和系统错误分区。",
+      "continuity_lock": [
+        "OP07-OP12 不是多年后废站。",
+        "不能出现雨夜、断电废站、澪星、澜冰屿或小夏回声。",
+        "OP12-5 可以出现连廊结构坍塌、电缆短路冷白爆闪，但不能做大火球或血腥画面。"
+      ],
+      "reference_images": [
+        "episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP10-5_两米以上隔离门锁死贯穿大厅_关键帧_v1.png",
+        "episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP12-5_连廊结构坍塌电缆短路冷白爆闪_关键帧_v1.png"
+      ],
+      "notes": "事故段仍保留车站运行时代的空间结构，不能提前进入 OP13 的废站美术。"
+    },
+    {
+      "id": "prop_isolation_door",
+      "type": "prop",
+      "name": "自动高长隔离门",
+      "status": "locked",
+      "description": "两米以上高长连续隔离门，透明防爆板与金属框咬合，横贯大厅，真正隔离候车区安全侧和轨道连廊危险侧。",
+      "continuity_lock": [
+        "不能是短栏杆、低矮护栏或可轻易绕开的门。",
+        "OP10 必须从母女之间升起，制造真实夹伤/带倒危险。",
+        "OP11 起门体已锁死。",
+        "OP12 仍作为小夏和妈妈之间的空间阻断。"
+      ],
+      "reference_images": [
+        "episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP10-2_隔离栏从两人之间急速升起_关键帧_v1.png",
+        "episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP10-5_两米以上隔离门锁死贯穿大厅_关键帧_v1.png"
+      ],
+      "notes": "OP10-4 的保护性松手必须由隔离门危险驱动。"
+    },
+    {
+      "id": "prop_xia_shoe",
+      "type": "prop",
+      "name": "小夏右脚掉落儿童鞋",
+      "status": "locked",
+      "description": "淡粉米白圆头魔术贴儿童鞋，鞋面有低调小花图案。OP09 脱落，OP12-8 事故当天无人特写，OP13 才进入多年后腐蚀。",
+      "continuity_lock": [
+        "OP10-OP12：小夏右脚不能重新穿鞋。",
+        "OP12-8：画面无人，不能出现人物、人影或玻璃反射人影。",
+        "OP13-1/OP13-2：必须承接 OP12-8 同机位、同构图、同一只鞋。"
+      ],
+      "reference_images": [
+        "episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP12-8_掉落儿童鞋无人定格声音消失_关键帧_v1.png"
+      ],
+      "notes": "这是 OP12 静音落点和 OP13 回声调查的桥。"
+    }
+  ]
+}
