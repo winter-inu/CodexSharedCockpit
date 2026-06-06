@@ -12,7 +12,7 @@
         "production/cockpit/shot_registry_OP10_OP12.json",
         "episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP10-1_轨道预警母女仍牵手_关键帧_v1.png",
         "episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP10-7_小夏怔住妈妈转向门体准备开门_关键帧_v1.png",
-        "episodes/season_01/episode_01/第一集_OP06-OP14_可灵视频Prompt_主线版_V1.md"
+        "episodes/season_01/episode_01/第一集_唯一关键帧与视频提示词_最新版.md"
       ],
       "expected_output": "OP10 保护性松手与隔离门升起视频段",
       "risk": "如果运动处理不好，妈妈松手可能被误读成放弃小夏。",
@@ -28,7 +28,7 @@
         "production/cockpit/shot_registry_OP10_OP12.json",
         "episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP11-1_隔离门完全升起锁死_关键帧_v1.png",
         "episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP11-7_妈妈说妈妈在这儿身后人潮逼近_关键帧_v1.png",
-        "episodes/season_01/episode_01/第一集_OP06-OP14_可灵视频Prompt_主线版_V1.md"
+        "episodes/season_01/episode_01/第一集_唯一关键帧与视频提示词_最新版.md"
       ],
       "expected_output": "OP11 妈妈隔门敲打、找应急开关、安慰小夏视频段",
       "risk": "OP11-4 不是应急开关硬特写，必须用运动补出沿门侧寻找开关、按键失灵。",
@@ -44,7 +44,7 @@
         "production/cockpit/shot_registry_OP10_OP12.json",
         "episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP12-1_人潮反冲妈妈被从门前推开_关键帧_v1.png",
         "episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP12-8_掉落儿童鞋无人定格声音消失_关键帧_v1.png",
-        "episodes/season_01/episode_01/第一集_OP06-OP14_可灵视频Prompt_主线版_V1.md"
+        "episodes/season_01/episode_01/第一集_唯一关键帧与视频提示词_最新版.md"
       ],
       "expected_output": "OP12 人潮推远、坍塌吞声、小夏停顿后奔跑、无人鞋静音视频段",
       "risk": "OP12-7 当前偏崩溃停顿，视频必须补出从停顿到短促奔跑。",

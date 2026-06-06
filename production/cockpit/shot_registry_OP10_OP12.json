@@ -3,7 +3,7 @@
   "project": "边界回声",
   "scope": "EP01 OP10-OP12",
   "source_storyboard": "episodes/season_01/episode_01/第一集_唯一主线宫格分镜表_最新版.md",
-  "source_prompt": "episodes/season_01/episode_01/第一集_OP06-OP14_可灵视频Prompt_主线版_V1.md",
+  "source_prompt": "episodes/season_01/episode_01/第一集_唯一关键帧与视频提示词_最新版.md",
   "qa_record": "episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP10_OP12_宫格关键帧质检记录_V1.md",
   "shots": [
     {
