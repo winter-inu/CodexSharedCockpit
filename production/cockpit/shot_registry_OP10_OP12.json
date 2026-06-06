@@ -257,27 +257,27 @@
       "id": "OP12-6",
       "op": "OP12",
       "time": "7.2-8.8s",
-      "content": "小夏茫然站了几秒，望着妈妈所在方向被灰尘和冷白电光吞没。",
+      "content": "小夏茫然站了几秒，望着妈妈所在方向被冷白光和灰尘吞没，后半句被切断。",
       "assets": ["char_xia", "scene_old_north_station_accident", "prop_xia_shoe"],
-      "keyframe_path": "episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP12-6_小夏茫然停顿望向妈妈方向_关键帧_v1.png",
+      "keyframe_path": "episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP12-6_冷白光灰尘吞没后半句_关键帧_v1.png",
       "status": "待视频",
-      "qa_score": 91,
-      "qa_source": "OP12 综合评分",
+      "qa_score": 94,
+      "qa_source": "OP12 导演版补帧自评",
       "readiness": {"script_locked": true, "assets_locked": true, "keyframes_ready": true, "prompt_ready": true, "video_ready": true},
-      "known_risks": ["情绪停顿必须留够，不要马上跑。"]
+      "known_risks": ["不直给伤害，不做火球；用冷白光、玻璃反射和灰尘完成吞声。"]
     },
     {
       "id": "OP12-7",
       "op": "OP12",
       "time": "8.8-10.5s",
-      "content": "小夏崩溃，朝隔离门另一侧边哭边跑，喊妈妈。",
+      "content": "小夏终于从停顿进入短促奔跑，朝隔离门方向喊妈妈。",
       "assets": ["char_xia", "scene_old_north_station_accident", "prop_isolation_door", "prop_xia_shoe"],
-      "keyframe_path": "episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP12-7_小夏崩溃边哭边跑向隔离门_关键帧_v1.png",
+      "keyframe_path": "episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP12-7_小夏低机位跑向隔离门_关键帧_v1.png",
       "status": "待视频",
-      "qa_score": 91,
-      "qa_source": "OP12 综合评分",
+      "qa_score": 95,
+      "qa_source": "OP12 导演版补帧自评",
       "readiness": {"script_locked": true, "assets_locked": true, "keyframes_ready": true, "prompt_ready": true, "video_ready": true},
-      "known_risks": ["当前帧偏崩溃停顿，视频必须补出从停顿到短促奔跑。"]
+      "known_risks": ["视频生成必须保留右脚白袜、左脚单鞋；动作是从停顿进入短促奔跑。"]
     },
     {
       "id": "OP12-8",

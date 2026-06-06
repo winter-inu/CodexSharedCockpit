@@ -42,13 +42,15 @@
       "priority": "P0",
       "input": [
         "production/cockpit/shot_registry_OP10_OP12.json",
-        "episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP12-1_人潮反冲妈妈被从门前推开_关键帧_v1.png",
-        "episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP12-8_掉落儿童鞋无人定格声音消失_关键帧_v1.png",
+        "episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP12-1_妈妈被人潮带远仍朝向小夏_关键帧_v1.png",
+        "episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP12-6_冷白光灰尘吞没后半句_关键帧_v1.png",
+        "episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP12-7_小夏低机位跑向隔离门_关键帧_v1.png",
+        "episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP12-5_无人鞋静音定格_关键帧_v1.png",
         "episodes/season_01/episode_01/第一集_唯一关键帧与视频提示词_最新版.md"
       ],
       "expected_output": "OP12 人潮推远、坍塌吞声、小夏停顿后奔跑、无人鞋静音视频段",
-      "risk": "OP12-7 当前偏崩溃停顿，视频必须补出从停顿到短促奔跑。",
-      "next_action": "图生视频建议拆为人潮推远、坍塌吞声、小夏停顿奔跑、鞋子静音四段。"
+      "risk": "OP12-6 不直给伤害，OP12-7 必须保留右脚白袜和左脚单鞋。",
+      "next_action": "图生视频建议拆为人潮推远、冷白光吞声、小夏短促奔跑、鞋子静音四段。"
     },
     {
       "id": "task_upgrade_manager_readiness",

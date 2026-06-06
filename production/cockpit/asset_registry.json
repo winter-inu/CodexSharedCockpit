@@ -17,9 +17,9 @@
       ],
       "reference_images": [
         "episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP11-6_小夏终于哭出来手掌贴门_关键帧_v1.png",
-        "episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP12-6_小夏茫然停顿望向妈妈方向_关键帧_v1.png"
+        "episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP12-7_小夏低机位跑向隔离门_关键帧_v1.png"
       ],
-      "notes": "OP12-7 视频运动必须补足从停顿到短促奔跑。"
+      "notes": "OP12-7 已补为低机位奔跑动作帧；视频运动必须保留右脚白袜、左脚单鞋。"
     },
     {
       "id": "char_mother",
@@ -47,11 +47,11 @@
       "continuity_lock": [
         "OP07-OP12 不是多年后废站。",
         "不能出现雨夜、断电废站、澪星、澜冰屿或小夏回声。",
-        "OP12-5 可以出现连廊结构坍塌、电缆短路冷白爆闪，但不能做大火球或血腥画面。"
+        "OP12-6 可以出现远处冷白强光、灰尘和玻璃反射吞声，但不能做大火球或血腥画面。"
       ],
       "reference_images": [
         "episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP10-5_两米以上隔离门锁死贯穿大厅_关键帧_v1.png",
-        "episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP12-5_连廊结构坍塌电缆短路冷白爆闪_关键帧_v1.png"
+        "episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP12-6_冷白光灰尘吞没后半句_关键帧_v1.png"
       ],
       "notes": "事故段仍保留车站运行时代的空间结构，不能提前进入 OP13 的废站美术。"
     },
@@ -78,14 +78,14 @@
       "type": "prop",
       "name": "小夏右脚掉落儿童鞋",
       "status": "locked",
-      "description": "淡粉米白圆头魔术贴儿童鞋，鞋面有低调小花图案。OP09 脱落，OP12-8 事故当天无人特写，OP13 才进入多年后腐蚀。",
+      "description": "淡粉米白圆头魔术贴儿童鞋，鞋面有低调小花图案。OP09 脱落，OP12-5 事故当天无人特写，OP13 才进入多年后腐蚀。",
       "continuity_lock": [
         "OP10-OP12：小夏右脚不能重新穿鞋。",
-        "OP12-8：画面无人，不能出现人物、人影或玻璃反射人影。",
-        "OP13-1/OP13-2：必须承接 OP12-8 同机位、同构图、同一只鞋。"
+        "OP12-5：画面无人，不能出现人物、人影或玻璃反射人影。",
+        "OP13-1/OP13-2：必须承接 OP12-5 同机位、同构图、同一只鞋。"
       ],
       "reference_images": [
-        "episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP12-8_掉落儿童鞋无人定格声音消失_关键帧_v1.png"
+        "episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP12-5_无人鞋静音定格_关键帧_v1.png"
       ],
       "notes": "这是 OP12 静音落点和 OP13 回声调查的桥。"
     }
