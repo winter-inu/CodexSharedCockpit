@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI 漫剧分镜管理器｜第二集</title>
+  <style>
+    :root{--bg:#f4f6f8;--card:#fff;--text:#182026;--muted:#66717c;--line:#d8dee5;--blue:#2563eb;--green:#2f7d5b;--amber:#a16207;--radius:8px}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
+    header{padding:22px 28px;background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+    h1{margin:0 0 6px;font-size:28px}
+    header p{margin:0;color:var(--muted)}
+    a{color:var(--blue);text-decoration:none}
+    main{max-width:1680px;margin:0 auto;padding:16px;display:grid;grid-template-columns:300px minmax(0,1fr);gap:16px}
+    aside,.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 10px 24px rgba(22,32,38,.07)}
+    aside{padding:16px;position:sticky;top:16px;align-self:start}
+    .metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}
+    .metric{border:1px solid var(--line);border-radius:var(--radius);padding:10px;background:#fbfcfd}
+    .metric strong{display:block;font-size:22px}
+    .metric span{font-size:12px;color:var(--muted)}
+    label{display:block;font-size:13px;font-weight:700;margin:14px 0 6px}
+    input,select{width:100%;border:1px solid var(--line);border-radius:var(--radius);padding:10px;background:#fff;font:inherit}
+    .links{display:grid;gap:8px;margin-top:14px}
+    .links a{display:block;border:1px solid var(--line);border-radius:var(--radius);padding:9px 10px;background:#fbfcfd}
+    .detail{padding:16px;margin-bottom:16px}
+    .detail-grid{display:grid;grid-template-columns:minmax(520px,1.35fr) minmax(360px,1fr);gap:16px}
+    .preview{background:#0d1117;border-radius:var(--radius);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:#cbd5e1;overflow:hidden}
+    .preview img{width:100%;height:100%;object-fit:cover;display:block}
+    h2{margin:0 0 8px;font-size:23px}
+    .badge{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px 9px;font-size:12px;font-weight:700;background:#eef2f5;color:var(--muted)}
+    .done{background:#eaf6ef;color:var(--green);border-color:#b9dec9}
+    .review{background:#fff7e6;color:var(--amber);border-color:#e7c77a}
+    .meta{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}
+    .meta div,.note{background:#fbfcfd;border:1px solid var(--line);border-radius:var(--radius);padding:10px}
+    .meta span,.compact{display:block;color:var(--muted);font-size:12px}
+    .notes{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .note h3{margin:0 0 6px;font-size:14px}.note p{margin:0}
+    .path{font-family:Consolas,monospace;font-size:12px;color:var(--muted);word-break:break-all;margin-top:10px}
+    table{width:100%;border-collapse:collapse;background:#fff}
+    th,td{padding:10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+    th{font-size:12px;color:var(--muted);background:#f8fafc}
+    tr{cursor:pointer}tr:hover{background:#f8fafc}tr.selected{background:#eef4ff}
+    .frames{overflow:auto}
+    footer{padding:18px 28px;color:var(--muted);font-size:12px;text-align:center}
+    @media(max-width:980px){main{grid-template-columns:1fr}.detail-grid{grid-template-columns:1fr}aside{position:static}.meta,.notes{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>《边界回声》第二集 AI 漫剧分镜管理器</h1>
+      <p>第二集《损坏记忆卡》：陆衡登场、妹妹记忆卡、未接来电异常、B-07 未归还记忆碎片钩子。</p>
+    </div>
+    <a href="./AI漫剧分镜管理器.html">返回第一集管理器</a>
+  </header>
+  <main>
+    <aside>
+      <strong>第二集制作状态</strong>
+      <div class="metric-grid">
+        <div class="metric"><strong id="totalCount">0</strong><span>宫格镜头</span></div>
+        <div class="metric"><strong id="keyframeCount">0</strong><span>主控关键帧</span></div>
+        <div class="metric"><strong>89</strong><span>导演终审评分</span></div>
+        <div class="metric"><strong>13</strong><span>可用图片</span></div>
+      </div>
+      <label for="search">搜索</label>
+      <input id="search" placeholder="陆衡 / 记忆卡 / B-07 / OP06" />
+      <label for="opFilter">段落</label>
+      <select id="opFilter"></select>
+      <div class="links">
+        <a href="../../episodes/season_01/episode_02/第二集_V1_完整剧本_最新版.md">第二集剧本</a>
+        <a href="../../episodes/season_01/episode_02/第二集_唯一宫格分镜表_最新版.md">唯一宫格分镜表</a>
+        <a href="../../episodes/season_01/episode_02/第二集_唯一关键帧与视频提示词_最新版.md">关键帧与视频提示词</a>
+        <a href="../../episodes/season_01/episode_02/第二集_图生视频提示词_最新版.md">图生视频提示词</a>
+        <a href="../../episodes/season_01/episode_02/第二集_导演终审与自评.md">导演终审与自评</a>
+        <a href="../../episodes/season_01/episode_02/keyframes/ep02_director_v1/EP02_导演版关键帧质检记录.md">关键帧质检记录</a>
+      </div>
+    </aside>
+    <section>
+      <div class="panel detail">
+        <div class="detail-grid">
+          <div class="preview" id="preview"></div>
+          <div>
+            <h2 id="detailTitle"></h2>
+            <span class="badge done" id="detailStatus"></span>
+            <div class="meta">
+              <div><span>段落</span><strong id="detailOp"></strong></div>
+              <div><span>时长</span><strong id="detailTime"></strong></div>
+              <div><span>评分</span><strong id="detailScore"></strong></div>
+            </div>
+            <div class="notes">
+              <div class="note"><h3>内容</h3><p id="detailAction"></p></div>
+              <div class="note"><h3>机位</h3><p id="detailCamera"></p></div>
+              <div class="note"><h3>声音</h3><p id="detailAudio"></p></div>
+              <div class="note"><h3>导演备注</h3><p id="detailNote"></p></div>
+            </div>
+            <div class="path" id="detailPath"></div>
+          </div>
+        </div>
+      </div>
+      <div class="panel frames">
+        <table>
+          <thead><tr><th>镜头</th><th>内容</th><th>关键帧</th><th>备注</th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <footer>数据源：episodes/season_01/episode_02。上传 GitHub 后可在另一台电脑直接查看。</footer>
+  <script>
+    const base = '../../episodes/season_01/episode_02/';
+    const frames = [
+      ['EP02-OP01-3','OP01','1.6s','澜冰屿发现自己走错路，坐标布条一段变白。','手部近景，雨夜旧北站外。','雨声压低，尾灯提示。','EP02-OP01-3_澜冰屿发现坐标布条变白_关键帧_v1.png',91,'第一集代价延续；澪星偏毛绒，后续视频需压回机械感。'],
+      ['EP02-OP02-1','OP02','1.2s','陆衡在异常区外围雨夜登场。','半身中景，封锁线外。','雨声、终端提示。','EP02-OP02-1_陆衡雨夜登场_关键帧_v1.png',95,'陆衡登场主控图。'],
+      ['EP02-OP02-4','OP02','1.8s','损坏记忆卡投影出妹妹陆星遥。','终端近景，投影半透明。','断裂残音。','EP02-OP02-4_损坏记忆卡投影妹妹_关键帧_v1.png',96,'妹妹线情绪钩子强。'],
+      ['EP02-OP03-2','OP03','1.4s','陆衡与澜冰屿第一次对峙。','雨夜平视双人构图。','陆衡质问。','EP02-OP03-2_陆衡与澜冰屿第一次对峙_关键帧_v1.png',90,'对峙可用；澪星不作角色锁参考。'],
+      ['EP02-OP04-1','OP04','1.6s','废弃派出所从雨雾中出现。','外景大全景。','旧电话铃一声。','EP02-OP04-1_废弃派出所从雨雾中出现_关键帧_v1.png',94,'边界漂移入口。'],
+      ['EP02-OP05-1','OP05','1.5s','未接来电大厅，旧电话亮起。','室内大全景，电话前景。','多部电话低响。','EP02-OP05-1_未接来电大厅电话亮起_关键帧_v1.png',95,'第二集空间主控图。'],
+      ['EP02-OP06-3','OP06','1.5s','妹妹投影看向澜冰屿而不是陆衡。','投影居中，澜冰屿反打。','残音：“B-07……”','EP02-OP06-3_妹妹投影看向澜冰屿_关键帧_v1.png',97,'本集最强悬疑图。'],
+      ['EP02-OP07-3','OP07','1.4s','澜冰屿按住屏幕，揭穿伪造记录。','侧面中近景。','澜冰屿：“它没有痛。”','EP02-OP07-3_澜冰屿按住伪造记录屏幕_关键帧_v1.png',90,'屏幕文字偏多，视频需模糊化。'],
+      ['EP02-OP08-1','OP08','1.4s','陆衡递出损坏记忆卡，双方都没完全松手。','双手近景。','环境声变低。','EP02-OP08-1_陆衡递出损坏记忆卡_关键帧_v1.png',94,'不信任的合作。'],
+      ['EP02-OP08-4','OP08','1.6s','澪星用尾灯稳定澜冰屿被拉长的影子。','低机位中景。','电话声骤停，尾灯低频。','EP02-OP08-4_澪星稳定澜冰屿影子_关键帧_v1.png',91,'代价可见；澪星视频需减少毛绒感。'],
+      ['EP02-OP09-4','OP09','1.4s','记忆卡没有熄灭，反而向澜冰屿发光。','卡片前景，澜冰屿背景。','微弱心跳声。','EP02-OP09-4_记忆卡向澜冰屿发光_关键帧_v1.png',94,'主线钩子清楚。'],
+      ['EP02-OP10-3','OP10','1.7s','陆衡要求澜冰屿在查清前不能消失。','雨夜平视对峙。','陆衡台词。','EP02-OP10-3_陆衡要求澜冰屿不能消失_关键帧_v1.png',95,'临时同盟成立。'],
+      ['EP02-OP10-4','OP10','1.5s','B-07 未归还记忆碎片警告，陆衡没看见。','三人关系构图。','短促警示音。','EP02-OP10-4_B07未归还记忆碎片警告_关键帧_v1.png',92,'结尾钩子可用。']
+    ].map((item) => ({
+      id:item[0], op:item[1], time:item[2], action:item[3], camera:item[4], audio:item[5],
+      file:item[6], score:item[7], note:item[8], path:base + 'keyframes/ep02_director_v1/' + item[6]
+    }));
+    const $ = (s) => document.querySelector(s);
+    let selected = frames[0];
+    function escapeHtml(v){return String(v ?? '').replace(/[&<>"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+    function renderFilters(){
+      const ops = ['all', ...new Set(frames.map((f)=>f.op))];
+      $('#opFilter').innerHTML = ops.map((op)=>`<option value="${op}">${op === 'all' ? '全部段落' : op}</option>`).join('');
+      $('#totalCount').textContent = frames.length;
+      $('#keyframeCount').textContent = frames.length;
+    }
+    function filtered(){
+      const q = $('#search').value.trim().toLowerCase();
+      const op = $('#opFilter').value;
+      return frames.filter((f)=> {
+        const text = `${f.id} ${f.op} ${f.action} ${f.note}`.toLowerCase();
+        return (!q || text.includes(q)) && (op === 'all' || f.op === op);
+      });
+    }
+    function renderDetail(){
+      $('#detailTitle').textContent = `${selected.id} ${selected.action}`;
+      $('#detailStatus').textContent = '可用';
+      $('#detailOp').textContent = selected.op;
+      $('#detailTime').textContent = selected.time;
+      $('#detailScore').textContent = `${selected.score} 分`;
+      $('#detailAction').textContent = selected.action;
+      $('#detailCamera').textContent = selected.camera;
+      $('#detailAudio').textContent = selected.audio;
+      $('#detailNote').textContent = selected.note;
+      $('#detailPath').textContent = selected.path;
+      $('#preview').innerHTML = `<img src="${escapeHtml(selected.path)}" alt="${escapeHtml(selected.id)}" onerror="this.parentElement.innerHTML='<span>图片路径待检查</span>'" />`;
+    }
+    function renderRows(){
+      $('#rows').innerHTML = filtered().map((f)=>`
+        <tr data-id="${escapeHtml(f.id)}" class="${selected.id === f.id ? 'selected' : ''}">
+          <td><strong>${escapeHtml(f.id)}</strong><span class="compact">${escapeHtml(f.op)} · ${escapeHtml(f.time)} · ${f.score}分</span></td>
+          <td>${escapeHtml(f.action)}<span class="compact">${escapeHtml(f.camera)}</span></td>
+          <td class="compact">${escapeHtml(f.file)}</td>
+          <td>${escapeHtml(f.note)}</td>
+        </tr>`).join('');
+      document.querySelectorAll('tr[data-id]').forEach((row)=>{
+        row.addEventListener('click',()=>{selected = frames.find((f)=>f.id === row.dataset.id); renderDetail(); renderRows();});
+      });
+    }
+    $('#search').addEventListener('input', renderRows);
+    $('#opFilter').addEventListener('change', renderRows);
+    renderFilters(); renderDetail(); renderRows();
+  </script>
+</body>
+</html>
