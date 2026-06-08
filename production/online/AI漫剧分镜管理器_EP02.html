@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AI 漫剧分镜管理器｜第二集</title>
+  <title>AI漫剧分镜管理器：第二集</title>
   <style>
     :root{--bg:#f4f6f8;--card:#fff;--text:#182026;--muted:#66717c;--line:#d8dee5;--blue:#2563eb;--green:#2f7d5b;--amber:#a16207;--radius:8px}
     *{box-sizing:border-box}
@@ -30,7 +30,6 @@
     h2{margin:0 0 8px;font-size:23px}
     .badge{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px 9px;font-size:12px;font-weight:700;background:#eef2f5;color:var(--muted)}
     .done{background:#eaf6ef;color:var(--green);border-color:#b9dec9}
-    .review{background:#fff7e6;color:var(--amber);border-color:#e7c77a}
     .meta{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}
     .meta div,.note{background:#fbfcfd;border:1px solid var(--line);border-radius:var(--radius);padding:10px}
     .meta span,.compact{display:block;color:var(--muted);font-size:12px}
@@ -49,8 +48,8 @@
 <body>
   <header>
     <div>
-      <h1>《边界回声》第二集 AI 漫剧分镜管理器</h1>
-      <p>第二集《损坏记忆卡》：陆衡登场、妹妹记忆卡、未接来电异常、B-07 未归还记忆碎片钩子。</p>
+      <h1>《边界回声》第二集 AI漫剧分镜管理器</h1>
+      <p>第二集《损坏记忆卡》：当前展示为角色海报 V2 校正版，澜冰屿、陆衡、澪星均按 V2 形象锁定。</p>
     </div>
     <a href="./AI漫剧分镜管理器.html">返回第一集管理器</a>
   </header>
@@ -60,11 +59,11 @@
       <div class="metric-grid">
         <div class="metric"><strong id="totalCount">0</strong><span>宫格镜头</span></div>
         <div class="metric"><strong id="keyframeCount">0</strong><span>主控关键帧</span></div>
-        <div class="metric"><strong>89</strong><span>导演终审评分</span></div>
-        <div class="metric"><strong>13</strong><span>可用图片</span></div>
+        <div class="metric"><strong>93</strong><span>导演终审评分</span></div>
+        <div class="metric"><strong>V2</strong><span>角色校正版</span></div>
       </div>
       <label for="search">搜索</label>
-      <input id="search" placeholder="陆衡 / 记忆卡 / B-07 / OP06" />
+      <input id="search" placeholder="陆衡 / 澪星 / B-07 / OP06" />
       <label for="opFilter">段落</label>
       <select id="opFilter"></select>
       <div class="links">
@@ -73,7 +72,7 @@
         <a href="../../episodes/season_01/episode_02/第二集_唯一关键帧与视频提示词_最新版.md">关键帧与视频提示词</a>
         <a href="../../episodes/season_01/episode_02/第二集_图生视频提示词_最新版.md">图生视频提示词</a>
         <a href="../../episodes/season_01/episode_02/第二集_导演终审与自评.md">导演终审与自评</a>
-        <a href="../../episodes/season_01/episode_02/keyframes/ep02_director_v1/EP02_导演版关键帧质检记录.md">关键帧质检记录</a>
+        <a href="../../episodes/season_01/episode_02/keyframes/ep02_director_v2/EP02_V2角色校正关键帧质检记录.md">V2关键帧质检记录</a>
       </div>
     </aside>
     <section>
@@ -106,26 +105,26 @@
       </div>
     </section>
   </main>
-  <footer>数据源：episodes/season_01/episode_02。上传 GitHub 后可在另一台电脑直接查看。</footer>
+  <footer>数据源：episodes/season_01/episode_02。当前最终关键帧目录：keyframes/ep02_director_v2。</footer>
   <script>
     const base = '../../episodes/season_01/episode_02/';
     const frames = [
-      ['EP02-OP01-3','OP01','1.6s','澜冰屿发现自己走错路，坐标布条一段变白。','手部近景，雨夜旧北站外。','雨声压低，尾灯提示。','EP02-OP01-3_澜冰屿发现坐标布条变白_关键帧_v1.png',91,'第一集代价延续；澪星偏毛绒，后续视频需压回机械感。'],
-      ['EP02-OP02-1','OP02','1.2s','陆衡在异常区外围雨夜登场。','半身中景，封锁线外。','雨声、终端提示。','EP02-OP02-1_陆衡雨夜登场_关键帧_v1.png',95,'陆衡登场主控图。'],
-      ['EP02-OP02-4','OP02','1.8s','损坏记忆卡投影出妹妹陆星遥。','终端近景，投影半透明。','断裂残音。','EP02-OP02-4_损坏记忆卡投影妹妹_关键帧_v1.png',96,'妹妹线情绪钩子强。'],
-      ['EP02-OP03-2','OP03','1.4s','陆衡与澜冰屿第一次对峙。','雨夜平视双人构图。','陆衡质问。','EP02-OP03-2_陆衡与澜冰屿第一次对峙_关键帧_v1.png',90,'对峙可用；澪星不作角色锁参考。'],
-      ['EP02-OP04-1','OP04','1.6s','废弃派出所从雨雾中出现。','外景大全景。','旧电话铃一声。','EP02-OP04-1_废弃派出所从雨雾中出现_关键帧_v1.png',94,'边界漂移入口。'],
-      ['EP02-OP05-1','OP05','1.5s','未接来电大厅，旧电话亮起。','室内大全景，电话前景。','多部电话低响。','EP02-OP05-1_未接来电大厅电话亮起_关键帧_v1.png',95,'第二集空间主控图。'],
-      ['EP02-OP06-3','OP06','1.5s','妹妹投影看向澜冰屿而不是陆衡。','投影居中，澜冰屿反打。','残音：“B-07……”','EP02-OP06-3_妹妹投影看向澜冰屿_关键帧_v1.png',97,'本集最强悬疑图。'],
-      ['EP02-OP07-3','OP07','1.4s','澜冰屿按住屏幕，揭穿伪造记录。','侧面中近景。','澜冰屿：“它没有痛。”','EP02-OP07-3_澜冰屿按住伪造记录屏幕_关键帧_v1.png',90,'屏幕文字偏多，视频需模糊化。'],
-      ['EP02-OP08-1','OP08','1.4s','陆衡递出损坏记忆卡，双方都没完全松手。','双手近景。','环境声变低。','EP02-OP08-1_陆衡递出损坏记忆卡_关键帧_v1.png',94,'不信任的合作。'],
-      ['EP02-OP08-4','OP08','1.6s','澪星用尾灯稳定澜冰屿被拉长的影子。','低机位中景。','电话声骤停，尾灯低频。','EP02-OP08-4_澪星稳定澜冰屿影子_关键帧_v1.png',91,'代价可见；澪星视频需减少毛绒感。'],
-      ['EP02-OP09-4','OP09','1.4s','记忆卡没有熄灭，反而向澜冰屿发光。','卡片前景，澜冰屿背景。','微弱心跳声。','EP02-OP09-4_记忆卡向澜冰屿发光_关键帧_v1.png',94,'主线钩子清楚。'],
-      ['EP02-OP10-3','OP10','1.7s','陆衡要求澜冰屿在查清前不能消失。','雨夜平视对峙。','陆衡台词。','EP02-OP10-3_陆衡要求澜冰屿不能消失_关键帧_v1.png',95,'临时同盟成立。'],
-      ['EP02-OP10-4','OP10','1.5s','B-07 未归还记忆碎片警告，陆衡没看见。','三人关系构图。','短促警示音。','EP02-OP10-4_B07未归还记忆碎片警告_关键帧_v1.png',92,'结尾钩子可用。']
+      ['EP02-OP01-3','OP01','1.6s','澜冰屿发现自己走错路，坐标布条一段变白。','手部与人物中近景，雨夜旧北站外。','雨声压低，尾灯提示。','EP02-OP01-3_澜冰屿发现坐标布条变白_关键帧_v2.png',94,'V2重做：澜冰屿按26岁年轻疲惫感锁定，旧白长外套与坐标布条保留。'],
+      ['EP02-OP02-1','OP02','1.2s','陆衡在异常区外围雨夜登场。','半身中景，封锁线外。','雨声、终端提示。','EP02-OP02-1_陆衡雨夜登场_关键帧_v2.png',95,'V2重做：陆衡按29岁失踪调查员锁定，不再偏中年。'],
+      ['EP02-OP02-4','OP02','1.8s','损坏记忆卡投影出妹妹陆星遥。','终端近景，投影半透明。','断裂残音。','EP02-OP02-4_损坏记忆卡投影妹妹_关键帧_v2.png',93,'V2重做：陆衡手和侧脸年轻化，投影保留悬疑钩子。'],
+      ['EP02-OP03-2','OP03','1.4s','陆衡与澜冰屿第一次对峙。','雨夜平视双人构图。','陆衡质问。','EP02-OP03-2_陆衡与澜冰屿第一次对峙_关键帧_v2.png',94,'V2重做：双人年龄和服装识别清楚，情绪克制。'],
+      ['EP02-OP04-1','OP04','1.6s','废弃派出所从雨雾中出现。','外景大全景。','旧电话铃一声。','EP02-OP04-1_废弃派出所从雨雾中出现_关键帧_v2.png',94,'环境帧沿用可用构图，无角色偏差。'],
+      ['EP02-OP05-1','OP05','1.5s','未接来电大厅，旧电话亮起。','室内大全景，电话前景。','多部电话低响。','EP02-OP05-1_未接来电大厅电话亮起_关键帧_v2.png',95,'环境帧沿用可用构图，作为第二集空间主控图。'],
+      ['EP02-OP06-3','OP06','1.5s','妹妹投影看向澜冰屿而不是陆衡。','投影居中，澜冰屿和陆衡形成三角关系。','残音：“B-07……”','EP02-OP06-3_妹妹投影看向澜冰屿_关键帧_v2.png',95,'V2重做：两位男性角色年龄正确，投影钩子更清楚。'],
+      ['EP02-OP07-3','OP07','1.4s','澜冰屿按住屏幕，揭穿伪造记录。','侧面中近景。','澜冰屿：“它没有痛。”','EP02-OP07-3_澜冰屿按住伪造记录屏幕_关键帧_v2.png',94,'V2重做：人物特写可用，屏幕仅保留抽象信息，不做可读长文。'],
+      ['EP02-OP08-1','OP08','1.4s','陆衡递出损坏记忆卡，双方都没有完全松手。','双手近景。','环境声变低。','EP02-OP08-1_陆衡递出损坏记忆卡_关键帧_v2.png',95,'V2重做：不信任的合作关系明确，人物年龄正确。'],
+      ['EP02-OP08-4','OP08','1.6s','澪星用尾灯稳定澜冰屿被拉长的影子。','低机位中景。','电话声骤停，尾灯低频。','EP02-OP08-4_澪星稳定澜冰屿影子_关键帧_v2.png',96,'V2重做：澪星回到机械猫引导生命体造型，不再动物化或变种。'],
+      ['EP02-OP09-4','OP09','1.4s','记忆卡没有熄灭，反而向澜冰屿发光。','卡片前景，三角构图。','微弱心跳声。','EP02-OP09-4_记忆卡向澜冰屿发光_关键帧_v2.png',95,'V2重做：澪星、澜冰屿、陆衡同框关系清楚。'],
+      ['EP02-OP10-3','OP10','1.7s','陆衡要求澜冰屿在查清前不能消失。','雨夜平视对峙，手抓住袖口。','陆衡台词。','EP02-OP10-3_陆衡要求澜冰屿不能消失_关键帧_v2.png',95,'V2重做：人物年轻化，临时同盟的情感压力更强。'],
+      ['EP02-OP10-4','OP10','1.5s','B-07 未归还记忆碎片警告，陆衡没有看见。','结尾钩子构图。','短促警示音。','EP02-OP10-4_B07未归还记忆碎片警告_关键帧_v2.png',92,'结尾钩子可用；后续视频生成需避免可读长文。']
     ].map((item) => ({
       id:item[0], op:item[1], time:item[2], action:item[3], camera:item[4], audio:item[5],
-      file:item[6], score:item[7], note:item[8], path:base + 'keyframes/ep02_director_v1/' + item[6]
+      file:item[6], score:item[7], note:item[8], path:base + 'keyframes/ep02_director_v2/' + item[6]
     }));
     const $ = (s) => document.querySelector(s);
     let selected = frames[0];
@@ -146,7 +145,7 @@
     }
     function renderDetail(){
       $('#detailTitle').textContent = `${selected.id} ${selected.action}`;
-      $('#detailStatus').textContent = '可用';
+      $('#detailStatus').textContent = 'V2可用';
       $('#detailOp').textContent = selected.op;
       $('#detailTime').textContent = selected.time;
       $('#detailScore').textContent = `${selected.score} 分`;
@@ -160,7 +159,7 @@
     function renderRows(){
       $('#rows').innerHTML = filtered().map((f)=>`
         <tr data-id="${escapeHtml(f.id)}" class="${selected.id === f.id ? 'selected' : ''}">
-          <td><strong>${escapeHtml(f.id)}</strong><span class="compact">${escapeHtml(f.op)} · ${escapeHtml(f.time)} · ${f.score}分</span></td>
+          <td><strong>${escapeHtml(f.id)}</strong><span class="compact">${escapeHtml(f.op)} | ${escapeHtml(f.time)} | ${f.score}分</span></td>
           <td>${escapeHtml(f.action)}<span class="compact">${escapeHtml(f.camera)}</span></td>
           <td class="compact">${escapeHtml(f.file)}</td>
           <td>${escapeHtml(f.note)}</td>
