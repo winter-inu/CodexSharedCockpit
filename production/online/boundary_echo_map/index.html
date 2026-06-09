@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>边界回声｜静海市交互地图</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="left-panel">
+      <div class="brand">
+        <p>边界回声</p>
+        <h1>静海市异常区地图</h1>
+      </div>
+
+      <section class="panel-block">
+        <h2>底图状态</h2>
+        <p class="asset-note">当前为占位图片底图，用于验证地图系统。建筑、废墟、道路、车站、海岸线等最终细节等待美术高精度地图资产替换。</p>
+      </section>
+
+      <section class="panel-block">
+        <h2>图层</h2>
+        <label><input type="checkbox" data-layer="locations" autocomplete="off" checked> 地点标记</label>
+        <label><input type="checkbox" data-layer="ep01" autocomplete="off" checked> EP01 路线</label>
+        <label><input type="checkbox" data-layer="ep02" autocomplete="off" checked> EP02 路线</label>
+        <label><input type="checkbox" data-layer="boundary" autocomplete="off" checked> 异常边界</label>
+        <label><input type="checkbox" data-layer="danger" autocomplete="off" checked> 危险区域</label>
+        <label><input type="checkbox" data-layer="future" autocomplete="off" checked> 未来事件位</label>
+      </section>
+
+      <section class="panel-block">
+        <h2>地图模式</h2>
+        <button class="wide-button" id="backToCity" disabled>返回静海市总图</button>
+      </section>
+    </aside>
+
+    <main class="map-wrap">
+      <div id="map" aria-label="静海市交互地图"></div>
+      <div class="hotspot-layer" id="hotspotLayer" aria-label="地点热区"></div>
+      <div class="hud top-hud">
+        <span id="mapTitle">静海市主舞台概念地图</span>
+        <span id="zoomReadout">缩放 0</span>
+      </div>
+      <div class="hud bottom-hud">
+        <span>拖拽 / 缩放 / 点击地点查看剧情用途</span>
+      </div>
+    </main>
+
+    <aside class="right-panel" id="detailPanel">
+      <div class="empty-state">
+        <p>选择一个地点</p>
+        <span>地点名称、剧情作用、相关事件和详细图入口会显示在这里。</span>
+      </div>
+    </aside>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>
