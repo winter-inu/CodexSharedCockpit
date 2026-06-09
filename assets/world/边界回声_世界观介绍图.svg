@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1080" viewBox="0 0 1800 1080">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111820"/>
+      <stop offset="0.45" stop-color="#1d2730"/>
+      <stop offset="1" stop-color="#101317"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#263842"/>
+      <stop offset="0.5" stop-color="#52666a"/>
+      <stop offset="1" stop-color="#222b31"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .title{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;font-size:64px;font-weight:700;fill:#eef5f7}
+      .sub{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;font-size:24px;fill:#9fb0b8}
+      .h{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;font-size:30px;font-weight:700;fill:#eef5f7}
+      .t{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;font-size:22px;fill:#cbd6da}
+      .small{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;font-size:18px;fill:#9fb0b8}
+      .tiny{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;font-size:16px;fill:#8d9aa0}
+      .card{fill:#18232b;stroke:#334653;stroke-width:2;rx:18}
+      .line{stroke:#6f8790;stroke-width:3;fill:none;stroke-linecap:round}
+      .dash{stroke:#7ca0a7;stroke-width:3;fill:none;stroke-linecap:round;stroke-dasharray:12 12}
+      .blue{fill:#8ccfe1}
+      .amber{fill:#d7a552}
+      .rose{fill:#d995a2}
+      .mint{fill:#8fc6a8}
+      .rust{fill:#a86b52}
+    </style>
+  </defs>
+  <rect width="1800" height="1080" fill="url(#bg)"/>
+  <path d="M0 820 C280 720 420 880 680 790 C980 690 1120 840 1450 760 C1620 720 1710 740 1800 700 L1800 1080 L0 1080 Z" fill="#0d1116" opacity="0.75"/>
+  <path d="M80 250 C320 180 520 315 730 245 C980 165 1140 285 1390 205 C1530 160 1660 180 1760 120" class="dash" opacity="0.35"/>
+  <text x="80" y="100" class="title">边界回声 世界观图</text>
+  <text x="84" y="142" class="sub">静海断层之后，现实、记忆、遗憾和城市空间被压在同一条边界线上。</text>
+
+  <rect x="80" y="210" width="500" height="270" class="card"/>
+  <text x="116" y="262" class="h">1. 静海系统</text>
+  <text x="116" y="310" class="t">城市级灾后修复与记忆治疗系统</text>
+  <text x="116" y="350" class="small">原目标：帮助城市和人从灾难中恢复稳定</text>
+  <text x="116" y="386" class="small">错误逻辑：遗憾未处理，就不能让它消失</text>
+  <text x="116" y="422" class="small">结果：保存失踪者的记忆、愿望和未完成瞬间</text>
+  <circle cx="512" cy="254" r="34" fill="#243a44" stroke="#8ccfe1" stroke-width="3"/>
+  <path d="M492 254 L512 235 L532 254 L512 273 Z" fill="#8ccfe1" opacity="0.8"/>
+
+  <rect x="650" y="210" width="500" height="270" class="card"/>
+  <text x="686" y="262" class="h">2. 静海断层</text>
+  <text x="686" y="310" class="t">现实出现看不见的裂缝</text>
+  <text x="686" y="350" class="small">一侧仍是正常城市</text>
+  <text x="686" y="386" class="small">另一侧变成记忆和现实混合的废城异常区</text>
+  <text x="686" y="422" class="small">事故不是普通爆炸，而是空间与情绪被压叠</text>
+  <path d="M1050 245 L1015 300 L1064 330 L1018 390 L1085 292 L1034 275 Z" fill="#d7a552" opacity="0.8" filter="url(#softGlow)"/>
+
+  <rect x="1220" y="210" width="500" height="270" class="card"/>
+  <text x="1256" y="262" class="h">3. 异常区</text>
+  <text x="1256" y="310" class="t">被遗憾与情绪重塑的城市空间</text>
+  <text x="1256" y="350" class="small">记忆回声：声音、影像、过去短暂重现</text>
+  <text x="1256" y="386" class="small">边界漂移：街道、站台、楼层夜间改变位置</text>
+  <text x="1256" y="422" class="small">遗憾循环：最未完成的一刻反复上演</text>
+  <circle cx="1640" cy="265" r="58" fill="#1d3338" stroke="#8fc6a8" stroke-width="3"/>
+  <circle cx="1640" cy="265" r="28" fill="none" stroke="#8ccfe1" stroke-width="3" opacity="0.7"/>
+
+  <rect x="80" y="565" width="360" height="260" class="card"/>
+  <text x="116" y="615" class="h">澜冰屿</text>
+  <text x="116" y="655" class="t">人形锚点 / 记忆回声感知者</text>
+  <text x="116" y="694" class="small">听见遗憾源点附近的回声</text>
+  <text x="116" y="728" class="small">短暂稳定局部异常区</text>
+  <text x="116" y="762" class="small">代价：存在痕迹逐渐褪白</text>
+  <path d="M348 650 C316 610 318 710 350 680 C372 660 366 620 348 650 Z" fill="#d8ded7" opacity="0.8"/>
+
+  <rect x="470" y="565" width="360" height="260" class="card"/>
+  <text x="506" y="615" class="h">澪星</text>
+  <text x="506" y="655" class="t">泊舟体系引航生命</text>
+  <text x="506" y="694" class="small">尾灯引航，星核定位</text>
+  <text x="506" y="728" class="small">愿望舱临时收纳记忆碎片</text>
+  <text x="506" y="762" class="small">它不是宠物，是回头等人的灯</text>
+  <circle cx="748" cy="650" r="38" fill="#5c737c" stroke="#8ccfe1" stroke-width="3"/>
+  <path d="M724 622 L710 585 L744 610 Z M776 622 L812 585 L790 614 Z" fill="#5c737c" stroke="#8ccfe1" stroke-width="2"/>
+
+  <rect x="860" y="565" width="360" height="260" class="card"/>
+  <text x="896" y="615" class="h">主角团任务</text>
+  <text x="896" y="655" class="t">不是消灭异常，而是回收遗憾</text>
+  <text x="896" y="694" class="small">找到现实地点</text>
+  <text x="896" y="728" class="small">识别真正源点</text>
+  <text x="896" y="762" class="small">让被困住的记忆继续向前</text>
+  <path d="M1112 648 C1080 650 1070 685 1092 706 C1110 722 1138 708 1144 680 C1150 650 1130 644 1112 648 Z" fill="#d995a2" opacity="0.75"/>
+
+  <rect x="1250" y="565" width="470" height="260" class="card"/>
+  <text x="1286" y="615" class="h">第一季空间推进</text>
+  <text x="1286" y="655" class="small">旧北站：观众入口 / 小夏等待回声</text>
+  <text x="1286" y="689" class="small">废弃派出所：陆衡入口 / 妹妹记忆卡</text>
+  <text x="1286" y="723" class="small">北湾总站：团队分工 / 无人到站事件</text>
+  <text x="1286" y="757" class="small">静海核心：B-07 / 澜冰屿诞生真相</text>
+  <path d="M1595 666 C1630 674 1630 724 1595 732 C1560 724 1560 674 1595 666 Z" fill="#a86b52" opacity="0.7"/>
+
+  <path d="M580 345 C610 345 625 345 650 345" class="line"/>
+  <path d="M1150 345 C1180 345 1195 345 1220 345" class="line"/>
+  <path d="M440 705 C455 705 455 705 470 705" class="line"/>
+  <path d="M830 705 C845 705 845 705 860 705" class="line"/>
+  <path d="M1220 705 C1235 705 1235 705 1250 705" class="line"/>
+
+  <rect x="80" y="900" width="1640" height="62" fill="#131c23" stroke="#334653" stroke-width="2" rx="14"/>
+  <text x="110" y="940" class="small">核心主题：失踪、记忆、选择、人是否仍是人。每个地点都不是纯背景，而是一段未被放回过去的遗憾。</text>
+</svg>

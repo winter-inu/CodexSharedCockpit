@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1080" viewBox="0 0 1800 1080">
+  <defs>
+    <linearGradient id="mapbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3f0e8"/>
+      <stop offset="1" stop-color="#d8d6cf"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#263238" flood-opacity="0.22"/>
+    </filter>
+    <style>
+      .title{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;font-size:56px;font-weight:700;fill:#24313a}
+      .sub{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;font-size:22px;fill:#64727a}
+      .label{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;font-size:24px;font-weight:700;fill:#25343c}
+      .small{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;font-size:18px;fill:#4d5d64}
+      .tiny{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;font-size:15px;fill:#66767d}
+      .zone{stroke:#7d8a8d;stroke-width:2;fill-opacity:0.88}
+      .road{stroke:#68777b;stroke-width:8;fill:none;stroke-linecap:round;opacity:0.45}
+      .rail{stroke:#3c4549;stroke-width:6;fill:none;stroke-linecap:round;stroke-dasharray:18 14;opacity:0.55}
+      .route1{stroke:#2f6f7f;stroke-width:5;fill:none;stroke-linecap:round}
+      .route2{stroke:#9a604a;stroke-width:5;fill:none;stroke-linecap:round;stroke-dasharray:14 10}
+      .route3{stroke:#7f6a2f;stroke-width:5;fill:none;stroke-linecap:round;stroke-dasharray:6 10}
+      .pin{stroke:#fff;stroke-width:4;filter:url(#shadow)}
+      .box{fill:#ffffff;stroke:#b9c0bd;stroke-width:2;rx:12;filter:url(#shadow)}
+    </style>
+  </defs>
+  <rect width="1800" height="1080" fill="#d9dee0"/>
+  <rect x="40" y="150" width="1720" height="860" fill="url(#mapbg)" opacity="0.78" stroke="#8b989a" stroke-width="2"/>
+  <g opacity="0.28">
+    <path d="M260 150 V1010 M480 150 V1010 M700 150 V1010 M920 150 V1010 M1140 150 V1010 M1360 150 V1010 M1580 150 V1010" stroke="#7f8c8e" stroke-width="1"/>
+    <path d="M40 280 H1760 M40 410 H1760 M40 540 H1760 M40 670 H1760 M40 800 H1760 M40 930 H1760" stroke="#7f8c8e" stroke-width="1"/>
+  </g>
+  <g class="tiny" opacity="0.72">
+    <text x="145" y="174">A</text><text x="365" y="174">B</text><text x="585" y="174">C</text><text x="805" y="174">D</text><text x="1025" y="174">E</text><text x="1245" y="174">F</text><text x="1465" y="174">G</text><text x="1685" y="174">H</text>
+    <text x="55" y="238">1</text><text x="55" y="368">2</text><text x="55" y="498">3</text><text x="55" y="628">4</text><text x="55" y="758">5</text><text x="55" y="888">6</text>
+  </g>
+  <text x="70" y="88" class="title">静海异常区地图草案</text>
+  <text x="74" y="126" class="sub">V1 空间定位图：用于决定每个事件发生的位置、路线和主线推进方向。</text>
+
+  <path d="M105 210 C250 120 450 160 520 300 C610 480 450 640 260 640 C110 640 50 500 78 365 C92 290 62 250 105 210 Z" fill="#e7e2d6" class="zone"/>
+  <text x="160" y="270" class="label">现实城区</text>
+  <text x="160" y="302" class="small">调查 / 档案 / 幸存者</text>
+
+  <path d="M420 170 C690 80 940 145 1030 320 C1140 530 970 735 710 770 C475 802 300 690 330 515 C352 385 308 238 420 170 Z" fill="#cbd8d4" class="zone"/>
+  <text x="590" y="250" class="label">异常区边缘</text>
+  <text x="590" y="282" class="small">雾墙 / 边界漂移 / 回声重叠</text>
+
+  <path d="M920 170 C1180 70 1490 120 1635 325 C1780 530 1610 850 1285 900 C1038 938 835 820 805 620 C780 450 760 250 920 170 Z" fill="#b9c5bd" class="zone"/>
+  <text x="1130" y="235" class="label">静海系统深层</text>
+  <text x="1130" y="267" class="small">损坏协议 / 样本编号 / 核心断层</text>
+
+  <path d="M210 585 C450 520 565 430 750 455 C915 480 1015 600 1165 585 C1320 568 1420 470 1580 430" class="road"/>
+  <path d="M340 735 C600 675 700 710 820 820 C920 910 1115 930 1360 820" class="rail"/>
+  <path d="M535 350 C620 420 725 455 820 525 C920 600 1030 660 1170 720 C1260 760 1350 785 1460 775" class="route1"/>
+  <path d="M360 250 C510 330 615 360 720 460 C820 560 880 630 1030 650" class="route2"/>
+  <path d="M620 710 C760 755 890 810 1030 780 C1180 748 1280 660 1400 560" class="route3"/>
+
+  <circle cx="535" cy="350" r="18" fill="#2f6f7f" class="pin"/>
+  <text x="508" y="326" class="tiny">S01E01</text>
+  <text x="560" y="342" class="label">旧北站</text>
+  <text x="560" y="371" class="tiny">第一集入口：小夏等待回声</text>
+
+  <circle cx="610" cy="405" r="14" fill="#8aa0a6" class="pin"/>
+  <text x="632" y="411" class="small">候车区 / 隔离栏事故点</text>
+
+  <circle cx="650" cy="445" r="14" fill="#8aa0a6" class="pin"/>
+  <text x="672" y="451" class="small">废站长椅 / 儿童鞋源点</text>
+
+  <circle cx="820" cy="525" r="18" fill="#9a604a" class="pin"/>
+  <text x="845" y="517" class="label">异常区边缘街区</text>
+  <text x="845" y="546" class="tiny">澜冰屿与澪星离开旧北站后的漂移区</text>
+
+  <circle cx="1030" cy="650" r="18" fill="#9a604a" class="pin"/>
+  <text x="1000" y="626" class="tiny">S01E02</text>
+  <text x="1055" y="642" class="label">废弃派出所</text>
+  <text x="1055" y="671" class="tiny">第二集：未接来电 / 陆星遥投影 / 伪造记录</text>
+
+  <circle cx="1245" cy="798" r="18" fill="#7f6a2f" class="pin"/>
+  <text x="1214" y="774" class="tiny">S01E05</text>
+  <text x="1270" y="790" class="label">北湾总站</text>
+  <text x="1270" y="819" class="tiny">计划第5集：《无人到站》团队分工事件</text>
+
+  <circle cx="1410" cy="560" r="18" fill="#4f5d64" class="pin"/>
+  <text x="1378" y="536" class="tiny">S01E04?</text>
+  <text x="1435" y="552" class="label">地下轨道设施</text>
+  <text x="1435" y="581" class="tiny">许明烬 / 最后一站 / 维修通道</text>
+
+  <circle cx="360" cy="250" r="18" fill="#51656b" class="pin"/>
+  <text x="385" y="242" class="label">档案室</text>
+  <text x="385" y="271" class="tiny">陆衡现实证据线 / 静海残留记录</text>
+
+  <circle cx="620" cy="710" r="18" fill="#a86b52" class="pin"/>
+  <text x="590" y="686" class="tiny">S01E04?</text>
+  <text x="645" y="702" class="label">黑市维修点</text>
+  <text x="645" y="731" class="tiny">废城设备、轨道零件、许明烬入口</text>
+
+  <circle cx="1510" cy="350" r="26" fill="#7d3d3d" class="pin"/>
+  <text x="1458" y="305" class="label">静海核心断层</text>
+  <text x="1395" y="330" class="tiny">B-07 / 澜冰屿诞生 / 系统错误逻辑</text>
+  <path d="M1510 318 L1494 350 L1515 344 L1500 386 L1536 340 L1515 346 Z" fill="#e0b25c"/>
+
+  <rect x="70" y="820" width="520" height="150" class="box"/>
+  <text x="100" y="862" class="label">路线图例</text>
+  <path d="M105 895 L195 895" class="route1"/><text x="215" y="902" class="small">澜冰屿 / 澪星回收遗憾路线</text>
+  <path d="M105 930 L195 930" class="route2"/><text x="215" y="937" class="small">陆衡现实追查路线</text>
+  <path d="M105 965 L195 965" class="route3"/><text x="215" y="972" class="small">后续主线向静海核心推进</text>
+
+  <rect x="1230" y="60" width="620" height="118" class="box"/>
+  <text x="1260" y="102" class="label">放置新事件时先问三件事</text>
+  <text x="1260" y="136" class="small">现实地点在哪里？遗憾源点在哪里？它离静海核心更近了吗？</text>
+
+  <rect x="70" y="60" width="20" height="20" fill="#e7e2d6" stroke="#7d8a8d"/>
+  <text x="100" y="76" class="tiny">现实城区</text>
+  <rect x="190" y="60" width="20" height="20" fill="#cbd8d4" stroke="#7d8a8d"/>
+  <text x="220" y="76" class="tiny">异常区边缘</text>
+  <rect x="340" y="60" width="20" height="20" fill="#b9c5bd" stroke="#7d8a8d"/>
+  <text x="370" y="76" class="tiny">静海深层</text>
+</svg>
