@@ -1,0 +1,96 @@
+{
+  "version": "v0.4-dual-map-prototype",
+  "maps": {
+    "fault": {
+      "title": "断层影响区地图",
+      "baseImage": "assets/maps/jinghai_fault_zone_base_8k.webp",
+      "annotatedImage": "assets/maps/jinghai_fault_zone_annotated_8k.webp",
+      "width": 1254,
+      "height": 1254,
+      "locations": "data/locations_fault_zone.json",
+      "routes": "data/routes_fault_zone.json",
+      "areas": [
+        {
+          "id": "core-boundary",
+          "layer": "boundary",
+          "name": "断层核心区范围",
+          "type": "异常区边界",
+          "stroke": "#ff7d73",
+          "fill": "#ff7d73",
+          "fillOpacity": 0.06,
+          "dashArray": "16 12",
+          "points": [
+            { "imageX": 702.24, "imageY": 338.58 },
+            { "imageX": 978.12, "imageY": 338.58 },
+            { "imageX": 978.12, "imageY": 639.54 },
+            { "imageX": 702.24, "imageY": 639.54 }
+          ],
+          "description": "断层核心区的占位边界，默认关闭。"
+        },
+        {
+          "id": "east-anomaly-edge",
+          "layer": "danger",
+          "name": "东部沿海异常带",
+          "type": "危险区域",
+          "stroke": "#ffb17b",
+          "fill": "#ffb17b",
+          "fillOpacity": 0.08,
+          "dashArray": "10 8",
+          "points": [
+            { "imageX": 1078.44, "imageY": 338.58 },
+            { "imageX": 1241.46, "imageY": 338.58 },
+            { "imageX": 1241.46, "imageY": 815.1 },
+            { "imageX": 1078.44, "imageY": 815.1 }
+          ],
+          "description": "东部海岸蓝色异常裂痕和能量扰动区域。"
+        }
+      ]
+    },
+    "regional": {
+      "title": "静海市全域结构图",
+      "baseImage": "assets/maps/jinghai_city_regional_structure.png",
+      "width": 1254,
+      "height": 1254,
+      "locations": "data/locations_regional.json",
+      "routes": "data/routes_regional.json",
+      "areas": [
+        {
+          "id": "regional-core",
+          "layer": "boundary",
+          "name": "核心异常区",
+          "type": "全域结构区域",
+          "stroke": "#ff6d5e",
+          "fill": "#ff6d5e",
+          "fillOpacity": 0.06,
+          "dashArray": "14 10",
+          "points": [
+            { "imageX": 460, "imageY": 360 },
+            { "imageX": 800, "imageY": 360 },
+            { "imageX": 860, "imageY": 690 },
+            { "imageX": 520, "imageY": 800 },
+            { "imageX": 360, "imageY": 570 }
+          ],
+          "description": "全域结构图中的核心异常区。"
+        },
+        {
+          "id": "regional-buffer",
+          "layer": "danger",
+          "name": "缓冲残留区",
+          "type": "全域结构区域",
+          "stroke": "#ffd184",
+          "fill": "#ffd184",
+          "fillOpacity": 0.08,
+          "dashArray": "12 8",
+          "points": [
+            { "imageX": 260, "imageY": 250 },
+            { "imageX": 980, "imageY": 250 },
+            { "imageX": 1040, "imageY": 920 },
+            { "imageX": 380, "imageY": 1040 },
+            { "imageX": 190, "imageY": 640 }
+          ],
+          "description": "全域结构图中的缓冲残留区。"
+        }
+      ]
+    }
+  }
+}

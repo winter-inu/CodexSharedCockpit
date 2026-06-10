@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>边界回声｜静海市交互地图</title>
+  <title>边界回声｜静海市双地图</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="src/styles.css">
@@ -13,51 +13,54 @@
     <aside class="left-panel">
       <div class="brand">
         <p>边界回声</p>
-        <h1>静海市异常区地图</h1>
+        <h1>静海市双地图</h1>
       </div>
 
       <section class="panel-block">
-        <h2>底图状态</h2>
-        <p class="asset-note">当前为占位图片底图，用于验证地图系统。建筑、废墟、道路、车站、海岸线等最终细节等待美术高精度地图资产替换。</p>
+        <h2>地图模式</h2>
+        <button class="mode-button active" data-mode="fault">断层影响区地图</button>
+        <button class="mode-button" data-mode="regional">切换到全域结构图</button>
       </section>
 
       <section class="panel-block">
         <h2>图层</h2>
         <label><input type="checkbox" data-layer="locations" autocomplete="off" checked> 地点标记</label>
-        <label><input type="checkbox" data-layer="ep01" autocomplete="off" checked> EP01 路线</label>
-        <label><input type="checkbox" data-layer="ep02" autocomplete="off" checked> EP02 路线</label>
-        <label><input type="checkbox" data-layer="boundary" autocomplete="off" checked> 异常边界</label>
-        <label><input type="checkbox" data-layer="danger" autocomplete="off" checked> 危险区域</label>
-        <label><input type="checkbox" data-layer="future" autocomplete="off" checked> 未来事件位</label>
+        <label><input type="checkbox" data-layer="ep01" autocomplete="off"> EP01 路线</label>
+        <label><input type="checkbox" data-layer="ep02" autocomplete="off"> EP02 路线</label>
+        <label><input type="checkbox" data-layer="boundary" autocomplete="off"> 异常区边界</label>
+        <label><input type="checkbox" data-layer="danger" autocomplete="off"> 危险区域</label>
+        <label><input type="checkbox" data-layer="future" autocomplete="off"> 未来事件位</label>
+        <label><input type="checkbox" data-layer="reference" autocomplete="off"> 标注参考图</label>
       </section>
 
       <section class="panel-block">
-        <h2>地图模式</h2>
-        <button class="wide-button" id="backToCity" disabled>返回静海市总图</button>
+        <h2>工具</h2>
+        <label><input type="checkbox" id="calibrationToggle" autocomplete="off"> 校准模式</label>
+        <p class="asset-note">开启后点击地图，右下角输出图片坐标 [x, y]。</p>
       </section>
     </aside>
 
-    <main class="map-wrap">
+    <main class="map-wrap" id="mapWrap" data-zoom-tier="mid">
       <div id="map" aria-label="静海市交互地图"></div>
       <div class="hotspot-layer" id="hotspotLayer" aria-label="地点热区"></div>
       <div class="hud top-hud">
-        <span id="mapTitle">静海市主舞台概念地图</span>
+        <span id="mapTitle">断层影响区地图</span>
         <span id="zoomReadout">缩放 0</span>
       </div>
       <div class="hud bottom-hud">
-        <span>拖拽 / 缩放 / 点击地点查看剧情用途</span>
+        <span id="calibrationReadout">校准模式关闭</span>
       </div>
     </main>
 
     <aside class="right-panel" id="detailPanel">
       <div class="empty-state">
-        <p>选择一个地点</p>
+        <p>选择一个地点或区域</p>
         <span>地点名称、剧情作用、相关事件和详细图入口会显示在这里。</span>
       </div>
     </aside>
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="src/app.js"></script>
+  <script src="src/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,38 @@
+{
+  "version": "2026-06-10-v04-direction-lock",
+  "directionLock": {
+    "north": "画面上方",
+    "east": "画面右侧",
+    "south": "画面下方",
+    "west": "画面左侧",
+    "policy": "除非用户明确要求，方向、地名和相对位置不得自动更改。"
+  },
+  "faultZoneLocationLock": [
+    { "id": "old-north-station", "name": "静海旧北站", "positionRule": "北部偏西 / 中北部的大型旧车站。" },
+    { "id": "corridor-gate", "name": "候车区 / 连廊 / 隔离门", "positionRule": "静海旧北站东南侧。" },
+    { "id": "fault-core", "name": "静海断层核心区", "positionRule": "中部偏东的大型圆形坍塌区。" },
+    { "id": "old-north-surrounding", "name": "旧北站周边旧城", "positionRule": "旧北站西侧与西北侧的旧居民 / 商业混合区。" },
+    { "id": "old-city", "name": "旧城街区", "positionRule": "西部主旧城区。" },
+    { "id": "old-city-buffer", "name": "旧城缓冲带", "positionRule": "旧城与断层核心区之间的过渡地带。" },
+    { "id": "south-bank-remnant", "name": "旧城南岸残区", "positionRule": "西南部靠海残留城区。" },
+    { "id": "underground-hub", "name": "地下轨道枢纽", "positionRule": "中南部交通节点。" },
+    { "id": "archive-room", "name": "静海档案室", "positionRule": "中南部偏东，靠近内湾的圆顶建筑。" },
+    { "id": "edge-zone", "name": "异常区边缘", "positionRule": "东部沿海蓝色异常带。" },
+    { "id": "black-market", "name": "黑市维修点", "positionRule": "东南港区边缘。" },
+    { "id": "police-post", "name": "静海派出所", "positionRule": "西南旧城边缘。" },
+    { "id": "harbor", "name": "海堤与港区", "positionRule": "东南部港湾与工业港区。" },
+    { "id": "port-supply", "name": "港口补给枢纽", "positionRule": "南部港湾交通与物流节点。" },
+    { "id": "future-a", "name": "事件位 A", "positionRule": "东南港区内部。" },
+    { "id": "future-b", "name": "事件位 B", "positionRule": "西部旧城与断层核心区之间的缓冲地带。" }
+  ],
+  "detailMapsReserved": [
+    "静海旧北站详细图",
+    "候车区 / 连廊 / 隔离门详细图",
+    "静海断层核心区详细图",
+    "地下轨道枢纽详细图",
+    "静海档案室详细图",
+    "静海派出所周边图",
+    "黑市维修点 / 港区详细图",
+    "外环安全区详细图"
+  ]
+}

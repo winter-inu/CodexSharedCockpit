@@ -1,0 +1,20 @@
+[
+  {
+    "id": "regional-outer-traffic",
+    "layer": "ep02",
+    "name": "全域对外交通线",
+    "color": "#9ee6ff",
+    "weight": 3,
+    "opacity": 0.35,
+    "dashArray": "12 10",
+    "description": "全域结构图中的外围交通占位线。",
+    "points": [
+      { "imageX": 180, "imageY": 360 },
+      { "imageX": 380, "imageY": 420 },
+      { "imageX": 780, "imageY": 120 },
+      { "imageX": 995, "imageY": 380 },
+      { "imageX": 1020, "imageY": 980 },
+      { "imageX": 535, "imageY": 1045 }
+    ]
+  }
+]

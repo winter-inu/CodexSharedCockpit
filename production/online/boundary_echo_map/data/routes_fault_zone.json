@@ -1,0 +1,38 @@
+[
+  {
+    "id": "ep01-fault-route",
+    "layer": "ep01",
+    "name": "EP01 旧北站事故路线",
+    "color": "#ffd184",
+    "weight": 3,
+    "opacity": 0.38,
+    "description": "旧北站到候车区/连廊/隔离门，再沿站区外缘和道路指向断层核心区。儿童鞋和小夏等待点位后续预留。",
+    "points": [
+      { "imageX": 500, "imageY": 226 },
+      { "imageX": 540, "imageY": 246 },
+      { "imageX": 630, "imageY": 263 },
+      { "imageX": 660, "imageY": 320 },
+      { "imageX": 704, "imageY": 382 },
+      { "imageX": 782, "imageY": 450 }
+    ]
+  },
+  {
+    "id": "ep02-fault-route",
+    "layer": "ep02",
+    "name": "EP02 损坏记忆卡调查路线",
+    "color": "#74ddf3",
+    "weight": 3,
+    "opacity": 0.36,
+    "dashArray": "10 8",
+    "description": "派出所，经旧城缓冲带、地下轨道枢纽、档案室，指向B-07和损坏记忆卡相关点位。",
+    "points": [
+      { "imageX": 390, "imageY": 697 },
+      { "imageX": 450, "imageY": 620 },
+      { "imageX": 410, "imageY": 476 },
+      { "imageX": 526, "imageY": 518 },
+      { "imageX": 565, "imageY": 696 },
+      { "imageX": 650, "imageY": 690 },
+      { "imageX": 743, "imageY": 664 }
+    ]
+  }
+]
