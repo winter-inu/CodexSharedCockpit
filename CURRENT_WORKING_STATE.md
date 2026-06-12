@@ -6,9 +6,9 @@ Boundary Echo / 《边界回声》
 
 ## Current Production Baseline
 
-Episode 01 V5 is the current production baseline.
+Episode 01 V5 is the only current production baseline.
 
-V5 is now the official structure for Episode 01 story, rhythm and storyboard direction. V4 remains historical reference and possible source material only.
+Episode 01 ?? files have been removed from the active production line and should not be used as story, storyboard, prompt, or keyframe references.
 
 ## Current Stage
 
@@ -17,16 +17,6 @@ Episode 01 V5 has completed the first full-pass keyframe generation and self-che
 On 2026-06-12, the missing second-half storyboard grids were expanded: OP09-OP14, OP16-OP17 and OP19-OP23 are no longer OP-level summaries. Future keyframe and image-to-video prompt work must use the detailed grids in `第一集_V5_宫格分镜表.md`.
 
 This is not final approval. The project is now in the full-episode keyframe review stage. ChatGPT should review role consistency, emotional clarity and shot usefulness before image-to-video production begins.
-
-Completed on 2026-06-12:
-
-- Generated and self-checked V5 OP01-OP08 keyframes.
-- Generated and self-checked V5 OP09-OP23 keyframes.
-- OP17 uses a safe accident-echo version instead of forcing explosion/collapse imagery.
-- Updated the ChatGPT review package, self-check table and morning review checklist.
-- Expanded the second-half storyboard grids by 58 cells.
-- Updated the video production checklist and production progress checklist to OP01-OP23.
-- No story rewrite, no final video prompt batch, no video generation.
 
 ## Primary Entry Files
 
@@ -61,7 +51,7 @@ Review sheets:
 - REJECTED: 1
 - MISSING: 0
 - Auto retry: 1
-- Directly reused old assets: 0; V4 accident material may still support OP17 montage.
+- Directly reused old assets: 0
 
 ## Next Step
 

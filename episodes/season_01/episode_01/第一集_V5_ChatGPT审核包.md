@@ -30,7 +30,7 @@
 - V5_OP04 澜冰屿确认鞋是坐标：完成 1 张，等待人物复核。
 - V5_OP05 触碰鞋，掉鞋碎片：完成 2 张可用候选 + 1 张被拒绝初版。
 - V5_OP06 小夏等待回声出现：完成 1 张，等待审核。
-- V5_OP07 第一次救援失败：完成 1 张，等待审核，不得混成 V4_FLASH_OP07。
+- V5_OP07 第一次救援失败：完成 1 张，等待审核，不得混成 ??????????。
 - V5_OP08 长椅“正”字刻痕：完成 2 张，P0 名场面等待审核。
 - V5_OP09 鞋、水痕、长椅等待边界：完成 1 张。
 - V5_OP10 损坏广播台读取前半句：完成 1 张。
@@ -40,7 +40,7 @@
 - V5_OP14 小夏问后半句，澜冰屿决定连接：完成 1 张，等待审核。
 - V5_OP15 澜冰屿连接断裂回声：完成 4 张。
 - V5_OP16 暖光回忆母女日常：完成 1 张。
-- V5_OP17 事故残影蒙太奇：完成 1 张安全版，等待审核，必要时结合 V4 事故素材。
+- V5_OP17 事故残影蒙太奇：完成 1 张安全版，等待审核，必要时结合 ?? 事故素材。
 - V5_OP18 小夏听到完整留言：完成 1 张。
 - V5_OP19 妈妈从暖光中出现：完成 1 张。
 - V5_OP20 小夏扑进妈妈怀里：完成 1 张。
@@ -61,7 +61,7 @@
 | V5_OP05 | `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP05-2_事故闪回小夏右脚鞋脱落_关键帧_v1.png` | 72 | REJECTED | 服装错误，已重试，不建议使用。 |
 | V5_OP05 | `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP05-2_事故闪回小夏右脚鞋脱落_关键帧_v2_RETRY.png` | 92 | RETRY_DONE | 重试后可用。 |
 | V5_OP06 | `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP06-2_小夏等待回声显现_关键帧_v1.png` | 86 | NEEDS_REVIEW | 小夏年龄、服装、鞋袜需审核。 |
-| V5_OP07 | `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP07-3_第一次救援失败隔离门残影_关键帧_v1.png` | 87 | NEEDS_REVIEW | 必须区分 V5_OP07 和 V4_FLASH_OP07。 |
+| V5_OP07 | `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP07-3_第一次救援失败隔离门残影_关键帧_v1.png` | 87 | NEEDS_REVIEW | 必须区分 V5_OP07 和 ??????????。 |
 | V5_OP08 | `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP08-2_P0长椅正字刻痕特写_关键帧_v1.png` | 89 | NEEDS_REVIEW | P0 名场面，刻痕需 ChatGPT 判断是否重做。 |
 | V5_OP08 | `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP08-4_澜冰屿沉默看刻痕_关键帧_v1.png` | 88 | NEEDS_REVIEW | 情绪成立，需复核澜冰屿脸和病弱感。 |
 | V5_OP09 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP09_鞋水痕长椅等待边界_关键帧_v1.png` | 92 | PASS | 鞋、水痕、长椅关系清楚。 |
@@ -75,7 +75,7 @@
 | V5_OP15-3 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP15-3_B07警告后期屏幕占位_关键帧_v1.png` | 87 | NEEDS_REVIEW | B-07 字样必须后期叠加，不依赖图内文本。 |
 | V5_OP15-4 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP15-4_澪星尾灯稳定澜冰屿影子_关键帧_v1.png` | 89 | NEEDS_REVIEW | 需确认澪星机械生命感，不要玩具化。 |
 | V5_OP16 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP16_暖光回忆妈妈整理小夏鞋_关键帧_v1.png` | 91 | PASS | 暖光回忆层成立。 |
-| V5_OP17 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP17_事故残影隔离门与人潮安全版_关键帧_v1.png` | 86 | NEEDS_REVIEW | 安全事故残影可审，冲击力可能不足，可结合 V4 事故素材。 |
+| V5_OP17 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP17_事故残影隔离门与人潮安全版_关键帧_v1.png` | 86 | NEEDS_REVIEW | 安全事故残影可审，冲击力可能不足，可结合 ?? 事故素材。 |
 | V5_OP18 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP18_小夏听到完整留言_关键帧_v1.png` | 90 | PASS | 小夏听见完整留言的情绪点成立。 |
 | V5_OP19 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP19_妈妈从暖光中出现_关键帧_v1.png` | 90 | PASS | 妈妈来接孩子的方向成立。 |
 | V5_OP20 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP20_小夏扑进妈妈怀里_关键帧_v1.png` | 90 | PASS | 母女情感释放成立。 |
@@ -87,7 +87,7 @@
 
 1. OP08 的“正”字刻痕是否足够像小夏长期手工刻痕，而不是印刷字、字幕或贴图。
 2. OP11 的母亲隔着隔离门伸手是否明确表达“保护性松手”，不能像放弃小夏。
-3. OP17 的安全事故残影是否足够有冲击力；如果不够，是否应混用 V4 事故蒙太奇素材。
+3. OP17 的安全事故残影是否足够有冲击力；如果不够，是否应混用 ?? 事故蒙太奇素材。
 4. OP21 小夏离开前认真回头是否保留天真和困惑，不能像过分懂事的大人。
 5. 澜冰屿在 OP04 / OP08 / OP22 是否足够接近海报2：病弱、疲惫、克制，短黑发、零星白丝。
 6. 澪星在 OP02 / OP10 / OP15-4 是否符合海报2：机械引航生命，不是真猫，不是毛绒玩具。
@@ -97,7 +97,7 @@
 ## 统计
 
 - 今晚生成关键帧：30 张登记，其中 29 张可进入审核，1 张旧版被拒绝。
-- 复用旧素材：0 张直接复用；V4 事故素材仍建议作为 OP17 的补充参考。
+- 复用旧素材：0 张直接复用；?? 事故素材仍建议作为 OP17 的补充参考。
 - 自动重试：1 张。
 - PASS：16 张。
 - RETRY_DONE：1 张。

@@ -134,12 +134,12 @@ F:\CodexSharedCockpit\episodes\season_01\episode_02\keyframes\ep02_director_v3\E
 
 关键帧图片：
 
-![EP02-OP03-2](keyframes/ep02_director_v3/EP02-OP03-2_陆衡与澜冰屿第一次对峙_关键帧_v4_澪星修正版.png)
+![EP02-OP03-2](keyframes/ep02_director_v3/EP02-OP03-2_陆衡与澜冰屿第一次对峙_关键帧_澪星修正版.png)
 
 图片路径：
 
 ```text
-F:\CodexSharedCockpit\episodes\season_01\episode_02\keyframes\ep02_director_v3\EP02-OP03-2_陆衡与澜冰屿第一次对峙_关键帧_v4_澪星修正版.png
+F:\CodexSharedCockpit\episodes\season_01\episode_02\keyframes\ep02_director_v3\EP02-OP03-2_陆衡与澜冰屿第一次对峙_关键帧_澪星修正版.png
 ```
 
 图生视频 Prompt：
@@ -314,12 +314,12 @@ F:\CodexSharedCockpit\episodes\season_01\episode_02\keyframes\ep02_director_v3\E
 
 关键帧图片：
 
-![EP02-OP08-4](keyframes/ep02_director_v3/EP02-OP08-4_澪星稳定澜冰屿影子_关键帧_v4_澪星修正版.png)
+![EP02-OP08-4](keyframes/ep02_director_v3/EP02-OP08-4_澪星稳定澜冰屿影子_关键帧_澪星修正版.png)
 
 图片路径：
 
 ```text
-F:\CodexSharedCockpit\episodes\season_01\episode_02\keyframes\ep02_director_v3\EP02-OP08-4_澪星稳定澜冰屿影子_关键帧_v4_澪星修正版.png
+F:\CodexSharedCockpit\episodes\season_01\episode_02\keyframes\ep02_director_v3\EP02-OP08-4_澪星稳定澜冰屿影子_关键帧_澪星修正版.png
 ```
 
 图生视频 Prompt：
@@ -344,12 +344,12 @@ F:\CodexSharedCockpit\episodes\season_01\episode_02\keyframes\ep02_director_v3\E
 
 关键帧图片：
 
-![EP02-OP09-4](keyframes/ep02_director_v3/EP02-OP09-4_记忆卡向澜冰屿发光_关键帧_v4_澪星修正版.png)
+![EP02-OP09-4](keyframes/ep02_director_v3/EP02-OP09-4_记忆卡向澜冰屿发光_关键帧_澪星修正版.png)
 
 图片路径：
 
 ```text
-F:\CodexSharedCockpit\episodes\season_01\episode_02\keyframes\ep02_director_v3\EP02-OP09-4_记忆卡向澜冰屿发光_关键帧_v4_澪星修正版.png
+F:\CodexSharedCockpit\episodes\season_01\episode_02\keyframes\ep02_director_v3\EP02-OP09-4_记忆卡向澜冰屿发光_关键帧_澪星修正版.png
 ```
 
 图生视频 Prompt：
@@ -404,12 +404,12 @@ F:\CodexSharedCockpit\episodes\season_01\episode_02\keyframes\ep02_director_v3\E
 
 关键帧图片：
 
-![EP02-OP10-4](keyframes/ep02_director_v3/EP02-OP10-4_B07未归还记忆碎片警告_关键帧_v4_澪星修正版.png)
+![EP02-OP10-4](keyframes/ep02_director_v3/EP02-OP10-4_B07未归还记忆碎片警告_关键帧_澪星修正版.png)
 
 图片路径：
 
 ```text
-F:\CodexSharedCockpit\episodes\season_01\episode_02\keyframes\ep02_director_v3\EP02-OP10-4_B07未归还记忆碎片警告_关键帧_v4_澪星修正版.png
+F:\CodexSharedCockpit\episodes\season_01\episode_02\keyframes\ep02_director_v3\EP02-OP10-4_B07未归还记忆碎片警告_关键帧_澪星修正版.png
 ```
 
 图生视频 Prompt：
@@ -423,6 +423,7 @@ F:\CodexSharedCockpit\episodes\season_01\episode_02\keyframes\ep02_director_v3\E
 ```text
 不要让屏幕文字清楚可读，不要长句字幕，不要解释完整真相，不要陆衡看见全部信息，不要大爆炸，不要结尾阳光化，不要把悬疑钩子讲透。
 ```
+
 
 
 
