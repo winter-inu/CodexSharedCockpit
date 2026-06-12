@@ -1,113 +1,128 @@
 # 第一集 V5 ChatGPT 审核包
 
+更新时间：2026-06-13 05:15
+
 ## 本次生成总览
 
-日期：2026-06-12  
-范围：第一集 V5 OP01-OP23 全片关键帧审核版  
-目标：只完成关键帧生成、自检、明显错误自动重试一次，并准备给 ChatGPT 审核的材料。  
-未做事项：未改写剧情结构，未批量写最终图生视频 Prompt，未生成视频，未假装得到 ChatGPT 审核。
+- V5 宫格总数:98
+- 当前关键帧候选总数:211
+- 已覆盖宫格:98
+- 缺失宫格:0
+- 首选 PASS:44
+- 首选 NEEDS_REVIEW:54
 
-角色参考要求：本轮统一使用本地 V2 版“海报2”作为角色参考，尤其是：
+## 明早优先审核前 10 张
 
-- 澜冰屿：`F:\角色设定\V2版\1.澜冰屿\澜冰屿海报2.png`
-- 澪星：`F:\角色设定\V2版\5.澪星\澪星海报2.png`
+请重点判断：澪星是否机械体统一、小夏右脚白袜/左脚单鞋是否成立、事故段母亲是否是保护性松手而不是抛弃、澜冰屿是否病弱克制。
 
-生成目录：
+- OP01-3:episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP01-3_极暗废站轮廓_关键帧_v1.png:第三遍广播突然断裂。:需要重点看：可能存在鞋袜左右、澪星形态、人物年龄或事故动作表达不够准确。
+- OP02-1:episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP02-1_废站大厅澪星尾灯进入_关键帧_v2_MIOXING_LOCK.png:废弃旧北站大厅建立，积水、破玻璃、长椅、旧闸机。:需要重点看：可能存在鞋袜左右、澪星形态、人物年龄或事故动作表达不够准确。
+- OP02-4:episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP02-4_澪星尾灯停在儿童鞋边缘_关键帧_v2_MIOXING_LOCK_PRE_SHOE.png:尾灯停住，照到儿童鞋边缘。:需要重点看：可能存在鞋袜左右、澪星形态、人物年龄或事故动作表达不够准确。
+- OP03-1:episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP03-1_褪色儿童鞋特写_关键帧_v2_SHOE_LOCK.png:褪色淡粉米白儿童鞋特写，鞋口积水。:需要重点看：可能存在鞋袜左右、澪星形态、人物年龄或事故动作表达不够准确。
+- OP04-1:episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP04-1_澜冰屿半蹲确认鞋是坐标_关键帧_v1.png:澜冰屿从黑暗里走出，半蹲。:需要重点看：可能存在鞋袜左右、澪星形态、人物年龄或事故动作表达不够准确。
+- OP04-2:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP04-2_xiaxia_echo_appears_by_bench_keyframe_v1_NEEDS_REVIEW.png:他观察鞋底、水痕和停留方向。:需要重点看：可能存在鞋袜左右、澪星形态、人物年龄或事故动作表达不够准确。
+- OP04-4:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP04-4_lan_and_xiaxia_share_frame_keyframe_v1_NEEDS_REVIEW.png:澜冰屿低声判断。:需要重点看：可能存在鞋袜左右、澪星形态、人物年龄或事故动作表达不够准确。
+- OP05-1:episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP05-1_澜冰屿指尖触碰鞋边_关键帧_v1.png:澜冰屿指尖碰到鞋边。:需要重点看：可能存在鞋袜左右、澪星形态、人物年龄或事故动作表达不够准确。
+- OP05-2:episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP05-2_事故闪回小夏右脚鞋脱落_关键帧_v2_RETRY.png:闪回：事故当天低机位，小夏右脚鞋被卡住并脱落，右脚白袜出现。:需要重点看：可能存在鞋袜左右、澪星形态、人物年龄或事故动作表达不够准确。
+- OP06-1:episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP06-1_日常牵手继续前行_关键帧_v1.png:旧长椅旁浮出小夏淡影。:需要重点看：可能存在鞋袜左右、澪星形态、人物年龄或事故动作表达不够准确。
 
-- `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1`
-- `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1`
+## 每格首选关键帧
 
-总览图：
-
-- `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/EP01_V5_OP01_OP08_review_sheet_v2.jpg`
-- `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/EP01_V5_OP09_OP23_review_sheet_v1.jpg`
-
-## 已完成 OP 列表
-
-- V5_OP01 黑屏残缺广播：完成 1 张极暗废站轮廓参考。
-- V5_OP02 废站与澪星尾灯：完成 2 张。
-- V5_OP03 儿童鞋与澜冰屿画外音：完成 1 张。
-- V5_OP04 澜冰屿确认鞋是坐标：完成 1 张，等待人物复核。
-- V5_OP05 触碰鞋，掉鞋碎片：完成 2 张可用候选 + 1 张被拒绝初版。
-- V5_OP06 小夏等待回声出现：完成 1 张，等待审核。
-- V5_OP07 第一次救援失败：完成 1 张，等待审核，不得混成 ??????????。
-- V5_OP08 长椅“正”字刻痕：完成 2 张，P0 名场面等待审核。
-- V5_OP09 鞋、水痕、长椅等待边界：完成 1 张。
-- V5_OP10 损坏广播台读取前半句：完成 1 张。
-- V5_OP11 隔离门残影母亲保护性分离：完成 1 张安全版，等待审核。
-- V5_OP12 应急通话器找到后半句：完成 1 张。
-- V5_OP13 两段回声不在同一路径：完成 1 张。
-- V5_OP14 小夏问后半句，澜冰屿决定连接：完成 1 张，等待审核。
-- V5_OP15 澜冰屿连接断裂回声：完成 4 张。
-- V5_OP16 暖光回忆母女日常：完成 1 张。
-- V5_OP17 事故残影蒙太奇：完成 1 张安全版，等待审核，必要时结合 ?? 事故素材。
-- V5_OP18 小夏听到完整留言：完成 1 张。
-- V5_OP19 妈妈从暖光中出现：完成 1 张。
-- V5_OP20 小夏扑进妈妈怀里：完成 1 张。
-- V5_OP21 小夏离开前认真回头：完成 1 张，等待审核。
-- V5_OP22 澜冰屿影子淡于澪星：完成 1 张。
-- V5_OP23 儿童鞋散成光点，刻痕留下：完成 1 张。
-
-## 关键帧路径与自评
-
-| OP | 文件路径 | 自评分 | 状态 | 问题备注 |
-| --- | --- | ---: | --- | --- |
-| V5_OP01 | `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP01-3_极暗废站轮廓_关键帧_v1.png` | 91 | PASS | 可作 OP01 最后一秒极暗废站轮廓参考。 |
-| V5_OP02 | `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP02-1_废站大厅澪星尾灯进入_关键帧_v1.png` | 90 | PASS | 废站和尾灯成立，澪星需按海报2复核机械感。 |
-| V5_OP02 | `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP02-4_澪星尾灯停在儿童鞋边缘_关键帧_v1.png` | 92 | PASS | 鞋和尾灯关系明确。 |
-| V5_OP03 | `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP03-1_褪色儿童鞋特写_关键帧_v1.png` | 93 | PASS | 儿童鞋静物特写稳定。 |
-| V5_OP04 | `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP04-1_澜冰屿半蹲确认鞋是坐标_关键帧_v1.png` | 88 | NEEDS_REVIEW | 需按澜冰屿海报2复核。 |
-| V5_OP05 | `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP05-1_澜冰屿指尖触碰鞋边_关键帧_v1.png` | 92 | PASS | 指尖和鞋关系清晰。 |
-| V5_OP05 | `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP05-2_事故闪回小夏右脚鞋脱落_关键帧_v1.png` | 72 | REJECTED | 服装错误，已重试，不建议使用。 |
-| V5_OP05 | `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP05-2_事故闪回小夏右脚鞋脱落_关键帧_v2_RETRY.png` | 92 | RETRY_DONE | 重试后可用。 |
-| V5_OP06 | `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP06-2_小夏等待回声显现_关键帧_v1.png` | 86 | NEEDS_REVIEW | 小夏年龄、服装、鞋袜需审核。 |
-| V5_OP07 | `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP07-3_第一次救援失败隔离门残影_关键帧_v1.png` | 87 | NEEDS_REVIEW | 必须区分 V5_OP07 和 ??????????。 |
-| V5_OP08 | `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP08-2_P0长椅正字刻痕特写_关键帧_v1.png` | 89 | NEEDS_REVIEW | P0 名场面，刻痕需 ChatGPT 判断是否重做。 |
-| V5_OP08 | `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP08-4_澜冰屿沉默看刻痕_关键帧_v1.png` | 88 | NEEDS_REVIEW | 情绪成立，需复核澜冰屿脸和病弱感。 |
-| V5_OP09 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP09_鞋水痕长椅等待边界_关键帧_v1.png` | 92 | PASS | 鞋、水痕、长椅关系清楚。 |
-| V5_OP10 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP10_损坏广播台读取前半句_关键帧_v1.png` | 91 | PASS | 广播台与澪星读取动作清楚。 |
-| V5_OP11 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP11_隔离门残影母亲保护性分离_安全版_关键帧_v1.png` | 88 | NEEDS_REVIEW | 需判断母亲保护性松手是否足够清楚。 |
-| V5_OP12 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP12_应急通话器找到后半句_关键帧_v1.png` | 90 | PASS | 应急通话器和母亲回声成立。 |
-| V5_OP13 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP13_两段回声不在同一路径_关键帧_v1.png` | 91 | PASS | 两段声源空间关系直观。 |
-| V5_OP14 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP14_小夏问后半句澜冰屿决定连接_关键帧_v1.png` | 88 | NEEDS_REVIEW | 小夏年龄与鞋袜连续性需复核。 |
-| V5_OP15-1 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP15-1_澜冰屿站在两段回声之间_关键帧_v1.png` | 90 | PASS | 连接断裂回声主镜头成立。 |
-| V5_OP15-2 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP15-2_澜冰屿影子变淡_关键帧_v1.png` | 91 | PASS | 能力代价可视化成立。 |
-| V5_OP15-3 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP15-3_B07警告后期屏幕占位_关键帧_v1.png` | 87 | NEEDS_REVIEW | B-07 字样必须后期叠加，不依赖图内文本。 |
-| V5_OP15-4 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP15-4_澪星尾灯稳定澜冰屿影子_关键帧_v1.png` | 89 | NEEDS_REVIEW | 需确认澪星机械生命感，不要玩具化。 |
-| V5_OP16 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP16_暖光回忆妈妈整理小夏鞋_关键帧_v1.png` | 91 | PASS | 暖光回忆层成立。 |
-| V5_OP17 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP17_事故残影隔离门与人潮安全版_关键帧_v1.png` | 86 | NEEDS_REVIEW | 安全事故残影可审，冲击力可能不足，可结合 ?? 事故素材。 |
-| V5_OP18 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP18_小夏听到完整留言_关键帧_v1.png` | 90 | PASS | 小夏听见完整留言的情绪点成立。 |
-| V5_OP19 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP19_妈妈从暖光中出现_关键帧_v1.png` | 90 | PASS | 妈妈来接孩子的方向成立。 |
-| V5_OP20 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP20_小夏扑进妈妈怀里_关键帧_v1.png` | 90 | PASS | 母女情感释放成立。 |
-| V5_OP21 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP21_小夏离开前认真回头_关键帧_v1.png` | 89 | NEEDS_REVIEW | 小夏认真反问的表情需判断是否太成熟。 |
-| V5_OP22 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP22_澜冰屿影子淡于澪星_关键帧_v1.png` | 90 | PASS | 结尾代价落点清楚。 |
-| V5_OP23 | `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP23_儿童鞋散成光点刻痕留下_关键帧_v1.png` | 91 | PASS | 儿童鞋散去、刻痕留下的余味成立。 |
-
-## 建议 ChatGPT 重点审核的问题
-
-1. OP08 的“正”字刻痕是否足够像小夏长期手工刻痕，而不是印刷字、字幕或贴图。
-2. OP11 的母亲隔着隔离门伸手是否明确表达“保护性松手”，不能像放弃小夏。
-3. OP17 的安全事故残影是否足够有冲击力；如果不够，是否应混用 ?? 事故蒙太奇素材。
-4. OP21 小夏离开前认真回头是否保留天真和困惑，不能像过分懂事的大人。
-5. 澜冰屿在 OP04 / OP08 / OP22 是否足够接近海报2：病弱、疲惫、克制，短黑发、零星白丝。
-6. 澪星在 OP02 / OP10 / OP15-4 是否符合海报2：机械引航生命，不是真猫，不是毛绒玩具。
-7. 小夏在 OP06 / OP07 / OP14 是否保持 6-7 岁、等待回声状态不恐怖、不卖萌。
-8. OP15-3 的 B-07 警告是否只作为后期元素，不要让生成图承担大段可读字幕。
-
-## 统计
-
-- 今晚生成关键帧：30 张登记，其中 29 张可进入审核，1 张旧版被拒绝。
-- 复用旧素材：0 张直接复用；?? 事故素材仍建议作为 OP17 的补充参考。
-- 自动重试：1 张。
-- PASS：16 张。
-- RETRY_DONE：1 张。
-- NEEDS_REVIEW：12 张。
-- REJECTED：1 张。
-- MISSING：0 张。
-
-## 明天是否建议进入视频化测试
-
-- 建议优先测试：V5_OP02、V5_OP03、V5_OP09、V5_OP10。
-- 可以做低成本运动测试但不定稿：V5_OP08、V5_OP15、V5_OP22、V5_OP23。
-- 建议先审再视频化：V5_OP06、V5_OP07、V5_OP11、V5_OP14、V5_OP17、V5_OP21。
-
+- OP01-1:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP01-1_black_rain_station_outline_keyframe_v1_PASS.png:PASS:
+- OP01-2:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP01-2_old_broadcast_speaker_dark_keyframe_v1_PASS.png:PASS:
+- OP01-3:episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP01-3_极暗废站轮廓_关键帧_v1.png:NEEDS_REVIEW:
+- OP02-1:episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP02-1_废站大厅澪星尾灯进入_关键帧_v2_MIOXING_LOCK.png:NEEDS_REVIEW:
+- OP02-2:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP02-2_mioxing_tail_lamp_sweeps_shoe_keyframe_v1_PASS.png:PASS:
+- OP02-3:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP02-3_lan_bingyu_enters_ruined_station_keyframe_v2_PASS.png:PASS:
+- OP02-4:episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP02-4_澪星尾灯停在儿童鞋边缘_关键帧_v2_MIOXING_LOCK_PRE_SHOE.png:NEEDS_REVIEW:
+- OP03-1:episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP03-1_褪色儿童鞋特写_关键帧_v2_SHOE_LOCK.png:NEEDS_REVIEW:
+- OP03-2:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP03-2_shoe_water_bench_mioxing_closeup_keyframe_v1_PASS.png:PASS:
+- OP03-3:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP03-3_bench_shoe_echo_space_relation_keyframe_v1_PASS.png:PASS:
+- OP04-1:episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP04-1_澜冰屿半蹲确认鞋是坐标_关键帧_v1.png:NEEDS_REVIEW:
+- OP04-2:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP04-2_xiaxia_echo_appears_by_bench_keyframe_v1_NEEDS_REVIEW.png:NEEDS_REVIEW:
+- OP04-3:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP04-3_lan_sees_xiaxia_echo_first_time_keyframe_v1_PASS.png:PASS:
+- OP04-4:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP04-4_lan_and_xiaxia_share_frame_keyframe_v1_NEEDS_REVIEW.png:NEEDS_REVIEW:
+- OP05-1:episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP05-1_澜冰屿指尖触碰鞋边_关键帧_v1.png:NEEDS_REVIEW:
+- OP05-2:episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP05-2_事故闪回小夏右脚鞋脱落_关键帧_v2_RETRY.png:RETRY_DONE:
+- OP05-3:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP05-3_mioxing_tail_lamp_lan_shadow_keyframe_v1_PASS.png:PASS:
+- OP06-1:episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP06-1_日常牵手继续前行_关键帧_v1.png:NEEDS_REVIEW:
+- OP06-2:episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP06-2_电子屏冷白故障线_关键帧_v1.png:NEEDS_REVIEW:
+- OP06-3:episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP06-3_少数乘客疑惑抬头_关键帧_v1.png:NEEDS_REVIEW:
+- OP06-4:episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP06-4_小夏抬头看妈妈疑惑_同背景修正版_v2.png:NEEDS_REVIEW:
+- OP07-1:episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP07-1_电子屏故障增强_关键帧_v1.png:NEEDS_REVIEW:
+- OP07-2:episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP07-2_少量警示灯亮起_关键帧_v1.png:NEEDS_REVIEW:
+- OP07-3:episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP07-3_人群停顿低声议论_关键帧_v1.png:NEEDS_REVIEW:
+- OP07-4:episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP07-4_小夏问妈妈怎么了_关键帧_v1.png:NEEDS_REVIEW:
+- OP08-1:episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP08-1_连廊方向巨响落尘_关键帧_v1.png:NEEDS_REVIEW:
+- OP08-2:episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP08-2_人群开始反向涌回_关键帧_v1.png:NEEDS_REVIEW:
+- OP08-3:episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP08-3_妈妈把小夏护到内侧_关键帧_v1.png:NEEDS_REVIEW:
+- OP08-4:episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP08-4_妈妈撑栏杆护住小夏_关键帧_v1.png:NEEDS_REVIEW:
+- OP09-1:episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP09-1_低机位脚步行李压迫_关键帧_v1.png:NEEDS_REVIEW:
+- OP09-2:episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP09-2_右脚鞋被行李卡住_关键帧_v1.png:NEEDS_REVIEW:
+- OP09-3:episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP09-3_右脚鞋脱落露出白袜_关键帧_v1.png:NEEDS_REVIEW:
+- OP09-4:episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP09-4_小夏低头想捡鞋_关键帧_v1.png:NEEDS_REVIEW:
+- OP10-1:episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP10-1_白袜单鞋牵手警示线_关键帧_v1.png:NEEDS_REVIEW:
+- OP10-2:episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP10-2_隔离栏从两人之间急速升起_关键帧_v1.png:NEEDS_REVIEW:
+- OP10-3:episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP10-3_妈妈意识到继续牵手会伤到小夏_关键帧_v1.png:NEEDS_REVIEW:
+- OP10-4:episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP10-4_妈妈保护性松手把小夏挡向安全侧_关键帧_v1.png:NEEDS_REVIEW:
+- OP11-1:episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP11-1_隔离门完全升起锁死_关键帧_v1.png:NEEDS_REVIEW:
+- OP11-2:episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP11-2_小夏候车区侧手贴透明板发怔_关键帧_v1.png:NEEDS_REVIEW:
+- OP11-3:episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP11-3_妈妈扑到门前用力敲打门体_关键帧_v1.png:NEEDS_REVIEW:
+- OP11-4:episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP11-4_妈妈沿门侧寻找应急开关_关键帧_v1.png:NEEDS_REVIEW:
+- OP11-5:episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP11-5_妈妈寻找应急开关_关键帧_v1.png:NEEDS_REVIEW:
+- OP12-1:episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP12-1_人潮反冲妈妈被从门前推开_关键帧_v1.png:NEEDS_REVIEW:
+- OP12-2:episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP12-2_妈妈被带往反方向仍扭身喊小夏_关键帧_v1.png:NEEDS_REVIEW:
+- OP12-3:episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP12-3_妈妈在人潮中回身伸手_关键帧_v1.png:NEEDS_REVIEW:
+- OP12-4:episodes/season_01/episode_01/keyframes/op10_op12_grid_v1/OP12-4_妈妈喊回候车区等被人潮带远_关键帧_v1.png:NEEDS_REVIEW:
+- OP12-5:episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP12-5_无人鞋静音定格_关键帧_v1.png:NEEDS_REVIEW:
+- OP13-1:episodes/season_01/episode_01/keyframes/op06_op14_main_v1/OP13-1_严格同机位废站鞋_生产硬参考_v1.png:NEEDS_REVIEW:
+- OP13-2:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP13-2_two_disconnected_echo_lines_reflection_keyframe_v1_PASS.png:PASS:
+- OP13-3:episodes/season_01/episode_01/keyframes/op06_op14_main_v1/OP13-3_澪星进入鞋前_统一背景硬参考_v1.png:NEEDS_REVIEW:
+- OP13-4:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP13-4_lan_realizes_not_same_echo_keyframe_v1_PASS.png:PASS:
+- OP14-1:episodes/season_01/episode_01/keyframes/op06_op14_main_v1/OP14-1_澜冰屿侧面半蹲观察鞋_生产硬参考_v1.png:NEEDS_REVIEW:
+- OP14-2:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP14-2_lan_looks_to_marks_and_shoe_keyframe_v1_PASS.png:PASS:
+- OP14-3:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP14-3_mioxing_warns_near_faint_shadow_keyframe_v1_PASS.png:PASS:
+- OP14-4:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP14-4_lan_decides_to_connect_echoes_keyframe_v1_PASS.png:PASS:
+- OP14-5:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP14-5_hand_reaches_between_echoes_keyframe_v1_PASS.png:PASS:
+- OP15-1:episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP15-1_澜冰屿站在两段回声之间_关键帧_v1.png:NEEDS_REVIEW:
+- OP15-2:episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP15-2_澜冰屿影子变淡_关键帧_v1.png:NEEDS_REVIEW:
+- OP15-3:episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP15-3_B07警告后期屏幕占位_关键帧_v1.png:NEEDS_REVIEW:
+- OP15-4:episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP15-4_澪星尾灯稳定澜冰屿影子_关键帧_v2_MIOXING_LOCK.png:NEEDS_REVIEW:
+- OP16-1:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP16-1_妈妈整理小夏鞋子_关键帧_v1_NEEDS_REVIEW.png:NEEDS_REVIEW:
+- OP16-2:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP16-2_小夏扶妈妈肩膀看鞋_关键帧_v1_PASS.png:PASS:
+- OP16-3:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP16-3_妈妈重新握住小夏的手_关键帧_v1_PASS.png:PASS:
+- OP16-4:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP16-4_母女拉钩阳光落在小指上_关键帧_v1_PASS.png:PASS:
+- OP16-5:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP16-5_xiaxia_promise_mother_nods_keyframe_v1_PASS.png:PASS:
+- OP16-6:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP16-6_warm_memory_cut_by_cold_current_keyframe_v1_PASS.png:PASS:
+- OP17-1:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP17-1_emergency_screen_glitches_hall_keyframe_v2_PASS.png:PASS:
+- OP17-2:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP17-2_mother_protects_xiaxia_in_crowd_keyframe_v2_PASS.png:PASS:
+- OP17-3:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP17-3_right_shoe_slips_off_object_closeup_keyframe_v1_NEEDS_REVIEW.png:NEEDS_REVIEW:
+- OP17-4:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP17-4_isolation_gate_near_hands_keyframe_v1_PASS.png:PASS:
+- OP17-5:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP17-5_mother_protective_release_at_gate_keyframe_v1_NEEDS_REVIEW.png:NEEDS_REVIEW:
+- OP17-6:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP17-6_mother_pushed_far_still_turns_back_keyframe_v1_NEEDS_REVIEW.png:NEEDS_REVIEW:
+- OP17-7:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP17-7_cold_light_dust_swallows_memory_keyframe_v1_PASS.png:PASS:
+- OP18-1:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP18-1_echo_connection_climax_between_devices_keyframe_v1_PASS.png:PASS:
+- OP18-2:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP18-2_hand_trembles_in_echo_current_keyframe_v1_PASS.png:PASS:
+- OP18-3:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP18-3_mioxing_lamp_dims_and_steadies_keyframe_v1_PASS.png:PASS:
+- OP18-4:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP18-4_echoes_connect_warm_light_opens_keyframe_v1_PASS.png:PASS:
+- OP19-1:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP19-1_废站长椅前暖光出现_关键帧_v1_PASS.png:PASS:
+- OP19-2:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP19-2_妈妈回声轮廓从暖光走出_关键帧_v1_PASS.png:PASS:
+- OP19-3:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP19-3_妈妈蹲下伸手道歉_关键帧_v1_PASS.png:PASS:
+- OP19-4:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP19-4_小夏不敢相信迈向妈妈_关键帧_v1_PASS.png:PASS:
+- OP20-1:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP20-1_小夏终于跑向妈妈_关键帧_v2_PASS.png:PASS:
+- OP20-2:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP20-2_小夏扑进妈妈怀里_关键帧_v1_PASS.png:PASS:
+- OP20-3:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP20-3_妈妈护住小夏补上拥抱_关键帧_v1_PASS.png:PASS:
+- OP20-4:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP20-4_小夏确认自己可以走了_关键帧_v1_PASS.png:PASS:
+- OP21-1:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP21-1_妈妈牵小夏走向暖光边缘_关键帧_v1_NEEDS_REVIEW.png:NEEDS_REVIEW:
+- OP21-2:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP21-2_小夏忽然停下回头_关键帧_v1_PASS.png:PASS:
+- OP21-3:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP21-3_小夏认真反问澜冰屿_关键帧_v2_PASS.png:PASS:
+- OP21-4:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP21-4_澜冰屿沉默反打_关键帧_v1_NEEDS_REVIEW.png:NEEDS_REVIEW:
+- OP22-1:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP22-1_小夏和妈妈进入暖光_关键帧_v1_NEEDS_REVIEW.png:NEEDS_REVIEW:
+- OP22-2:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP22-2_澜冰屿影子明显变淡_关键帧_v1_NEEDS_REVIEW.png:NEEDS_REVIEW:
+- OP22-3:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP22-3_坐标布条字迹一段变白_关键帧_v1_PASS.png:PASS:
+- OP22-4:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP22-4_B07警告后期屏幕占位_关键帧_v1_PASS.png:PASS:
+- OP22-5:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP22-5_澜冰屿我还记得路_关键帧_v1_PASS.png:PASS:
+- OP23-1:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP23-1_儿童鞋开始化成细小光点_关键帧_v1_PASS.png:PASS:
+- OP23-2:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP23-2_鞋消失后只剩水痕_关键帧_v1_PASS.png:PASS:
+- OP23-3:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP23-3_长椅正字刻痕仍留着_关键帧_v1_PASS.png:PASS:
+- OP23-4:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP23-4_极暗废站轮廓片名后期位_关键帧_v1_PASS.png:PASS:

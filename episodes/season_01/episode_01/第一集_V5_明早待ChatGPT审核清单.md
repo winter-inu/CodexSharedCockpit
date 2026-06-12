@@ -1,78 +1,40 @@
 # 第一集 V5 明早待 ChatGPT 审核清单
 
-当前范围：第一集 V5 OP01-OP23 全片关键帧审核版  
-审核原则：本清单只供明早由用户交给 ChatGPT 审核；今晚没有等待 ChatGPT 实时参与，也没有把不确定图直接定稿。
-
-总览图：
-
-- `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/EP01_V5_OP01_OP08_review_sheet_v2.jpg`
-- `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/EP01_V5_OP09_OP23_review_sheet_v1.jpg`
+更新时间：2026-06-13 05:15
 
 ## 最该先看的 10 张图
 
-1. `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP08-2_P0长椅正字刻痕特写_关键帧_v1.png`
-   - 原因：P0 名场面，决定“小夏等了很久”是否能不用台词被观众看懂。
-2. `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP11_隔离门残影母亲保护性分离_安全版_关键帧_v1.png`
-   - 原因：需要判断母亲是“保护性松手”，不能像放弃或逃走。
-3. `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP17_事故残影隔离门与人潮安全版_关键帧_v1.png`
-   - 原因：事故蒙太奇安全版较克制，需要判断冲击力是否够。
-4. `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP21_小夏离开前认真回头_关键帧_v1.png`
-   - 原因：小夏最后反问是整集情感秤砣，表情不能太成熟，也不能像普通告别。
-5. `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP06-2_小夏等待回声显现_关键帧_v1.png`
-   - 原因：判断小夏是否 6-7 岁、可怜但不恐怖、不卖萌。
-6. `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP07-3_第一次救援失败隔离门残影_关键帧_v1.png`
-   - 原因：必须明确这是 V5_OP07_第一次救援失败，不是 ??????????_系统正式警报。
-7. `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP14_小夏问后半句澜冰屿决定连接_关键帧_v1.png`
-   - 原因：小夏问“后半句”的理解点要清楚，鞋袜连续性也要查。
-8. `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP15-3_B07警告后期屏幕占位_关键帧_v1.png`
-   - 原因：确认 B-07 只做后期叠字，生成图不要承担大段可读字幕。
-9. `episodes/season_01/episode_01/keyframes/v5_op09_op23_batch_v1/V5_OP15-4_澪星尾灯稳定澜冰屿影子_关键帧_v1.png`
-   - 原因：确认澪星是机械引航生命，不要玩具化。
-10. `episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP04-1_澜冰屿半蹲确认鞋是坐标_关键帧_v1.png`
-    - 原因：澜冰屿脸、发型、白丝和病弱感需按海报2复核。
+- OP01-3:episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP01-3_极暗废站轮廓_关键帧_v1.png
+  - 画面:第三遍广播突然断裂。
+  - 风险:需要重点看：可能存在鞋袜左右、澪星形态、人物年龄或事故动作表达不够准确。
+- OP02-1:episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP02-1_废站大厅澪星尾灯进入_关键帧_v2_MIOXING_LOCK.png
+  - 画面:废弃旧北站大厅建立，积水、破玻璃、长椅、旧闸机。
+  - 风险:需要重点看：可能存在鞋袜左右、澪星形态、人物年龄或事故动作表达不够准确。
+- OP02-4:episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP02-4_澪星尾灯停在儿童鞋边缘_关键帧_v2_MIOXING_LOCK_PRE_SHOE.png
+  - 画面:尾灯停住，照到儿童鞋边缘。
+  - 风险:需要重点看：可能存在鞋袜左右、澪星形态、人物年龄或事故动作表达不够准确。
+- OP03-1:episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP03-1_褪色儿童鞋特写_关键帧_v2_SHOE_LOCK.png
+  - 画面:褪色淡粉米白儿童鞋特写，鞋口积水。
+  - 风险:需要重点看：可能存在鞋袜左右、澪星形态、人物年龄或事故动作表达不够准确。
+- OP04-1:episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP04-1_澜冰屿半蹲确认鞋是坐标_关键帧_v1.png
+  - 画面:澜冰屿从黑暗里走出，半蹲。
+  - 风险:需要重点看：可能存在鞋袜左右、澪星形态、人物年龄或事故动作表达不够准确。
+- OP04-2:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP04-2_xiaxia_echo_appears_by_bench_keyframe_v1_NEEDS_REVIEW.png
+  - 画面:他观察鞋底、水痕和停留方向。
+  - 风险:需要重点看：可能存在鞋袜左右、澪星形态、人物年龄或事故动作表达不够准确。
+- OP04-4:episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/V5_OP04-4_lan_and_xiaxia_share_frame_keyframe_v1_NEEDS_REVIEW.png
+  - 画面:澜冰屿低声判断。
+  - 风险:需要重点看：可能存在鞋袜左右、澪星形态、人物年龄或事故动作表达不够准确。
+- OP05-1:episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP05-1_澜冰屿指尖触碰鞋边_关键帧_v1.png
+  - 画面:澜冰屿指尖碰到鞋边。
+  - 风险:需要重点看：可能存在鞋袜左右、澪星形态、人物年龄或事故动作表达不够准确。
+- OP05-2:episodes/season_01/episode_01/keyframes/v5_op01_op08_batch_v1/V5_OP05-2_事故闪回小夏右脚鞋脱落_关键帧_v2_RETRY.png
+  - 画面:闪回：事故当天低机位，小夏右脚鞋被卡住并脱落，右脚白袜出现。
+  - 风险:需要重点看：可能存在鞋袜左右、澪星形态、人物年龄或事故动作表达不够准确。
+- OP06-1:episodes/season_01/episode_01/keyframes/op06_op12_director_v1/OP06-1_日常牵手继续前行_关键帧_v1.png
+  - 画面:旧长椅旁浮出小夏淡影。
+  - 风险:需要重点看：可能存在鞋袜左右、澪星形态、人物年龄或事故动作表达不够准确。
 
-## 最可能需要重做的图
+## 是否可以进入图生视频测试
 
-1. `V5_OP08-2_P0长椅正字刻痕特写_关键帧_v1.png`
-   - 如果 ChatGPT 判断刻痕太像规整文字，就必须重做高质量手工刻痕特写。
-2. `V5_OP11_隔离门残影母亲保护性分离_安全版_关键帧_v1.png`
-   - 如果保护性松手不够明确，需要重做更强的手部/隔离门/母亲表情特写。
-3. `V5_OP17_事故残影隔离门与人潮安全版_关键帧_v1.png`
-   - 如果冲击力不足，建议不硬刷爆炸，而是用 ?? 事故素材做蒙太奇补强。
-4. `V5_OP21_小夏离开前认真回头_关键帧_v1.png`
-   - 如果小夏表情太成熟，需要重做更天真、更困惑、更轻的反问表情。
-5. `V5_OP15-4_澪星尾灯稳定澜冰屿影子_关键帧_v1.png`
-   - 如果澪星太像玩具，需要按海报2重做机械质感版本。
-
-## 最影响剧情理解的图
-
-- OP08 刻痕：观众是否能看懂“小夏等了很久”。
-- OP11 隔离门：观众是否能看懂妈妈是保护孩子才松手。
-- OP14 后半句：观众是否能看懂澜冰屿为什么必须冒险连接。
-- OP15 影子变淡：观众是否能看懂能力代价。
-- OP17 事故残影：观众是否能补全母女分离的情感痛点。
-- OP21 小夏反问：观众是否能被最后一句打中。
-- OP23 鞋散去刻痕留下：观众是否能感到“回声被接走，但痕迹留下”。
-
-## 是否可以进入图生视频阶段
-
-### 建议优先做短段测试
-
-- V5_OP02：废站中澪星尾灯移动，适合测试光线扫过地面。
-- V5_OP03：儿童鞋静物特写，适合慢推/雨水滴落/尾灯扫光。
-- V5_OP09：鞋、水痕、长椅等待边界，适合做空间连接测试。
-- V5_OP10：损坏广播台与澪星读取，适合做设备闪烁和声波运动。
-
-### 可做低成本运动测试，但不定稿
-
-- V5_OP08：P0 刻痕镜头，必须先审美术质量。
-- V5_OP15：影子变淡和 B-07，后期元素多，先测概念。
-- V5_OP22：澜冰屿影子变淡的余味镜头。
-- V5_OP23：鞋散成光点，适合测试消散效果。
-
-### 建议先审核再视频化
-
-- V5_OP06 / V5_OP07 / V5_OP11 / V5_OP14 / V5_OP17 / V5_OP21。
-
-这些镜头涉及小夏年龄、母亲保护动作、事故表达和最后反问，一旦方向错，后续视频会浪费时间。
-
+建议先用 PASS 稳定度较高的 OP02 / OP03 / OP08 / OP23 做短测试；OP17 事故段和 OP21-22 情绪钩子需要先人工审核。

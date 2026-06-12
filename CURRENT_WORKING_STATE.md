@@ -8,7 +8,7 @@ Boundary Echo / 《边界回声》
 
 Episode 01 V5 is the only current production baseline.
 
-Episode 01 ?? files have been removed from the active production line and should not be used as story, storyboard, prompt, or keyframe references.
+Episode 01 old-version files have been removed from the active production line and should not be used as story, storyboard, prompt, or keyframe references.
 
 ## Current Stage
 
@@ -64,3 +64,12 @@ Priority review shots:
 3. OP17 safe accident echo montage.
 4. OP21 Xia's final serious question.
 5. Lan Bingyu and Mioxing consistency with V2 poster 2.
+## 2026-06-13 V5 全关键帧与管理器更新
+
+- 已补齐第一集 V5 OP01-OP23 全部 98 个宫格的关键帧覆盖。
+- 新增生成目录：`episodes/season_01/episode_01/keyframes/v5_full_grid_batch_v1/`。
+- 新增网页展示用英文文件名副本：`production/online/assets/ep01_v5_keyframes/`，共 98 张，避免图片在浏览器中打不开。
+- 已重建 AI 漫剧分镜管理器：`production/online/AI漫剧分镜管理器.html`。
+- 浏览器验证：98 个宫格、98 张图，坏图 0。
+- 已更新：`第一集_V5_全宫格关键帧缺口清单.md`、`第一集_V5_关键帧自检结果表.md`、`第一集_V5_ChatGPT审核包.md`、`第一集_V5_明早待ChatGPT审核清单.md`。
+- 注意：OP17 事故段、OP21-22 情绪钩子、小夏鞋袜左右连续性仍建议明早优先人工审核。
